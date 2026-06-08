@@ -1,7 +1,7 @@
-﻿using Microsoft.Data.Sqlite;
+using Microsoft.Data.Sqlite;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using WinFormsApp1.Modelos;
 
 namespace WinFormsApp1.Persistencia
 {
@@ -11,8 +11,7 @@ namespace WinFormsApp1.Persistencia
         {
             List<Cliente> clientes = new List<Cliente>();
 
-            SqliteCommand sqliteCommand = new SqliteCommand("Select id_cliente, nombre, apellido, tipo_documento, nro_document, telefono, email, localidad from Cliente");
-
+            SqliteCommand sqliteCommand = new SqliteCommand("SELECT id_cliente, nombre, apellido, nro_documento, telefono, email, localidad FROM CLIENTE");
             sqliteCommand.Connection = Conexion.MiConexion;
 
             SqliteDataReader dataReader = sqliteCommand.ExecuteReader();
@@ -23,8 +22,10 @@ namespace WinFormsApp1.Persistencia
                 cliente.Id = dataReader.GetInt32(0);
                 cliente.Nombre = dataReader.GetString(1);
                 cliente.Apellido = dataReader.GetString(2);
-                cliente.Telefono = dataReader.GetString(3);
-                cliente.Dni = dataReader.GetString(4);
+                cliente.Dni = dataReader.GetString(3);
+                cliente.Telefono = dataReader.IsDBNull(4) ? string.Empty : dataReader.GetString(4);
+                cliente.Email = dataReader.IsDBNull(5) ? string.Empty : dataReader.GetString(5);
+                cliente.Localidad = dataReader.IsDBNull(6) ? string.Empty : dataReader.GetString(6);
                 clientes.Add(cliente);
             }
 
@@ -33,23 +34,35 @@ namespace WinFormsApp1.Persistencia
 
         public static Cliente GuardarCliente(Cliente c)
         {
-            SqliteCommand sqliteCommand = new SqliteCommand("INSERT INTO Cliente (Id, DNI, Nombre, Apellido, Telefono) VALUES (@Id, @DNI, @Nombre, @Apellido, @Telefono)");
-            sqliteCommand.Parameters.Add(new SqliteParameter("@Id", c.Id));
-            sqliteCommand.Parameters.Add(new SqliteParameter("@DNI", c.Dni));
+            SqliteCommand sqliteCommand = new SqliteCommand(
+                "INSERT INTO CLIENTE (nombre, apellido, nro_documento, telefono, email, localidad) " +
+                "VALUES (@Nombre, @Apellido, @NroDocumento, @Telefono, @Email, @Localidad); " +
+                "SELECT last_insert_rowid();"
+            );
             sqliteCommand.Parameters.Add(new SqliteParameter("@Nombre", c.Nombre));
             sqliteCommand.Parameters.Add(new SqliteParameter("@Apellido", c.Apellido));
-            sqliteCommand.Parameters.Add(new SqliteParameter("@Telefono", c.Telefono));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@NroDocumento", c.Dni));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@Telefono", string.IsNullOrEmpty(c.Telefono) ? (object)DBNull.Value : c.Telefono));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@Email", string.IsNullOrEmpty(c.Email) ? (object)DBNull.Value : c.Email));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@Localidad", string.IsNullOrEmpty(c.Localidad) ? (object)DBNull.Value : c.Localidad));
             sqliteCommand.Connection = Conexion.MiConexion;
-            sqliteCommand.ExecuteNonQuery();
+
+            c.Id = Convert.ToInt32(sqliteCommand.ExecuteScalar());
             return c;
         }
 
         public static void ModificarCliente(Cliente c)
         {
-            SqliteCommand sqliteCommand = new SqliteCommand("UPDATE Cliente SET Nombre = @Nombre, Apellido = @Apellido, Telefono = @Telefono WHERE Id = @Id");
+            SqliteCommand sqliteCommand = new SqliteCommand(
+                "UPDATE CLIENTE SET nombre = @Nombre, apellido = @Apellido, " +
+                "nro_documento = @NroDocumento, telefono = @Telefono, email = @Email, localidad = @Localidad WHERE id_cliente = @Id"
+            );
             sqliteCommand.Parameters.Add(new SqliteParameter("@Nombre", c.Nombre));
             sqliteCommand.Parameters.Add(new SqliteParameter("@Apellido", c.Apellido));
-            sqliteCommand.Parameters.Add(new SqliteParameter("@Telefono", c.Telefono));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@NroDocumento", c.Dni));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@Telefono", string.IsNullOrEmpty(c.Telefono) ? (object)DBNull.Value : c.Telefono));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@Email", string.IsNullOrEmpty(c.Email) ? (object)DBNull.Value : c.Email));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@Localidad", string.IsNullOrEmpty(c.Localidad) ? (object)DBNull.Value : c.Localidad));
             sqliteCommand.Parameters.Add(new SqliteParameter("@Id", c.Id));
             sqliteCommand.Connection = Conexion.MiConexion;
             sqliteCommand.ExecuteNonQuery();
@@ -57,7 +70,7 @@ namespace WinFormsApp1.Persistencia
 
         public static void EliminarCliente(int id)
         {
-            SqliteCommand sqliteCommand = new SqliteCommand("DELETE FROM Cliente WHERE Id = @Id");
+            SqliteCommand sqliteCommand = new SqliteCommand("DELETE FROM CLIENTE WHERE id_cliente = @Id");
             sqliteCommand.Parameters.Add(new SqliteParameter("@Id", id));
             sqliteCommand.Connection = Conexion.MiConexion;
             sqliteCommand.ExecuteNonQuery();
