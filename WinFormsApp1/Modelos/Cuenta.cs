@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WinFormsApp1.Modelos
 {
-    internal class Cuenta
+    public class Cuenta
     {
         public int IdCuenta { get; set; }
         public int IdEstadia { get; set; }

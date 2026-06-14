@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WinFormsApp1.Modelos
 {
-    internal class Estadia
+    public class Estadia
     {
         public int IdEstadia { get; set; }
         public int IdReserva { get; set; }
