@@ -6,7 +6,7 @@ using WinFormsApp1.Persistencia;
 
 namespace WinFormsApp1.Modelos
 {
-    internal class Cliente
+    public class Cliente
     {
         public int Id { get; set; }
         public string Dni { get; set; } = string.Empty;
