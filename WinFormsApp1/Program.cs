@@ -18,7 +18,7 @@ namespace WinFormsApp1
             Conexion.OpenConexion();
 
             // Realiza la migración automática de contraseñas a BCrypt en caso de existir contraseñas en texto plano
-            new nUsuario().MigrarPasswordsAHash();
+            nUsuario.MigrarPasswordsAHash();
 
             Application.Run(new fLogin());
             Conexion.CloseConexion();
