@@ -1,4 +1,4 @@
-﻿using Microsoft.Data.Sqlite;
+using Microsoft.Data.Sqlite;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,7 +7,8 @@ namespace WinFormsApp1.Persistencia
 {
     internal static class Conexion
     {
-        private static SqliteConnection miConexion = new SqliteConnection("Data Source=HotelDB.db");
+        private static readonly string dbPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "HotelDB.db");
+        private static SqliteConnection miConexion = new SqliteConnection($"Data Source={dbPath}");
 
         public static void OpenConexion()
         {
