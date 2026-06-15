@@ -13,8 +13,7 @@ namespace WinFormsApp1.Controladores
         // Validar autenticación
         public static Usuario Login(string username, string passwordPlano)
         {
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(passwordPlano))
-                return null;
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(passwordPlano)) return null;
 
             Usuario usuario = persistencia.BuscarPorUsername(username);
             if (usuario == null) return null;

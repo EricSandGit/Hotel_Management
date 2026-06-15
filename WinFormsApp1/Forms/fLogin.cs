@@ -43,7 +43,26 @@ namespace WinFormsApp1.Forms
                 MessageBox.Show(this, "Usuario o contraseña incorrectos.\nIngrese nuevamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void tbUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // Evita el ruido "beep" de Windows
 
+                tbContrasena.Focus(); // Le pasa el foco al cuadro de contraseña
+            }
+        }
+
+        private void tbContrasena_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // Evita el ruido "beep" de Windows
+
+                // Ejecuta la misma acción que el clic del botón de ingresar
+                btIngresar_Click(this, new EventArgs());
+            }
+        }
         private void fLogin_Load(object sender, EventArgs e)
         {
 
