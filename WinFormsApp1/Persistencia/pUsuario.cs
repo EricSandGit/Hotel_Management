@@ -54,7 +54,7 @@ namespace WinFormsApp1.Persistencia
             SqliteCommand sqliteCommand = new SqliteCommand("SELECT id_usuario, id_rol, nombre, username, password_hash FROM USUARIO WHERE username = @username");
             sqliteCommand.Parameters.Add(new SqliteParameter("@username", username));
             sqliteCommand.Connection = Conexion.MiConexion;
-            SqliteDataReader dataReader = sqliteCommand.ExecuteReader();
+             SqliteDataReader dataReader = sqliteCommand.ExecuteReader();
             while (dataReader.Read())
             {
                 usuario = new Usuario();

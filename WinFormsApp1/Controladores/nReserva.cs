@@ -9,16 +9,13 @@ namespace WinFormsApp1.Controladores
     {
         private static readonly pReserva persistencia = new pReserva();
 
-        // Consulta de todas las reservas
         public static List<Reserva> ListarReservas() => persistencia.ObtenerTodos();
 
-        // Consulta por id
         public static Reserva ObtenerReservaPorId(int id) => persistencia.ObtenerPorId(id);
 
-        // Verificar disponibilidad de la habitación para evitar superposiciones y validar fechas
         public static bool ValidarDisponibilidad(int idHabitacion, DateTime fechaEntrada, DateTime fechaSalida, int idReservaAExcluir = 0)
         {
-            // Validar fechas de ingreso y egreso
+            
             if (fechaEntrada >= fechaSalida || fechaEntrada < DateTime.Today)
                 return false;
 
@@ -27,7 +24,6 @@ namespace WinFormsApp1.Controladores
             {
                 if (r.IdReserva == idReservaAExcluir) continue;
 
-                // Verificar superposición si la habitación coincide y la reserva no está cancelada
                 if (r.IdHabitacion == idHabitacion && r.Estado != "Cancelada")
                 {
                     // Fórmula de traslape: (StartA < EndB) y (EndA > StartB)
@@ -51,6 +47,8 @@ namespace WinFormsApp1.Controladores
             int maxCapacidad = nHabitacion.ObtenerCapacidadTotal(h);
             return cantidadPersonas <= maxCapacidad;
         }
+
+    
 
         // Alta de reserva con validaciones de negocio
         public static bool CrearReserva(Reserva r)
