@@ -14,8 +14,6 @@ namespace WinFormsApp1.Forms
 {
     public partial class fLogin : Form
     {
-        private nUsuario usuarioController = new nUsuario();
-
         public fLogin()
         {
             InitializeComponent();
@@ -27,7 +25,7 @@ namespace WinFormsApp1.Forms
             string usernameIngresado = tbUsuario.Text;
             string passwordIngresada = tbContrasena.Text;
 
-            Usuario usuarioEncontrado = usuarioController.Login(usernameIngresado, passwordIngresada);
+            Usuario usuarioEncontrado = nUsuario.Login(usernameIngresado, passwordIngresada);
 
             if (usuarioEncontrado != null)
             {

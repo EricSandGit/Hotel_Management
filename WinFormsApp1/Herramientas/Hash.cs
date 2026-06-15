@@ -1,6 +1,6 @@
-namespace WinFormsApp1.Utilidades
+namespace WinFormsApp1.Herramientas
 {
-    public static class PasswordHelper
+    public static class Hash
     {
         public static string HashPassword(string passwordPlano)
             => BCrypt.Net.BCrypt.HashPassword(passwordPlano);
