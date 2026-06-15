@@ -28,12 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "fSesion";
+            lbBienvenida = new Label();
+            lbRol = new Label();
+            SuspendLayout();
+            // 
+            // lbBienvenida
+            // 
+            lbBienvenida.AutoSize = true;
+            lbBienvenida.Font = new Font("Segoe UI", 15F);
+            lbBienvenida.Location = new Point(12, 9);
+            lbBienvenida.Name = "lbBienvenida";
+            lbBienvenida.Size = new Size(151, 35);
+            lbBienvenida.TabIndex = 0;
+            lbBienvenida.Text = "Bienvenido!!";
+            // 
+            // lbRol
+            // 
+            lbRol.AutoSize = true;
+            lbRol.Font = new Font("Segoe UI", 12F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            lbRol.Location = new Point(12, 44);
+            lbRol.Name = "lbRol";
+            lbRol.Size = new Size(56, 28);
+            lbRol.TabIndex = 1;
+            lbRol.Text = "-Rol-";
+            // 
+            // fSesion
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(lbRol);
+            Controls.Add(lbBienvenida);
+            Name = "fSesion";
+            Text = "fSesion";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lbBienvenida;
+        private Label lbRol;
     }
 }

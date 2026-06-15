@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             lbUsuario = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            tbUsuario = new TextBox();
+            tbContrasena = new TextBox();
             lbContrasena = new Label();
             btIngresar = new Button();
             lbLogin = new Label();
@@ -46,20 +46,20 @@
             lbUsuario.TabIndex = 0;
             lbUsuario.Text = "Usuario:";
             // 
-            // textBox1
+            // tbUsuario
             // 
-            textBox1.Location = new Point(226, 143);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(378, 27);
-            textBox1.TabIndex = 1;
+            tbUsuario.Location = new Point(226, 143);
+            tbUsuario.Name = "tbUsuario";
+            tbUsuario.Size = new Size(378, 27);
+            tbUsuario.TabIndex = 1;
             // 
-            // textBox2
+            // tbContrasena
             // 
-            textBox2.Location = new Point(226, 235);
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(378, 27);
-            textBox2.TabIndex = 3;
+            tbContrasena.Location = new Point(226, 235);
+            tbContrasena.Name = "tbContrasena";
+            tbContrasena.PasswordChar = '*';
+            tbContrasena.Size = new Size(378, 27);
+            tbContrasena.TabIndex = 3;
             // 
             // lbContrasena
             // 
@@ -99,9 +99,9 @@
             ClientSize = new Size(800, 450);
             Controls.Add(lbLogin);
             Controls.Add(btIngresar);
-            Controls.Add(textBox2);
+            Controls.Add(tbContrasena);
             Controls.Add(lbContrasena);
-            Controls.Add(textBox1);
+            Controls.Add(tbUsuario);
             Controls.Add(lbUsuario);
             Name = "fLogin";
             Text = "fLogin";
@@ -112,8 +112,8 @@
         #endregion
 
         private Label lbUsuario;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox tbUsuario;
+        private TextBox tbContrasena;
         private Label lbContrasena;
         private Button btIngresar;
         private Label lbLogin;
