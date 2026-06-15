@@ -17,8 +17,6 @@ namespace WinFormsApp1
             ApplicationConfiguration.Initialize();
             Conexion.OpenConexion();
 
-         
-
             Application.Run(new fLogin());
             Conexion.CloseConexion();
         }
