@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,11 +8,14 @@ using System.Text;
 using System.Windows.Forms;
 using WinFormsApp1.Modelos;
 using WinFormsApp1.Persistencia;
+using WinFormsApp1.Controladores;
 
 namespace WinFormsApp1.Forms
 {
     public partial class fLogin : Form
     {
+        private nUsuario usuarioController = new nUsuario();
+
         public fLogin()
         {
             InitializeComponent();
@@ -24,17 +27,7 @@ namespace WinFormsApp1.Forms
             string usernameIngresado = tbUsuario.Text;
             string passwordIngresada = tbContrasena.Text;
 
-            List<Usuario> usuarios = pUsuario.getAll();
-            Usuario usuarioEncontrado = null;
-
-            foreach (Usuario u in usuarios)
-            {
-                if (u.Username == usernameIngresado && u.PasswordHash == passwordIngresada)
-                {
-                    usuarioEncontrado = u;
-                    break;
-                }
-            }
+            Usuario usuarioEncontrado = usuarioController.Login(usernameIngresado, passwordIngresada);
 
             if (usuarioEncontrado != null)
             {
@@ -51,6 +44,11 @@ namespace WinFormsApp1.Forms
 
                 MessageBox.Show(this, "Usuario o contraseña incorrectos.\nIngrese nuevamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void fLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

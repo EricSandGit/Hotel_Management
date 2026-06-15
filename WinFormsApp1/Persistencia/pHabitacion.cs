@@ -5,9 +5,9 @@ using WinFormsApp1.Modelos;
 
 namespace WinFormsApp1.Persistencia
 {
-    internal class pHabitacion
+    internal class pHabitacion : IRepositorio<Habitacion>
     {
-        public static List<Habitacion> getAll()
+        public List<Habitacion> ObtenerTodos()
         {
             List<Habitacion> habitaciones = new List<Habitacion>();
 
@@ -30,44 +30,64 @@ namespace WinFormsApp1.Persistencia
             return habitaciones;
         }
 
-        public static Habitacion GuardarHabitacion(Habitacion h)
+        public Habitacion ObtenerPorId(int id)
+        {
+            Habitacion habitacion = new Habitacion();
+            SqliteCommand sqliteCommand = new SqliteCommand("SELECT id_habitacion, numero, camas_individuales, camas_matrimoniales, precio_por_noche FROM HABITACION WHERE id_habitacion = @id");
+            sqliteCommand.Parameters.Add(new SqliteParameter("@id", id));
+            sqliteCommand.Connection = Conexion.MiConexion;
+            SqliteDataReader dataReader = sqliteCommand.ExecuteReader();
+            while (dataReader.Read())
+            {
+                habitacion.IdHabitacion = dataReader.GetInt32(0);
+                habitacion.Numero = dataReader.GetInt32(1);
+                habitacion.CamasIndividuales = dataReader.GetInt32(2);
+                habitacion.CamasMatrimoniales = dataReader.GetInt32(3);
+                habitacion.PrecioPorNoche = dataReader.GetDouble(4);
+            }
+            return habitacion;
+        }
+
+        public int Agregar(Habitacion entidad)
         {
             SqliteCommand sqliteCommand = new SqliteCommand(
                 "INSERT INTO HABITACION (numero, camas_individuales, camas_matrimoniales, precio_por_noche) " +
                 "VALUES (@Numero, @CamasIndividuales, @CamasMatrimoniales, @PrecioPorNoche); " +
                 "SELECT last_insert_rowid();"
             );
-            sqliteCommand.Parameters.Add(new SqliteParameter("@Numero", h.Numero));
-            sqliteCommand.Parameters.Add(new SqliteParameter("@CamasIndividuales", h.CamasIndividuales));
-            sqliteCommand.Parameters.Add(new SqliteParameter("@CamasMatrimoniales", h.CamasMatrimoniales));
-            sqliteCommand.Parameters.Add(new SqliteParameter("@PrecioPorNoche", h.PrecioPorNoche));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@Numero", entidad.Numero));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@CamasIndividuales", entidad.CamasIndividuales));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@CamasMatrimoniales", entidad.CamasMatrimoniales));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@PrecioPorNoche", entidad.PrecioPorNoche));
             sqliteCommand.Connection = Conexion.MiConexion;
 
-            h.IdHabitacion = Convert.ToInt32(sqliteCommand.ExecuteScalar());
-            return h;
+            entidad.IdHabitacion = Convert.ToInt32(sqliteCommand.ExecuteScalar());
+            return entidad.IdHabitacion;
         }
 
-        public static void ModificarHabitacion(Habitacion h)
+        public bool Actualizar(Habitacion entidad)
         {
             SqliteCommand sqliteCommand = new SqliteCommand(
                 "UPDATE HABITACION SET numero = @Numero, camas_individuales = @CamasIndividuales, " +
                 "camas_matrimoniales = @CamasMatrimoniales, precio_por_noche = @PrecioPorNoche WHERE id_habitacion = @Id"
             );
-            sqliteCommand.Parameters.Add(new SqliteParameter("@Numero", h.Numero));
-            sqliteCommand.Parameters.Add(new SqliteParameter("@CamasIndividuales", h.CamasIndividuales));
-            sqliteCommand.Parameters.Add(new SqliteParameter("@CamasMatrimoniales", h.CamasMatrimoniales));
-            sqliteCommand.Parameters.Add(new SqliteParameter("@PrecioPorNoche", h.PrecioPorNoche));
-            sqliteCommand.Parameters.Add(new SqliteParameter("@Id", h.IdHabitacion));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@Numero", entidad.Numero));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@CamasIndividuales", entidad.CamasIndividuales));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@CamasMatrimoniales", entidad.CamasMatrimoniales));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@PrecioPorNoche", entidad.PrecioPorNoche));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@Id", entidad.IdHabitacion));
             sqliteCommand.Connection = Conexion.MiConexion;
-            sqliteCommand.ExecuteNonQuery();
+            int rowsAffected = sqliteCommand.ExecuteNonQuery();
+            return rowsAffected > 0;
         }
 
-        public static void EliminarHabitacion(int id)
+        public bool Eliminar(int id)
         {
             SqliteCommand sqliteCommand = new SqliteCommand("DELETE FROM HABITACION WHERE id_habitacion = @Id");
             sqliteCommand.Parameters.Add(new SqliteParameter("@Id", id));
             sqliteCommand.Connection = Conexion.MiConexion;
-            sqliteCommand.ExecuteNonQuery();
+            int rowsAffected = sqliteCommand.ExecuteNonQuery();
+            return rowsAffected > 0;
         }
     }
 }
