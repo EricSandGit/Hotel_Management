@@ -41,6 +41,21 @@ namespace WinFormsApp1.Persistencia
             r.IdRol = Convert.ToInt32(sqliteCommand.ExecuteScalar());
             return r;
         }
+        public static Rol getById(int id)
+        {
+            Rol rol = new Rol();
+            SqliteCommand sqliteCommand = new SqliteCommand("SELECT id_rol, nombre, descripcion FROM ROL WHERE id_rol = @id");
+            sqliteCommand.Parameters.Add(new SqliteParameter("@id", id));
+            sqliteCommand.Connection = Conexion.MiConexion;
+            SqliteDataReader dataReader = sqliteCommand.ExecuteReader();
+            while (dataReader.Read())
+            {
+                rol.IdRol = dataReader.GetInt32(0);
+                rol.Nombre = dataReader.GetString(1);
+                rol.Descripcion = dataReader.IsDBNull(2) ? string.Empty : dataReader.GetString(2);
+            }
+            return rol;
+        }
 
         public static void ModificarRol(Rol r)
         {
