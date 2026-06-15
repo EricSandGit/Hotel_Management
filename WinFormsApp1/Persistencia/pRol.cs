@@ -5,9 +5,9 @@ using WinFormsApp1.Modelos;
 
 namespace WinFormsApp1.Persistencia
 {
-    internal class pRol
+    internal class pRol : IRepositorio<Rol>
     {
-        public static List<Rol> getAll()
+        public List<Rol> ObtenerTodos()
         {
             List<Rol> roles = new List<Rol>();
 
@@ -28,20 +28,7 @@ namespace WinFormsApp1.Persistencia
             return roles;
         }
 
-        public static Rol GuardarRol(Rol r)
-        {
-            SqliteCommand sqliteCommand = new SqliteCommand(
-                "INSERT INTO ROL (nombre, descripcion) VALUES (@Nombre, @Descripcion); " +
-                "SELECT last_insert_rowid();"
-            );
-            sqliteCommand.Parameters.Add(new SqliteParameter("@Nombre", r.Nombre));
-            sqliteCommand.Parameters.Add(new SqliteParameter("@Descripcion", string.IsNullOrEmpty(r.Descripcion) ? (object)DBNull.Value : r.Descripcion));
-            sqliteCommand.Connection = Conexion.MiConexion;
-
-            r.IdRol = Convert.ToInt32(sqliteCommand.ExecuteScalar());
-            return r;
-        }
-        public static Rol getById(int id)
+        public Rol ObtenerPorId(int id)
         {
             Rol rol = new Rol();
             SqliteCommand sqliteCommand = new SqliteCommand("SELECT id_rol, nombre, descripcion FROM ROL WHERE id_rol = @id");
@@ -57,24 +44,40 @@ namespace WinFormsApp1.Persistencia
             return rol;
         }
 
-        public static void ModificarRol(Rol r)
+        public int Agregar(Rol entidad)
+        {
+            SqliteCommand sqliteCommand = new SqliteCommand(
+                "INSERT INTO ROL (nombre, descripcion) VALUES (@Nombre, @Descripcion); " +
+                "SELECT last_insert_rowid();"
+            );
+            sqliteCommand.Parameters.Add(new SqliteParameter("@Nombre", entidad.Nombre));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@Descripcion", string.IsNullOrEmpty(entidad.Descripcion) ? (object)DBNull.Value : entidad.Descripcion));
+            sqliteCommand.Connection = Conexion.MiConexion;
+
+            entidad.IdRol = Convert.ToInt32(sqliteCommand.ExecuteScalar());
+            return entidad.IdRol;
+        }
+
+        public bool Actualizar(Rol entidad)
         {
             SqliteCommand sqliteCommand = new SqliteCommand(
                 "UPDATE ROL SET nombre = @Nombre, descripcion = @Descripcion WHERE id_rol = @Id"
             );
-            sqliteCommand.Parameters.Add(new SqliteParameter("@Nombre", r.Nombre));
-            sqliteCommand.Parameters.Add(new SqliteParameter("@Descripcion", string.IsNullOrEmpty(r.Descripcion) ? (object)DBNull.Value : r.Descripcion));
-            sqliteCommand.Parameters.Add(new SqliteParameter("@Id", r.IdRol));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@Nombre", entidad.Nombre));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@Descripcion", string.IsNullOrEmpty(entidad.Descripcion) ? (object)DBNull.Value : entidad.Descripcion));
+            sqliteCommand.Parameters.Add(new SqliteParameter("@Id", entidad.IdRol));
             sqliteCommand.Connection = Conexion.MiConexion;
-            sqliteCommand.ExecuteNonQuery();
+            int rowsAffected = sqliteCommand.ExecuteNonQuery();
+            return rowsAffected > 0;
         }
 
-        public static void EliminarRol(int id)
+        public bool Eliminar(int id)
         {
             SqliteCommand sqliteCommand = new SqliteCommand("DELETE FROM ROL WHERE id_rol = @Id");
             sqliteCommand.Parameters.Add(new SqliteParameter("@Id", id));
             sqliteCommand.Connection = Conexion.MiConexion;
-            sqliteCommand.ExecuteNonQuery();
+            int rowsAffected = sqliteCommand.ExecuteNonQuery();
+            return rowsAffected > 0;
         }
     }
 }

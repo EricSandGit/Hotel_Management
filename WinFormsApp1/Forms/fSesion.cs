@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +26,7 @@ namespace WinFormsApp1.Forms
             lbBienvenida.Text = $"Bienvenido, {_usuario.Nombre}!";
             this.Controls.Add(lbBienvenida);
             //
-            lbRol.Text = $"- ROL: {pRol.getById(_usuario.IdRol).Nombre} -";
+            lbRol.Text = $"- ROL: {new pRol().ObtenerPorId(_usuario.IdRol).Nombre} -";
             this.Controls.Add(lbRol);
             //
         }

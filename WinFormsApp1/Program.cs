@@ -1,5 +1,6 @@
 using WinFormsApp1.Forms;
 using WinFormsApp1.Persistencia;
+using WinFormsApp1.Controladores;
 
 namespace WinFormsApp1
 {
@@ -15,6 +16,10 @@ namespace WinFormsApp1
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Conexion.OpenConexion();
+
+            // Realiza la migración automática de contraseñas a BCrypt en caso de existir contraseñas en texto plano
+            new nUsuario().MigrarPasswordsAHash();
+
             Application.Run(new fLogin());
             Conexion.CloseConexion();
         }
