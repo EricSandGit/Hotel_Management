@@ -13,8 +13,7 @@ namespace WinFormsApp1.Controladores
         // Validar autenticación
         public static Usuario Login(string username, string passwordPlano)
         {
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(passwordPlano))
-                return null;
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(passwordPlano)) return null;
 
             Usuario usuario = persistencia.BuscarPorUsername(username);
             if (usuario == null) return null;
@@ -22,19 +21,7 @@ namespace WinFormsApp1.Controladores
             return usuario;
         }
 
-        // Realiza la migración única de contraseñas a BCrypt
-        public static void MigrarPasswordsAHash()
-        {
-            var usuarios = persistencia.ObtenerTodos();
-            foreach (var u in usuarios)
-            {
-                if (!u.PasswordHash.StartsWith("$2"))
-                {
-                    u.PasswordHash = Hash.HashPassword(u.PasswordHash);
-                    persistencia.Actualizar(u);
-                }
-            }
-        }
+       
 
         // Crear usuario (Alta) con validaciones de datos obligatorios y duplicados
         public static bool CrearUsuario(string nombre, string username, string passwordPlano, int idRol)

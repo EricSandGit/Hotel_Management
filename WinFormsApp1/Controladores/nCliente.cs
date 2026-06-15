@@ -22,12 +22,20 @@ namespace WinFormsApp1.Controladores
             return persistencia.ObtenerTodos().Find(c => c.Dni == nroDoc);
         }
 
+        private static bool ValidarDatosObligatorios(Cliente c)
+        {
+            return !string.IsNullOrWhiteSpace(c.Dni) &&
+                   !string.IsNullOrWhiteSpace(c.Nombre) &&
+                   !string.IsNullOrWhiteSpace(c.Apellido) &&
+                   !string.IsNullOrWhiteSpace(c.Telefono) &&
+                   !string.IsNullOrWhiteSpace(c.Email) &&
+                   !string.IsNullOrWhiteSpace(c.Localidad);
+        }
+
         // Alta de cliente con validaciones obligatorias y de duplicados
         public static bool AgregarCliente(Cliente c)
         {
-            // Validar campos obligatorios
-            if (c == null || string.IsNullOrEmpty(c.Nombre) || string.IsNullOrEmpty(c.Apellido) || string.IsNullOrEmpty(c.Dni))
-                return false;
+            if (c == null || !ValidarDatosObligatorios(c)) return false;
 
             // Evitar duplicados de documento
             if (BuscarPorDocumento(c.Dni) != null)
@@ -40,9 +48,7 @@ namespace WinFormsApp1.Controladores
         // Modificación de cliente con validaciones
         public static bool ActualizarCliente(Cliente c)
         {
-            // Validar campos obligatorios
-            if (c == null || c.Id <= 0 || string.IsNullOrEmpty(c.Nombre) || string.IsNullOrEmpty(c.Apellido) || string.IsNullOrEmpty(c.Dni))
-                return false;
+            if (c == null || !ValidarDatosObligatorios(c)) return false;
 
             // Evitar duplicados de documento en otros registros
             var existente = BuscarPorDocumento(c.Dni);
