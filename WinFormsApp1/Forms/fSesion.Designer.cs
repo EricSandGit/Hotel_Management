@@ -36,9 +36,10 @@
             // 
             lbBienvenida.AutoSize = true;
             lbBienvenida.Font = new Font("Segoe UI", 15F);
-            lbBienvenida.Location = new Point(12, 9);
+            lbBienvenida.Location = new Point(15, 11);
+            lbBienvenida.Margin = new Padding(4, 0, 4, 0);
             lbBienvenida.Name = "lbBienvenida";
-            lbBienvenida.Size = new Size(151, 35);
+            lbBienvenida.Size = new Size(183, 41);
             lbBienvenida.TabIndex = 0;
             lbBienvenida.Text = "Bienvenido!!";
             // 
@@ -46,19 +47,21 @@
             // 
             lbRol.AutoSize = true;
             lbRol.Font = new Font("Segoe UI", 12F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            lbRol.Location = new Point(12, 44);
+            lbRol.Location = new Point(15, 55);
+            lbRol.Margin = new Padding(4, 0, 4, 0);
             lbRol.Name = "lbRol";
-            lbRol.Size = new Size(56, 28);
+            lbRol.Size = new Size(67, 32);
             lbRol.TabIndex = 1;
             lbRol.Text = "-Rol-";
             // 
             // fSesion
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1386, 566);
             Controls.Add(lbRol);
             Controls.Add(lbBienvenida);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "fSesion";
             Text = "fSesion";
             ResumeLayout(false);

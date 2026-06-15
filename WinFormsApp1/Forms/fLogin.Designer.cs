@@ -50,7 +50,7 @@
             // tbUsuario
             // 
             tbUsuario.Location = new Point(282, 179);
-            tbUsuario.Margin = new Padding(4, 4, 4, 4);
+            tbUsuario.Margin = new Padding(4);
             tbUsuario.Name = "tbUsuario";
             tbUsuario.Size = new Size(472, 31);
             tbUsuario.TabIndex = 1;
@@ -58,11 +58,12 @@
             // tbContrasena
             // 
             tbContrasena.Location = new Point(282, 294);
-            tbContrasena.Margin = new Padding(4, 4, 4, 4);
+            tbContrasena.Margin = new Padding(4);
             tbContrasena.Name = "tbContrasena";
             tbContrasena.PasswordChar = '*';
             tbContrasena.Size = new Size(472, 31);
             tbContrasena.TabIndex = 3;
+            tbContrasena.TextChanged += tbContrasena_TextChanged;
             // 
             // lbContrasena
             // 
@@ -79,7 +80,7 @@
             // 
             btIngresar.Font = new Font("Segoe UI", 12F);
             btIngresar.Location = new Point(368, 420);
-            btIngresar.Margin = new Padding(4, 4, 4, 4);
+            btIngresar.Margin = new Padding(4);
             btIngresar.Name = "btIngresar";
             btIngresar.Size = new Size(246, 59);
             btIngresar.TabIndex = 4;
@@ -109,7 +110,7 @@
             Controls.Add(lbContrasena);
             Controls.Add(tbUsuario);
             Controls.Add(lbUsuario);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "fLogin";
             Text = "fLogin";
             Load += fLogin_Load;

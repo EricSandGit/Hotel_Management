@@ -48,5 +48,10 @@ namespace WinFormsApp1.Forms
         {
 
         }
+
+        private void tbContrasena_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

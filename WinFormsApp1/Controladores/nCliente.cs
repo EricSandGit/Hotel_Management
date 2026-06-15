@@ -52,6 +52,8 @@ namespace WinFormsApp1.Controladores
             return persistencia.Actualizar(c);
         }
 
+
+
         // Método guardar unificado para backward compatibility
         public static bool GuardarCliente(Cliente c)
         {
