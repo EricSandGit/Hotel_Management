@@ -26,7 +26,8 @@ namespace WinFormsApp1.Controladores
                 return false;
 
             // Obtener la reserva para validar la capacidad y habitación
-            var reserva = new pReserva().ObtenerPorId(e.IdReserva);
+            // Obtener la reserva para validar la capacidad y habitación
+            var reserva = nReserva.ObtenerReservaPorId(e.IdReserva);
             if (reserva == null || reserva.IdReserva <= 0)
                 return false;
 
@@ -78,7 +79,7 @@ namespace WinFormsApp1.Controladores
             {
                 // Actualizar el estado de la reserva
                 r.Estado = "En Curso";
-                new pReserva().Actualizar(r);
+                nReserva.ActualizarReserva(r);
                 return true;
             }
             return false;
@@ -99,11 +100,11 @@ namespace WinFormsApp1.Controladores
             if (ok)
             {
                 // Finalizar la reserva asociada
-                var reserva = new pReserva().ObtenerPorId(estadia.IdReserva);
+                var reserva = nReserva.ObtenerReservaPorId(estadia.IdReserva);
                 if (reserva != null && reserva.IdReserva > 0)
                 {
                     reserva.Estado = "Finalizada";
-                    new pReserva().Actualizar(reserva);
+                    nReserva.ActualizarReserva(reserva);
                 }
 
                 // Generar automáticamente la cuenta consolidada para esta estadía

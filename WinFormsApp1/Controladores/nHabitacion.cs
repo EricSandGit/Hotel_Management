@@ -22,6 +22,13 @@ namespace WinFormsApp1.Controladores
             return h.CamasIndividuales + (h.CamasMatrimoniales * 2);
         }
 
+        private static double CalcularPrecioBase(int camasInd, int camasMat)
+        {
+            return (camasInd * 30000) + (camasMat * 50000);
+        }
+
+     
+
         // Alta de habitación con validaciones de negocio e inconsistencias
         public static bool AgregarHabitacion(Habitacion h)
         {
@@ -39,6 +46,11 @@ namespace WinFormsApp1.Controladores
             var todas = ListarHabitaciones();
             if (todas.Exists(x => x.Numero == h.Numero))
                 return false;
+
+            if (h.PrecioPorNoche <= 0)
+            {
+                h.PrecioPorNoche = CalcularPrecioBase(h.CamasIndividuales, h.CamasMatrimoniales);
+            }
 
             int id = persistencia.Agregar(h);
             return id > 0;
