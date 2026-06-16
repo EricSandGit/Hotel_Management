@@ -10,17 +10,17 @@ namespace WinFormsApp1.Modelos
         public int IdRol { get; set; }
         public string Nombre { get; set; } = string.Empty;
         public string Username { get; set; } = string.Empty;
-        public string PasswordHash { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
 
         public Usuario() { }
 
-        public Usuario(int idUsuario, int idRol, string nombre, string username, string passwordHash)
+        public Usuario(int idUsuario, int idRol, string nombre, string username, string password)
         {
             IdUsuario = idUsuario;
             IdRol = idRol;
             Nombre = nombre;
             Username = username;
-            PasswordHash = passwordHash;
+            Password = password;
         }
 
         public override string ToString()

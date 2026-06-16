@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using WinFormsApp1.Modelos;
 using WinFormsApp1.Persistencia;
-using WinFormsApp1.Herramientas;
 
 namespace WinFormsApp1.Controladores
 {
@@ -17,7 +16,7 @@ namespace WinFormsApp1.Controladores
 
             Usuario usuario = persistencia.BuscarPorUsername(username);
             if (usuario == null) return null;
-            if (!Hash.VerifyPassword(passwordPlano, usuario.PasswordHash)) return null;
+            if (usuario.Password != passwordPlano) return null;
             return usuario;
         }
 
@@ -38,7 +37,7 @@ namespace WinFormsApp1.Controladores
             {
                 Nombre = nombre,
                 Username = username,
-                PasswordHash = Hash.HashPassword(passwordPlano),
+                Password = passwordPlano,
                 IdRol = idRol
             };
             persistencia.Agregar(nuevoUsuario);
