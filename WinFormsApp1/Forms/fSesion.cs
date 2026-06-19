@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using WinFormsApp1.Controladores;
 using WinFormsApp1.Modelos;
 using WinFormsApp1.Persistencia;
 
@@ -138,7 +139,7 @@ namespace WinFormsApp1.Forms
         {
             SeleccionarBoton((Button)sender);
 
-
+            AbrirFormEnPanel(new fAltaReserva());
         }
         private void btRol_Click(object sender, EventArgs e)
         {
