@@ -52,6 +52,7 @@
             btCancelar.TabIndex = 29;
             btCancelar.Text = "Cancelar";
             btCancelar.UseVisualStyleBackColor = true;
+            btCancelar.Click += btCancelar_Click;
             // 
             // btGuardar
             // 
@@ -61,6 +62,7 @@
             btGuardar.TabIndex = 28;
             btGuardar.Text = "Guardar";
             btGuardar.UseVisualStyleBackColor = true;
+            btGuardar.Click += btGuardar_Click;
             // 
             // lbLocalidad
             // 
