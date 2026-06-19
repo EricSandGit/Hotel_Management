@@ -50,7 +50,7 @@
             lbBienvenida.ForeColor = SystemColors.ButtonHighlight;
             lbBienvenida.Location = new Point(23, 9);
             lbBienvenida.Name = "lbBienvenida";
-            lbBienvenida.Size = new Size(151, 35);
+            lbBienvenida.Size = new Size(183, 41);
             lbBienvenida.TabIndex = 0;
             lbBienvenida.Text = "Bienvenido!!";
             // 
@@ -61,7 +61,7 @@
             lbRol.ForeColor = SystemColors.ButtonHighlight;
             lbRol.Location = new Point(3, 619);
             lbRol.Name = "lbRol";
-            lbRol.Size = new Size(56, 28);
+            lbRol.Size = new Size(67, 32);
             lbRol.TabIndex = 1;
             lbRol.Text = "-Rol-";
             // 
@@ -220,7 +220,7 @@
             // 
             // fSesion
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1186, 656);
             ControlBox = false;

@@ -1,6 +1,7 @@
 using WinFormsApp1.Controladores;
 using WinFormsApp1.Forms;
 using WinFormsApp1.Forms.fClientes;
+using WinFormsApp1.Forms.fReservas;
 using WinFormsApp1.Persistencia;
 
 namespace WinFormsApp1
