@@ -33,15 +33,16 @@ namespace WinFormsApp1.Persistencia
 
         public Rol ObtenerPorId(int id)
         {
-            Rol rol = new Rol();
+            Rol rol = null;
             using (SqliteCommand sqliteCommand = new SqliteCommand("SELECT id_rol, nombre, descripcion FROM ROL WHERE id_rol = @id"))
             {
                 sqliteCommand.Parameters.Add(new SqliteParameter("@id", id));
                 sqliteCommand.Connection = Conexion.MiConexion;
                 using (SqliteDataReader dataReader = sqliteCommand.ExecuteReader())
                 {
-                    while (dataReader.Read())
+                    if (dataReader.Read())
                     {
+                        rol = new Rol();
                         rol.IdRol = dataReader.GetInt32(0);
                         rol.Nombre = dataReader.GetString(1);
                         rol.Descripcion = dataReader.IsDBNull(2) ? string.Empty : dataReader.GetString(2);

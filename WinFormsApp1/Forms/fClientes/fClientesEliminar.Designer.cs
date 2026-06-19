@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp1.Forms.fClientes
+namespace WinFormsApp1.Forms.fClientes
 {
     partial class fClientesEliminar
     {
@@ -41,7 +41,6 @@
             lbAdvertencia.Size = new Size(507, 41);
             lbAdvertencia.TabIndex = 0;
             lbAdvertencia.Text = "Estas seguro que lo quieres eliminar?";
-            lbAdvertencia.Click += lbAdvertencia_Click;
             // 
             // btSiEstoySeguro
             // 

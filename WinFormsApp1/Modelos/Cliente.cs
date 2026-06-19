@@ -8,33 +8,32 @@ namespace WinFormsApp1.Modelos
 {
     public class Cliente
     {
-        public int Id { get; set; }
+        public int IdCliente { get; set; }
         public string Dni { get; set; } = string.Empty;
 
         public string Nombre { get; set; } = string.Empty;
         public string Apellido { get; set; } = string.Empty;
         public string Telefono { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
-
         public string Localidad { get; set; } = string.Empty;
-        public List<Reserva> Reservas { get; set; } = new List<Reserva>();
 
         public Cliente() { }
 
-        public Cliente(int id, string dni, string nombre, string apellido,
-                       string telefono)
+        public Cliente(int idCliente, string dni, string nombre, string apellido,
+                       string telefono, string email, string localidad)
         {
-            Id = id;
+            IdCliente = idCliente;
             Dni = dni;
             Nombre = nombre;
             Apellido = apellido;
             Telefono = telefono;
-            Reservas = new List<Reserva>();
+            Email = email;
+            Localidad = localidad;
         }
 
         public override string ToString()
         {
-            return $"[{Id}] {Apellido}, {Nombre} | DNI: {Dni} | Tel: {Telefono} | Email: {Email} | Localidad: {Localidad} ";
+            return $"[{IdCliente}] {Apellido}, {Nombre} | DNI: {Dni} | Tel: {Telefono} | Email: {Email} | Localidad: {Localidad} ";
         }
     }
 }

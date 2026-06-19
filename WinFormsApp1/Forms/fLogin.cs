@@ -63,14 +63,9 @@ namespace WinFormsApp1.Forms
                 btIngresar_Click(this, new EventArgs());
             }
         }
-        private void fLogin_Load(object sender, EventArgs e)
-        {
+        
 
-        }
-
-        private void tbContrasena_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
+

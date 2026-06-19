@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,12 +6,13 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using WinFormsApp1.Modelos;
+using WinFormsApp1.Controladores;
 
 namespace WinFormsApp1.Forms.fReservas
 {
     public partial class fListarReservas : Form
     {
-        private List<Reserva> _listaLocalReservas = new List<Reserva>();
+        
         public fListarReservas()
         {
             InitializeComponent();
@@ -27,18 +28,12 @@ namespace WinFormsApp1.Forms.fReservas
         private void ActualizarGrilla()
         {
             dgListarReservas.DataSource = null;
-            dgListarReservas.DataSource = _listaLocalReservas;
+            dgListarReservas.DataSource = nReserva.ListarReservas();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        
 
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btAgregarLReserva_Click(object sender, EventArgs e)
         {
@@ -46,10 +41,10 @@ namespace WinFormsApp1.Forms.fReservas
 
             if(altaReserva.ShowDialog() == DialogResult.OK)
             {
-                _listaLocalReservas.Add(altaReserva.ReservaNueva);
                 ActualizarGrilla();
             }
             
         }
     }
 }
+

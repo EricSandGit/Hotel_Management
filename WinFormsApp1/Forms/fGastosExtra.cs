@@ -13,7 +13,7 @@ namespace WinFormsApp1.Forms
 {
     public partial class fGastosExtra : Form
     {
-        pEstadia repoEstadia = new pEstadia();
+        
         public fGastosExtra()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace WinFormsApp1.Forms
 
         private void fGastosExtra_Load(object sender, EventArgs e)
         {
-            List<Estadia> listaEstadia = repoEstadia.ObtenerTodos();
+            List<Estadia> listaEstadia = nEstadia.ListarEstadias();
 
             cbEstadias.DropDownStyle =ComboBoxStyle.DropDownList;
             cbEstadias.DataSource = listaEstadia;

@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp1.Forms.fClientes
+namespace WinFormsApp1.Forms.fClientes
 {
     partial class fClientesListar
     {
@@ -88,7 +88,6 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 33);
             comboBox1.TabIndex = 4;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // textBox1
             // 
@@ -112,7 +111,6 @@
             Margin = new Padding(2, 2, 2, 2);
             Name = "fClientesListar";
             Text = "fClientesListar";
-            Load += fClientesListar_Load_1;
             ((System.ComponentModel.ISupportInitialize)dataGridViewClientes).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -30,12 +30,12 @@ namespace WinFormsApp1.Controladores
      
 
         // Alta de habitación con validaciones de negocio e inconsistencias
-        public static bool AgregarHabitacion(Habitacion h)
+        public static bool CrearHabitacion(Habitacion h)
         {
             if (h == null) return false;
 
             // Validar campos obligatorios y datos consistentes
-            if (h.Numero <= 0 || h.PrecioPorNoche <= 0)
+            if (h.Numero <= 0)
                 return false;
 
             // Validar que la cantidad de camas sea válida y que haya al menos una cama
@@ -82,7 +82,7 @@ namespace WinFormsApp1.Controladores
         {
             if (h == null) return false;
             if (h.IdHabitacion <= 0)
-                return AgregarHabitacion(h);
+                return CrearHabitacion(h);
             return ActualizarHabitacion(h);
         }
 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,10 +23,7 @@ namespace WinFormsApp1.Forms.fClientes
             // 3. Guardamos el ID que nos llega en nuestra variable
             _idClienteAEliminar = idCliente;
         }
-        private void lbAdvertencia_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btNoVolver_Click(object sender, EventArgs e)
         {
@@ -46,3 +43,4 @@ namespace WinFormsApp1.Forms.fClientes
         }
     }
 }
+

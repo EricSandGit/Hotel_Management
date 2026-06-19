@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp1.Forms
+namespace WinFormsApp1.Forms
 {
     partial class fLogin
     {
@@ -109,7 +109,6 @@
             MaximizeBox = false;
             Name = "fLogin";
             Text = "fLogin";
-            Load += fLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }

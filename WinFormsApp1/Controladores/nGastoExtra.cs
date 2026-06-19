@@ -16,7 +16,7 @@ namespace WinFormsApp1.Controladores
         public static GastoExtra ObtenerGastoPorId(int id) => persistencia.ObtenerPorId(id);
 
         // Alta de gasto con validaciones de negocio (concepto obligatorio, monto positivo, estadía activa)
-        public static bool AgregarGasto(GastoExtra g)
+        public static bool CrearGasto(GastoExtra g)
         {
             if (g == null || g.IdEstadia <= 0)
                 return false;
@@ -30,8 +30,8 @@ namespace WinFormsApp1.Controladores
                 return false;
 
             // Asociar correctamente el gasto a una estadía activa
-            var estadia = new pEstadia().ObtenerPorId(g.IdEstadia);
-            if (estadia == null || estadia.IdEstadia <= 0 || estadia.Estado != "Activa")
+            var estadia = nEstadia.ObtenerEstadiaPorId(g.IdEstadia);
+            if (estadia == null || estadia.IdEstadia <= 0 || !string.Equals(estadia.Estado, "Activa", StringComparison.OrdinalIgnoreCase))
                 return false;
 
             int id = persistencia.Agregar(g);
@@ -53,7 +53,7 @@ namespace WinFormsApp1.Controladores
                 return false;
 
             // Verificar existencia de la estadía asociada
-            var estadia = new pEstadia().ObtenerPorId(g.IdEstadia);
+            var estadia = nEstadia.ObtenerEstadiaPorId(g.IdEstadia);
             if (estadia == null || estadia.IdEstadia <= 0)
                 return false;
 

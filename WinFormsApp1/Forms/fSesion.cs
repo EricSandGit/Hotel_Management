@@ -38,7 +38,7 @@ namespace WinFormsApp1.Forms
             pnLateral.BackColor = colorBarraLateral;
 
             lbBienvenida.Text = $"Bienvenido, \n{_usuario.Nombre}!";
-            lbRol.Text = $"- {new pRol().ObtenerPorId(_usuario.IdRol).Nombre} -";
+            lbRol.Text = $"- {nRol.ObtenerRolPorId(_usuario.IdRol).Nombre} -";
 
             foreach (Control control in pnLateral.Controls)
             {
@@ -98,10 +98,10 @@ namespace WinFormsApp1.Forms
             {
                 fh.TopLevel = false;             // No es una ventana independiente
                 fh.FormBorderStyle = FormBorderStyle.None; // Sacar la barra de arriba 
-                fh.Dock = DockStyle.Fill;        // El form ocupa todo el tamaño del panel
+                fh.Dock = DockStyle.Fill;        // El form ocupa todo el tamaï¿½o del panel
 
                 this.pnContenedor.Controls.Add(fh); 
-                this.pnContenedor.Tag = fh; // Guarda en el panel un tag de lo que se está viendo
+                this.pnContenedor.Tag = fh; // Guarda en el panel un tag de lo que se estï¿½ viendo
                 fh.Show();                       
             }
         }
@@ -139,7 +139,7 @@ namespace WinFormsApp1.Forms
         {
             SeleccionarBoton((Button)sender);
 
-            AbrirFormEnPanel(new fAltaReserva());
+            AbrirFormEnPanel(new fAltaReserva(_usuario.IdUsuario));
         }
         private void btRol_Click(object sender, EventArgs e)
         {

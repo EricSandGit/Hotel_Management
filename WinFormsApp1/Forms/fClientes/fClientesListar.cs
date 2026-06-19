@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +13,7 @@ namespace WinFormsApp1.Forms.fClientes
 {
     public partial class fClientesListar : Form
     {
-        private List<Cliente> _listaLocalClientes = new List<Cliente>();
+        
         public fClientesListar()
         {
             InitializeComponent();
@@ -43,10 +43,7 @@ namespace WinFormsApp1.Forms.fClientes
         }
 
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btEliminarCliente_Click(object sender, EventArgs e)
         {
@@ -56,7 +53,7 @@ namespace WinFormsApp1.Forms.fClientes
 
                 Cliente clienteSeleccionado = (Cliente)dataGridViewClientes.SelectedRows[0].DataBoundItem;
 
-                fClientesEliminar Baja = new fClientesEliminar(clienteSeleccionado.Id);
+                fClientesEliminar Baja = new fClientesEliminar(clienteSeleccionado.IdCliente);
 
                 Baja.ShowDialog();
                 ActualizarGrilla();
@@ -88,9 +85,7 @@ namespace WinFormsApp1.Forms.fClientes
             }
         }
 
-        private void fClientesListar_Load_1(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
+

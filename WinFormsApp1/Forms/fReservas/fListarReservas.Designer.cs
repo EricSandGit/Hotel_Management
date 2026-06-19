@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp1.Forms.fReservas
+namespace WinFormsApp1.Forms.fReservas
 {
     partial class fListarReservas
     {
@@ -45,7 +45,6 @@
             dgListarReservas.RowHeadersWidth = 62;
             dgListarReservas.Size = new Size(850, 421);
             dgListarReservas.TabIndex = 0;
-            dgListarReservas.CellContentClick += dataGridView1_CellContentClick;
             // 
             // textBox1
             // 
@@ -61,7 +60,6 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(135, 33);
             comboBox1.TabIndex = 2;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // btAgregarLReserva
             // 
