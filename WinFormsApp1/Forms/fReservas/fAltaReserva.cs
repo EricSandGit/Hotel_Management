@@ -13,6 +13,8 @@ namespace WinFormsApp1.Forms
 {
     public partial class fAltaReserva : Form
     {
+        public Reserva ReservaNueva { get; private set;  }
+
         private int idUsuarioLogueado = 1;
 
         public fAltaReserva()

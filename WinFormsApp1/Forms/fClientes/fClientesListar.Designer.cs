@@ -40,17 +40,19 @@
             // dataGridViewClientes
             // 
             dataGridViewClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewClientes.Location = new Point(30, 28);
+            dataGridViewClientes.Location = new Point(18, 17);
+            dataGridViewClientes.Margin = new Padding(2, 2, 2, 2);
             dataGridViewClientes.Name = "dataGridViewClientes";
             dataGridViewClientes.RowHeadersWidth = 102;
-            dataGridViewClientes.Size = new Size(1677, 779);
+            dataGridViewClientes.Size = new Size(986, 475);
             dataGridViewClientes.TabIndex = 0;
             // 
             // btEditarCliente
             // 
-            btEditarCliente.Location = new Point(1462, 837);
+            btEditarCliente.Location = new Point(860, 510);
+            btEditarCliente.Margin = new Padding(2, 2, 2, 2);
             btEditarCliente.Name = "btEditarCliente";
-            btEditarCliente.Size = new Size(245, 76);
+            btEditarCliente.Size = new Size(144, 46);
             btEditarCliente.TabIndex = 1;
             btEditarCliente.Text = "Editar";
             btEditarCliente.UseVisualStyleBackColor = true;
@@ -58,9 +60,10 @@
             // 
             // btEliminarCliente
             // 
-            btEliminarCliente.Location = new Point(1199, 837);
+            btEliminarCliente.Location = new Point(705, 510);
+            btEliminarCliente.Margin = new Padding(2, 2, 2, 2);
             btEliminarCliente.Name = "btEliminarCliente";
-            btEliminarCliente.Size = new Size(245, 76);
+            btEliminarCliente.Size = new Size(144, 46);
             btEliminarCliente.TabIndex = 2;
             btEliminarCliente.Text = "Eliminar";
             btEliminarCliente.UseVisualStyleBackColor = true;
@@ -68,9 +71,10 @@
             // 
             // btAgregarCliente
             // 
-            btAgregarCliente.Location = new Point(928, 837);
+            btAgregarCliente.Location = new Point(546, 510);
+            btAgregarCliente.Margin = new Padding(2, 2, 2, 2);
             btAgregarCliente.Name = "btAgregarCliente";
-            btAgregarCliente.Size = new Size(245, 76);
+            btAgregarCliente.Size = new Size(144, 46);
             btAgregarCliente.TabIndex = 3;
             btAgregarCliente.Text = "Agregar";
             btAgregarCliente.UseVisualStyleBackColor = true;
@@ -79,32 +83,36 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(701, 852);
+            comboBox1.Location = new Point(412, 520);
+            comboBox1.Margin = new Padding(2, 2, 2, 2);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(203, 49);
+            comboBox1.Size = new Size(121, 33);
             comboBox1.TabIndex = 4;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(30, 852);
+            textBox1.Location = new Point(18, 520);
+            textBox1.Margin = new Padding(2, 2, 2, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(644, 47);
+            textBox1.Size = new Size(380, 31);
             textBox1.TabIndex = 5;
             // 
             // fClientesListar
             // 
-            AutoScaleDimensions = new SizeF(17F, 41F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1745, 968);
+            ClientSize = new Size(1026, 590);
             Controls.Add(textBox1);
             Controls.Add(comboBox1);
             Controls.Add(btAgregarCliente);
             Controls.Add(btEliminarCliente);
             Controls.Add(btEditarCliente);
             Controls.Add(dataGridViewClientes);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "fClientesListar";
             Text = "fClientesListar";
+            Load += fClientesListar_Load_1;
             ((System.ComponentModel.ISupportInitialize)dataGridViewClientes).EndInit();
             ResumeLayout(false);
             PerformLayout();

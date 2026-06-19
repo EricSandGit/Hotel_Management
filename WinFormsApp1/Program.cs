@@ -1,6 +1,7 @@
 using WinFormsApp1.Controladores;
 using WinFormsApp1.Forms;
 using WinFormsApp1.Forms.fClientes;
+using WinFormsApp1.Forms.fReservas;
 using WinFormsApp1.Persistencia;
 
 namespace WinFormsApp1
@@ -18,7 +19,7 @@ namespace WinFormsApp1
             ApplicationConfiguration.Initialize();
             Conexion.OpenConexion();
 
-            Application.Run(new fLogin());
+            Application.Run(new fListarReservas());
             Conexion.CloseConexion();
         }
     }
