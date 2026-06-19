@@ -16,9 +16,7 @@ namespace WinFormsApp1.Forms
     {
         Usuario _usuario;
         Form _formLogin;
-        Color colorFondoForm = Color.FromArgb(45, 45, 45);
-        Color colorBarraLateral = Color.FromArgb(39, 56, 99);
-        Color colorSecundarioBotones = Color.FromArgb(43, 60, 110);
+        Color colorBarraLateral = Color.FromArgb(30,30,30);
         Color colorBotonSeleccionado = Color.FromArgb(60, 60, 65);
 
         Button botonActivoActual = null;
@@ -29,54 +27,19 @@ namespace WinFormsApp1.Forms
             _formLogin = formLogin;
             this.StartPosition = FormStartPosition.CenterScreen;
             inicializarForm();
-            this.BackColor = colorFondoForm;
 
         }
         public void inicializarForm()
         {
-            colorBarraLateral = Color.FromArgb(30, 30, 30);
-            colorSecundarioBotones = Color.FromArgb(45, 45, 48);
-
-
-            pnLateral.BackColor = colorBarraLateral;
+          
 
             lbBienvenida.Text = $"Bienvenido, \n{_usuario.Nombre}!";
             lbRol.Text = $"- {new pRol().ObtenerPorId(_usuario.IdRol).Nombre} -";
 
-            foreach (Control control in pnLateral.Controls)
-            {
-                if (control is Button boton)
-                {
-                    boton.FlatStyle = FlatStyle.Flat;
-                    boton.FlatAppearance.BorderSize = 0;
-                    boton.BackColor = colorBarraLateral;
-                    boton.ForeColor = Color.FromArgb(220, 220, 220);
-                }
-            }
         }
 
 
-        private void button_MouseEnter(object sender, EventArgs e)
-        {
-            if (sender is Button botonActivo)
-            {
-                if (botonActivo != botonActivoActual)
-                {
-                    botonActivo.BackColor = colorSecundarioBotones;
-                }
-            }
-        }
 
-        private void button_MouseLeave(object sender, EventArgs e)
-        {
-            if (sender is Button botonActivo)
-            {
-                if (botonActivo != botonActivoActual)
-                {
-                    botonActivo.BackColor = colorBarraLateral;
-                }
-            }
-        }
         private void SeleccionarBoton(Button botonClickeado)
         {
             // Boton seleccionado anterior

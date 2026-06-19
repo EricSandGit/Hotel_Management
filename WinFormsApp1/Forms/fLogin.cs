@@ -14,11 +14,16 @@ namespace WinFormsApp1.Forms
 {
     public partial class fLogin : Form
     {
+        Color colorFondoForm = Color.FromArgb(45, 45, 45);
+        Color colorBotones = Color.FromArgb(30, 30, 30);
+        Color colorTextoGrisClaro = Color.FromArgb(220, 220, 220);
+        Color colorSecundarioBotones = Color.FromArgb(45, 45, 48); // El color de fSesion para el hover
+
         public fLogin()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-        }
+        }       
         public void ReiniciarFormulario()
         {
             //Borramos lo escrito en textboxes
@@ -26,14 +31,15 @@ namespace WinFormsApp1.Forms
             tbContrasena.Clear();
 
             // Ponemos devuelta los colores default de los labels en caso de que haya habido un error
-            lbUsuario.ForeColor = SystemColors.ControlText; 
+            lbUsuario.ForeColor = colorTextoGrisClaro;
             lbUsuario.Font = new Font(lbUsuario.Font, FontStyle.Regular);
-            lbContrasena.ForeColor = SystemColors.ControlText;
+            lbContrasena.ForeColor = colorTextoGrisClaro;
             lbContrasena.Font = new Font(lbContrasena.Font, FontStyle.Regular);
 
             // Ponemos el cursor en el textBox para escribir el usuario
             tbUsuario.Focus();
         }
+
         private void btIngresar_Click(object sender, EventArgs e)
         {
             string usernameIngresado = tbUsuario.Text;
@@ -57,6 +63,7 @@ namespace WinFormsApp1.Forms
                 MessageBox.Show(this, "Usuario o contraseña incorrectos.\nIngrese nuevamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void tbUsuario_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -77,14 +84,18 @@ namespace WinFormsApp1.Forms
                 btIngresar_Click(this, new EventArgs());
             }
         }
+
         private void fLogin_Load(object sender, EventArgs e)
         {
-
         }
 
         private void tbContrasena_TextChanged(object sender, EventArgs e)
         {
+        }
 
+        private void btSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
