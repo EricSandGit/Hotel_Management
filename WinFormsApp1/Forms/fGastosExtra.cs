@@ -28,7 +28,6 @@ namespace WinFormsApp1.Forms
             cbEstadias.DisplayMember = "IdEstadia";
             cbEstadias.ValueMember = "IdEstadia";
 
-            cbEstadias.SelectedIndex = 0;
         }
 
         private void cbEstadias_Click(object sender, EventArgs e)

@@ -19,7 +19,7 @@ namespace WinFormsApp1
             ApplicationConfiguration.Initialize();
             Conexion.OpenConexion();
 
-            Application.Run(new fListarReservas());
+            Application.Run(new fLogin());
             Conexion.CloseConexion();
         }
     }
