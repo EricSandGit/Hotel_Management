@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using WinFormsApp1.Controladores;
 using WinFormsApp1.Modelos;
 
 namespace WinFormsApp1.Forms.fClientes
@@ -20,22 +21,28 @@ namespace WinFormsApp1.Forms.fClientes
 
         private void btGuardar_Click_1(object sender, EventArgs e)
         {
-            // Armamos el objeto con lo que el usuario escribió en los textboxes
-            ClienteNuevo = new Cliente
             {
-                Nombre = textBox1.Text,
-                Apellido = textBox2.Text,
-                Dni = textBox3.Text,
-                Telefono = textBox4.Text,
-                Email = textBox5.Text,
-                Localidad = textBox6.Text
-            };
+                ClienteNuevo = new Cliente
+                {
+                    Nombre = textBox1.Text,
+                    Apellido = textBox2.Text,
+                    Dni = textBox3.Text,
+                    Telefono = textBox4.Text,
+                    Email = textBox5.Text,
+                    Localidad = textBox6.Text
+                };
 
-            // Le avisamos al sistema que la operación fue un éxito (OK)
-            this.DialogResult = DialogResult.OK;
+                bool exito = nCliente.AgregarCliente(ClienteNuevo);
 
-            // Cerramos la ventana de Alta
-            this.Close();
+                if (!exito)
+                {
+                    MessageBox.Show("No se pudo guardar el cliente. Verificá que todos los campos estén completos y que el documento no esté duplicado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // no cerramos la ventana, dejamos que corrija
+                }
+
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
 
         private void btCancelar_Click_1(object sender, EventArgs e)
