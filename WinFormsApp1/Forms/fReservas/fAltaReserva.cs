@@ -62,12 +62,12 @@ namespace WinFormsApp1.Forms
             dtResSalida.MinDate = dtResLlegada.Value.AddDays(1);
         }
 
-        // L�gica del bot�n Aceptar
+        // Logica del boton Aceptar
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (cbResCliente.SelectedValue == null || cbResHabitaciones.SelectedValue == null)
             {
-                MessageBox.Show("Por favor, seleccione un cliente y una habitaci�n.", "Datos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor, seleccione un cliente y una habitacion.", "Datos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -77,7 +77,7 @@ namespace WinFormsApp1.Forms
 
             if (totalPersonas == 0)
             {
-                MessageBox.Show("La reserva debe tener al menos 1 persona.", "Atenci�n", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La reserva debe tener al menos 1 persona.", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -96,7 +96,7 @@ namespace WinFormsApp1.Forms
 
             if (guardadoExitoso)
             {
-                MessageBox.Show("�La reserva fue generada y guardada con �xito!", "�xito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("La reserva fue generada y guardada con exito!", "exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
@@ -104,14 +104,14 @@ namespace WinFormsApp1.Forms
             {
                 MessageBox.Show("No se pudo registrar la reserva.\n\n" +
                                 "Posibles causas:\n" +
-                                "- La habitaci�n ya est� ocupada en esas fechas.\n" +
+                                "- La habitacion ya est ocupada en esas fechas.\n" +
                                 "- La cantidad total de personas supera la capacidad de las camas.\n" +
                                 "- Faltan datos obligatorios.",
-                                "Error de Validaci�n", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                "Error de Validacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        // L�gica del bot�n Cancelar
+        // Logica del boton Cancelar
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;

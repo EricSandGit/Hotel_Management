@@ -117,7 +117,7 @@ namespace WinFormsApp1.Forms
             btSalir.TabIndex = 6;
             btSalir.Text = "Salir";
             btSalir.UseVisualStyleBackColor = false;
-            btSalir.Click += btSalir_Click;
+           
             // 
             // fLogin
             // 

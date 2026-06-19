@@ -17,7 +17,7 @@ namespace WinFormsApp1.Forms.fClientes
         public fClientesListar()
         {
             InitializeComponent();
-            this.Load += fClientesListar_Load; // Enganchamos el evento
+            this.Load += fClientesListar_Load; 
         }
 
 
