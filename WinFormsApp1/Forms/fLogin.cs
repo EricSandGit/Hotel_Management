@@ -19,7 +19,21 @@ namespace WinFormsApp1.Forms
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
+        public void ReiniciarFormulario()
+        {
+            //Borramos lo escrito en textboxes
+            tbUsuario.Clear();
+            tbContrasena.Clear();
 
+            // Ponemos devuelta los colores default de los labels en caso de que haya habido un error
+            lbUsuario.ForeColor = SystemColors.ControlText; 
+            lbUsuario.Font = new Font(lbUsuario.Font, FontStyle.Regular);
+            lbContrasena.ForeColor = SystemColors.ControlText;
+            lbContrasena.Font = new Font(lbContrasena.Font, FontStyle.Regular);
+
+            // Ponemos el cursor en el textBox para escribir el usuario
+            tbUsuario.Focus();
+        }
         private void btIngresar_Click(object sender, EventArgs e)
         {
             string usernameIngresado = tbUsuario.Text;
@@ -29,7 +43,7 @@ namespace WinFormsApp1.Forms
 
             if (usuarioEncontrado != null)
             {
-                fSesion fs = new fSesion(usuarioEncontrado);
+                fSesion fs = new fSesion(usuarioEncontrado, this);
                 fs.Show();
                 this.Hide();
             }

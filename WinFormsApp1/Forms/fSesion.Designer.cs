@@ -31,8 +31,8 @@
             lbBienvenida = new Label();
             lbRol = new Label();
             pnLateral = new Panel();
+            btSalir = new Button();
             btUsuario = new Button();
-            btRol = new Button();
             btReserva = new Button();
             btHabitacion = new Button();
             btGastoExtra = new Button();
@@ -48,9 +48,10 @@
             lbBienvenida.AutoSize = true;
             lbBienvenida.Font = new Font("Segoe UI", 15F);
             lbBienvenida.ForeColor = SystemColors.ButtonHighlight;
-            lbBienvenida.Location = new Point(23, 9);
+            lbBienvenida.Location = new Point(18, 7);
+            lbBienvenida.Margin = new Padding(2, 0, 2, 0);
             lbBienvenida.Name = "lbBienvenida";
-            lbBienvenida.Size = new Size(183, 41);
+            lbBienvenida.Size = new Size(151, 35);
             lbBienvenida.TabIndex = 0;
             lbBienvenida.Text = "Bienvenido!!";
             // 
@@ -59,17 +60,18 @@
             lbRol.AutoSize = true;
             lbRol.Font = new Font("Segoe UI", 12F, FontStyle.Underline, GraphicsUnit.Point, 0);
             lbRol.ForeColor = SystemColors.ButtonHighlight;
-            lbRol.Location = new Point(3, 619);
+            lbRol.Location = new Point(0, 452);
+            lbRol.Margin = new Padding(2, 0, 2, 0);
             lbRol.Name = "lbRol";
-            lbRol.Size = new Size(67, 32);
+            lbRol.Size = new Size(56, 28);
             lbRol.TabIndex = 1;
             lbRol.Text = "-Rol-";
             // 
             // pnLateral
             // 
             pnLateral.BackColor = Color.MidnightBlue;
+            pnLateral.Controls.Add(btSalir);
             pnLateral.Controls.Add(btUsuario);
-            pnLateral.Controls.Add(btRol);
             pnLateral.Controls.Add(btReserva);
             pnLateral.Controls.Add(btHabitacion);
             pnLateral.Controls.Add(btGastoExtra);
@@ -79,9 +81,25 @@
             pnLateral.Controls.Add(lbBienvenida);
             pnLateral.Controls.Add(lbRol);
             pnLateral.Location = new Point(0, 0);
+            pnLateral.Margin = new Padding(2);
             pnLateral.Name = "pnLateral";
-            pnLateral.Size = new Size(281, 657);
+            pnLateral.Size = new Size(225, 526);
             pnLateral.TabIndex = 2;
+            // 
+            // btSalir
+            // 
+            btSalir.BackColor = SystemColors.ActiveCaption;
+            btSalir.FlatAppearance.BorderSize = 0;
+            btSalir.FlatStyle = FlatStyle.Flat;
+            btSalir.ForeColor = SystemColors.ButtonHighlight;
+            btSalir.Location = new Point(-1, 482);
+            btSalir.Margin = new Padding(2);
+            btSalir.Name = "btSalir";
+            btSalir.Size = new Size(225, 42);
+            btSalir.TabIndex = 10;
+            btSalir.Text = "Salir";
+            btSalir.UseVisualStyleBackColor = false;
+            btSalir.Click += btSalir_Click;
             // 
             // btUsuario
             // 
@@ -89,9 +107,10 @@
             btUsuario.FlatAppearance.BorderSize = 0;
             btUsuario.FlatStyle = FlatStyle.Flat;
             btUsuario.ForeColor = SystemColors.ButtonHighlight;
-            btUsuario.Location = new Point(0, 518);
+            btUsuario.Location = new Point(0, 372);
+            btUsuario.Margin = new Padding(2);
             btUsuario.Name = "btUsuario";
-            btUsuario.Size = new Size(281, 53);
+            btUsuario.Size = new Size(225, 42);
             btUsuario.TabIndex = 9;
             btUsuario.Text = "Usuarios";
             btUsuario.UseVisualStyleBackColor = false;
@@ -99,31 +118,16 @@
             btUsuario.MouseEnter += button_MouseEnter;
             btUsuario.MouseLeave += button_MouseLeave;
             // 
-            // btRol
-            // 
-            btRol.BackColor = SystemColors.ActiveCaption;
-            btRol.FlatAppearance.BorderSize = 0;
-            btRol.FlatStyle = FlatStyle.Flat;
-            btRol.ForeColor = SystemColors.ButtonHighlight;
-            btRol.Location = new Point(0, 464);
-            btRol.Name = "btRol";
-            btRol.Size = new Size(281, 53);
-            btRol.TabIndex = 8;
-            btRol.Text = "Roles";
-            btRol.UseVisualStyleBackColor = false;
-            btRol.Click += btRol_Click;
-            btRol.MouseEnter += button_MouseEnter;
-            btRol.MouseLeave += button_MouseLeave;
-            // 
             // btReserva
             // 
             btReserva.BackColor = SystemColors.ActiveCaption;
             btReserva.FlatAppearance.BorderSize = 0;
             btReserva.FlatStyle = FlatStyle.Flat;
             btReserva.ForeColor = SystemColors.ButtonHighlight;
-            btReserva.Location = new Point(0, 410);
+            btReserva.Location = new Point(0, 329);
+            btReserva.Margin = new Padding(2);
             btReserva.Name = "btReserva";
-            btReserva.Size = new Size(281, 53);
+            btReserva.Size = new Size(225, 42);
             btReserva.TabIndex = 7;
             btReserva.Text = "Reservas";
             btReserva.UseVisualStyleBackColor = false;
@@ -137,9 +141,10 @@
             btHabitacion.FlatAppearance.BorderSize = 0;
             btHabitacion.FlatStyle = FlatStyle.Flat;
             btHabitacion.ForeColor = SystemColors.ButtonHighlight;
-            btHabitacion.Location = new Point(0, 356);
+            btHabitacion.Location = new Point(0, 286);
+            btHabitacion.Margin = new Padding(2);
             btHabitacion.Name = "btHabitacion";
-            btHabitacion.Size = new Size(281, 53);
+            btHabitacion.Size = new Size(225, 42);
             btHabitacion.TabIndex = 6;
             btHabitacion.Text = "Habitaciones";
             btHabitacion.UseVisualStyleBackColor = false;
@@ -153,9 +158,10 @@
             btGastoExtra.FlatAppearance.BorderSize = 0;
             btGastoExtra.FlatStyle = FlatStyle.Flat;
             btGastoExtra.ForeColor = SystemColors.ButtonHighlight;
-            btGastoExtra.Location = new Point(0, 302);
+            btGastoExtra.Location = new Point(0, 243);
+            btGastoExtra.Margin = new Padding(2);
             btGastoExtra.Name = "btGastoExtra";
-            btGastoExtra.Size = new Size(281, 53);
+            btGastoExtra.Size = new Size(225, 42);
             btGastoExtra.TabIndex = 5;
             btGastoExtra.Text = "Gastos Extras";
             btGastoExtra.UseVisualStyleBackColor = false;
@@ -169,9 +175,10 @@
             btEstadia.FlatAppearance.BorderSize = 0;
             btEstadia.FlatStyle = FlatStyle.Flat;
             btEstadia.ForeColor = SystemColors.ButtonHighlight;
-            btEstadia.Location = new Point(0, 248);
+            btEstadia.Location = new Point(0, 200);
+            btEstadia.Margin = new Padding(2);
             btEstadia.Name = "btEstadia";
-            btEstadia.Size = new Size(281, 53);
+            btEstadia.Size = new Size(225, 42);
             btEstadia.TabIndex = 4;
             btEstadia.Text = "Estadias";
             btEstadia.UseVisualStyleBackColor = false;
@@ -185,9 +192,10 @@
             btCuenta.FlatAppearance.BorderSize = 0;
             btCuenta.FlatStyle = FlatStyle.Flat;
             btCuenta.ForeColor = SystemColors.ButtonHighlight;
-            btCuenta.Location = new Point(0, 194);
+            btCuenta.Location = new Point(0, 157);
+            btCuenta.Margin = new Padding(2);
             btCuenta.Name = "btCuenta";
-            btCuenta.Size = new Size(281, 53);
+            btCuenta.Size = new Size(225, 42);
             btCuenta.TabIndex = 3;
             btCuenta.Text = "Cuentas";
             btCuenta.UseVisualStyleBackColor = false;
@@ -201,9 +209,10 @@
             btCliente.FlatAppearance.BorderSize = 0;
             btCliente.FlatStyle = FlatStyle.Flat;
             btCliente.ForeColor = SystemColors.ButtonHighlight;
-            btCliente.Location = new Point(0, 140);
+            btCliente.Location = new Point(0, 114);
+            btCliente.Margin = new Padding(2);
             btCliente.Name = "btCliente";
-            btCliente.Size = new Size(281, 53);
+            btCliente.Size = new Size(225, 42);
             btCliente.TabIndex = 2;
             btCliente.Text = "Clientes";
             btCliente.UseVisualStyleBackColor = false;
@@ -213,20 +222,22 @@
             // 
             // pnContenedor
             // 
-            pnContenedor.Location = new Point(281, 0);
+            pnContenedor.Location = new Point(225, 0);
+            pnContenedor.Margin = new Padding(2);
             pnContenedor.Name = "pnContenedor";
-            pnContenedor.Size = new Size(905, 657);
+            pnContenedor.Size = new Size(724, 526);
             pnContenedor.TabIndex = 3;
             // 
             // fSesion
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1186, 656);
+            ClientSize = new Size(949, 525);
             ControlBox = false;
             Controls.Add(pnContenedor);
             Controls.Add(pnLateral);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2);
             MaximizeBox = false;
             Name = "fSesion";
             Text = "fSesion";
@@ -243,11 +254,11 @@
         private Button btCliente;
         private Button btCuenta;
         private Button btUsuario;
-        private Button btRol;
         private Button btReserva;
         private Button btHabitacion;
         private Button btGastoExtra;
         private Button btEstadia;
         private Panel pnContenedor;
+        private Button btSalir;
     }
 }
