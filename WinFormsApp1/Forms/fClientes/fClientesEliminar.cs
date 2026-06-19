@@ -35,7 +35,14 @@ namespace WinFormsApp1.Forms.fClientes
 
         private void btSiEstoySeguro_Click(object sender, EventArgs e)
         {
-            nCliente.EliminarCliente(_idClienteAEliminar);
+            bool exito = nCliente.EliminarCliente(_idClienteAEliminar);
+
+            if (!exito)
+            {
+                MessageBox.Show("No se pudo eliminar el cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            this.Close();
         }
     }
 }
