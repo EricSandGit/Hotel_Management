@@ -37,15 +37,16 @@ namespace WinFormsApp1.Persistencia
 
         public Cuenta ObtenerPorId(int id)
         {
-            Cuenta cuenta = new Cuenta();
+            Cuenta cuenta = null;
             using (SqliteCommand sqliteCommand = new SqliteCommand("SELECT id_cuenta, id_estadia, total_habitacion, total_gastos, total_general, monto_pagado, estado FROM CUENTA WHERE id_cuenta = @id"))
             {
                 sqliteCommand.Parameters.Add(new SqliteParameter("@id", id));
                 sqliteCommand.Connection = Conexion.MiConexion;
                 using (SqliteDataReader dataReader = sqliteCommand.ExecuteReader())
                 {
-                    while (dataReader.Read())
+                    if (dataReader.Read())
                     {
+                        cuenta = new Cuenta();
                         cuenta.IdCuenta = dataReader.GetInt32(0);
                         cuenta.IdEstadia = dataReader.GetInt32(1);
                         cuenta.TotalHabitacion = dataReader.GetDouble(2);

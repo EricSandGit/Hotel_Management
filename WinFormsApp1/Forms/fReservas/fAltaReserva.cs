@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,13 +13,18 @@ namespace WinFormsApp1.Forms
 {
     public partial class fAltaReserva : Form
     {
-        public Reserva ReservaNueva { get; private set;  }
+        public Reserva? ReservaNueva { get; private set;  }
 
         private int idUsuarioLogueado = 1;
 
-        public fAltaReserva()
+        public fAltaReserva() : this(1)
+        {
+        }
+
+        public fAltaReserva(int idUsuarioLogueado)
         {
             InitializeComponent();
+            this.idUsuarioLogueado = idUsuarioLogueado;
 
             dtResLlegada.MinDate = DateTime.Today;
             dtResSalida.MinDate = DateTime.Today.AddDays(1);
@@ -33,7 +38,7 @@ namespace WinFormsApp1.Forms
             
             var clientesParaElCombo = listaClientes.Select(c => new
             {
-                Id = c.Id,
+                Id = c.IdCliente,
                 
                 NombreVisible = $"{c.Apellido}, {c.Nombre} (DNI: {c.Dni})"
             }).ToList();
@@ -57,12 +62,12 @@ namespace WinFormsApp1.Forms
             dtResSalida.MinDate = dtResLlegada.Value.AddDays(1);
         }
 
-        // Lógica del botón Aceptar
+        // Logica del boton Aceptar
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (cbResCliente.SelectedValue == null || cbResHabitaciones.SelectedValue == null)
             {
-                MessageBox.Show("Por favor, seleccione un cliente y una habitación.", "Datos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor, seleccione un cliente y una habitacion.", "Datos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -72,7 +77,7 @@ namespace WinFormsApp1.Forms
 
             if (totalPersonas == 0)
             {
-                MessageBox.Show("La reserva debe tener al menos 1 persona.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La reserva debe tener al menos 1 persona.", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -91,7 +96,7 @@ namespace WinFormsApp1.Forms
 
             if (guardadoExitoso)
             {
-                MessageBox.Show("¡La reserva fue generada y guardada con éxito!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("La reserva fue generada y guardada con exito!", "exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
@@ -99,14 +104,14 @@ namespace WinFormsApp1.Forms
             {
                 MessageBox.Show("No se pudo registrar la reserva.\n\n" +
                                 "Posibles causas:\n" +
-                                "- La habitación ya está ocupada en esas fechas.\n" +
+                                "- La habitacion ya est ocupada en esas fechas.\n" +
                                 "- La cantidad total de personas supera la capacidad de las camas.\n" +
                                 "- Faltan datos obligatorios.",
-                                "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                "Error de Validacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        // Lógica del botón Cancelar
+        // Logica del boton Cancelar
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;

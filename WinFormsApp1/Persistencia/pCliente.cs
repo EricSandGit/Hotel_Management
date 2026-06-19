@@ -20,7 +20,7 @@ namespace WinFormsApp1.Persistencia
                     while (dataReader.Read())
                     {
                         Cliente cliente = new Cliente();
-                        cliente.Id = dataReader.GetInt32(0);
+                        cliente.IdCliente = dataReader.GetInt32(0);
                         cliente.Nombre = dataReader.GetString(1);
                         cliente.Apellido = dataReader.GetString(2);
                         cliente.Dni = dataReader.GetString(3);
@@ -37,16 +37,17 @@ namespace WinFormsApp1.Persistencia
 
         public Cliente ObtenerPorId(int id)
         {
-            Cliente cliente = new Cliente();
+            Cliente cliente = null;
             using (SqliteCommand sqliteCommand = new SqliteCommand("SELECT id_cliente, nombre, apellido, nro_documento, telefono, email, localidad FROM CLIENTE WHERE id_cliente = @id"))
             {
                 sqliteCommand.Parameters.Add(new SqliteParameter("@id", id));
                 sqliteCommand.Connection = Conexion.MiConexion;
                 using (SqliteDataReader dataReader = sqliteCommand.ExecuteReader())
                 {
-                    while (dataReader.Read())
+                    if (dataReader.Read())
                     {
-                        cliente.Id = dataReader.GetInt32(0);
+                        cliente = new Cliente();
+                        cliente.IdCliente = dataReader.GetInt32(0);
                         cliente.Nombre = dataReader.GetString(1);
                         cliente.Apellido = dataReader.GetString(2);
                         cliente.Dni = dataReader.GetString(3);
@@ -75,9 +76,9 @@ namespace WinFormsApp1.Persistencia
                 sqliteCommand.Parameters.Add(new SqliteParameter("@Localidad", string.IsNullOrEmpty(entidad.Localidad) ? (object)DBNull.Value : entidad.Localidad));
                 sqliteCommand.Connection = Conexion.MiConexion;
 
-                entidad.Id = Convert.ToInt32(sqliteCommand.ExecuteScalar());
+                entidad.IdCliente = Convert.ToInt32(sqliteCommand.ExecuteScalar());
             }
-            return entidad.Id;
+            return entidad.IdCliente;
         }
 
         public bool Actualizar(Cliente entidad)
@@ -93,7 +94,7 @@ namespace WinFormsApp1.Persistencia
                 sqliteCommand.Parameters.Add(new SqliteParameter("@Telefono", string.IsNullOrEmpty(entidad.Telefono) ? (object)DBNull.Value : entidad.Telefono));
                 sqliteCommand.Parameters.Add(new SqliteParameter("@Email", string.IsNullOrEmpty(entidad.Email) ? (object)DBNull.Value : entidad.Email));
                 sqliteCommand.Parameters.Add(new SqliteParameter("@Localidad", string.IsNullOrEmpty(entidad.Localidad) ? (object)DBNull.Value : entidad.Localidad));
-                sqliteCommand.Parameters.Add(new SqliteParameter("@Id", entidad.Id));
+                sqliteCommand.Parameters.Add(new SqliteParameter("@Id", entidad.IdCliente));
                 sqliteCommand.Connection = Conexion.MiConexion;
                 int rowsAffected = sqliteCommand.ExecuteNonQuery();
                 return rowsAffected > 0;

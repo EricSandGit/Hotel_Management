@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +12,7 @@ namespace WinFormsApp1.Forms.fClientes
 {
     public partial class fClientesAlta : Form
     {
-        public Cliente ClienteNuevo { get; private set; }
+        public Cliente? ClienteNuevo { get; private set; }
 
         public fClientesAlta()
         {
@@ -32,11 +32,11 @@ namespace WinFormsApp1.Forms.fClientes
                     Localidad = textBox6.Text
                 };
 
-                bool exito = nCliente.AgregarCliente(ClienteNuevo);
+                bool exito = nCliente.CrearCliente(ClienteNuevo);
 
                 if (!exito)
                 {
-                    MessageBox.Show("No se pudo guardar el cliente. Verificá que todos los campos estén completos y que el documento no esté duplicado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se pudo guardar el cliente. Verific� que todos los campos est�n completos y que el documento no est� duplicado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return; // no cerramos la ventana, dejamos que corrija
                 }
 

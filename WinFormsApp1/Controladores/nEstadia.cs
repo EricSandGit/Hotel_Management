@@ -16,7 +16,7 @@ namespace WinFormsApp1.Controladores
         public static Estadia ObtenerEstadiaPorId(int id) => persistencia.ObtenerPorId(id);
 
         // Alta de estadía (manual)
-        public static bool AgregarEstadia(Estadia e)
+        public static bool CrearEstadia(Estadia e)
         {
             if (e == null || e.IdReserva <= 0 || e.IdUsuario <= 0)
                 return false;
@@ -89,7 +89,7 @@ namespace WinFormsApp1.Controladores
         public static bool RegistrarCheckOut(int idEstadia)
         {
             var estadia = persistencia.ObtenerPorId(idEstadia);
-            if (estadia == null || estadia.IdEstadia <= 0 || estadia.Estado == "Finalizada") 
+            if (estadia == null || estadia.IdEstadia <= 0 || string.Equals(estadia.Estado, "Finalizada", StringComparison.OrdinalIgnoreCase)) 
                 return false;
 
             // Finalizar la estadía

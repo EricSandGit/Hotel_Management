@@ -35,15 +35,16 @@ namespace WinFormsApp1.Persistencia
 
         public Usuario ObtenerPorId(int id)
         {
-            Usuario usuario = new Usuario();
+            Usuario usuario = null;
             using (SqliteCommand sqliteCommand = new SqliteCommand("SELECT id_usuario, id_rol, nombre, username, password FROM USUARIO WHERE id_usuario = @id"))
             {
                 sqliteCommand.Parameters.Add(new SqliteParameter("@id", id));
                 sqliteCommand.Connection = Conexion.MiConexion;
                 using (SqliteDataReader dataReader = sqliteCommand.ExecuteReader())
                 {
-                    while (dataReader.Read())
+                    if (dataReader.Read())
                     {
+                        usuario = new Usuario();
                         usuario.IdUsuario = dataReader.GetInt32(0);
                         usuario.IdRol = dataReader.GetInt32(1);
                         usuario.Nombre = dataReader.GetString(2);

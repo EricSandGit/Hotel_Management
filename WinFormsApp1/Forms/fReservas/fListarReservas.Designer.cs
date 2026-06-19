@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp1.Forms.fReservas
+namespace WinFormsApp1.Forms.fReservas
 {
     partial class fListarReservas
     {
@@ -43,29 +43,29 @@
             dgListarReservas.Location = new Point(12, 18);
             dgListarReservas.Name = "dgListarReservas";
             dgListarReservas.RowHeadersWidth = 62;
-            dgListarReservas.Size = new Size(850, 421);
+            dgListarReservas.Size = new Size(928, 558);
             dgListarReservas.TabIndex = 0;
-            dgListarReservas.CellContentClick += dataGridView1_CellContentClick;
+            dgListarReservas.CellContentClick += dgListarReservas_CellContentClick;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(20, 467);
+            textBox1.Location = new Point(12, 594);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(284, 31);
             textBox1.TabIndex = 1;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(319, 467);
+            comboBox1.Location = new Point(326, 592);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(135, 33);
+            comboBox1.Size = new Size(152, 33);
             comboBox1.TabIndex = 2;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // btAgregarLReserva
             // 
-            btAgregarLReserva.Location = new Point(486, 467);
+            btAgregarLReserva.Location = new Point(497, 590);
             btAgregarLReserva.Name = "btAgregarLReserva";
             btAgregarLReserva.Size = new Size(112, 34);
             btAgregarLReserva.TabIndex = 3;
@@ -75,7 +75,7 @@
             // 
             // btEliminarLReserva
             // 
-            btEliminarLReserva.Location = new Point(604, 467);
+            btEliminarLReserva.Location = new Point(615, 591);
             btEliminarLReserva.Name = "btEliminarLReserva";
             btEliminarLReserva.Size = new Size(112, 34);
             btEliminarLReserva.TabIndex = 4;
@@ -84,7 +84,7 @@
             // 
             // btModificarLReserva
             // 
-            btModificarLReserva.Location = new Point(722, 467);
+            btModificarLReserva.Location = new Point(733, 591);
             btModificarLReserva.Name = "btModificarLReserva";
             btModificarLReserva.Size = new Size(112, 34);
             btModificarLReserva.TabIndex = 5;
@@ -95,7 +95,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(874, 510);
+            ClientSize = new Size(968, 664);
             Controls.Add(btModificarLReserva);
             Controls.Add(btEliminarLReserva);
             Controls.Add(btAgregarLReserva);

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using WinFormsApp1.Modelos;
 using WinFormsApp1.Persistencia;
@@ -18,13 +18,13 @@ namespace WinFormsApp1.Controladores
         // Calcular subtotal de habitación basándose en estadía, reserva y precio por noche de habitación
         public static double CalcularSubtotalHabitacion(int idEstadia)
         {
-            var estadia = new pEstadia().ObtenerPorId(idEstadia);
+            var estadia = nEstadia.ObtenerEstadiaPorId(idEstadia);
             if (estadia == null || estadia.IdEstadia <= 0) return 0;
 
-            var reserva = new pReserva().ObtenerPorId(estadia.IdReserva);
+            var reserva = nReserva.ObtenerReservaPorId(estadia.IdReserva);
             if (reserva == null || reserva.IdReserva <= 0) return 0;
 
-            var habitacion = new pHabitacion().ObtenerPorId(reserva.IdHabitacion);
+            var habitacion = nHabitacion.ObtenerHabitacionPorId(reserva.IdHabitacion);
             if (habitacion == null || habitacion.IdHabitacion <= 0) return 0;
 
             int noches = (int)(reserva.FechaSalida - reserva.FechaEntrada).TotalDays;
@@ -36,7 +36,7 @@ namespace WinFormsApp1.Controladores
         // Calcular subtotal de gastos extras de una estadía
         public static double CalcularSubtotalGastos(int idEstadia)
         {
-            var listGastos = new pGastoExtra().ObtenerTodos();
+            var listGastos = nGastoExtra.ListarGastos();
             double totalGastos = 0;
             foreach (var g in listGastos)
             {

@@ -24,7 +24,7 @@ namespace WinFormsApp1.Controladores
             {
                 if (r.IdReserva == idReservaAExcluir) continue;
 
-                if (r.IdHabitacion == idHabitacion && r.Estado != "Cancelada")
+                if (r.IdHabitacion == idHabitacion && !string.Equals(r.Estado, "Cancelada", StringComparison.OrdinalIgnoreCase))
                 {
                     // Fórmula de traslape: (StartA < EndB) y (EndA > StartB)
                     if (fechaEntrada < r.FechaSalida && fechaSalida > r.FechaEntrada)
