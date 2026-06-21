@@ -35,15 +35,16 @@ namespace WinFormsApp1.Persistencia
 
         public Habitacion ObtenerPorId(int id)
         {
-            Habitacion habitacion = new Habitacion();
+            Habitacion habitacion = null;
             using (SqliteCommand sqliteCommand = new SqliteCommand("SELECT id_habitacion, numero, camas_individuales, camas_matrimoniales, precio_por_noche FROM HABITACION WHERE id_habitacion = @id"))
             {
                 sqliteCommand.Parameters.Add(new SqliteParameter("@id", id));
                 sqliteCommand.Connection = Conexion.MiConexion;
                 using (SqliteDataReader dataReader = sqliteCommand.ExecuteReader())
                 {
-                    while (dataReader.Read())
+                    if (dataReader.Read())
                     {
+                        habitacion = new Habitacion();
                         habitacion.IdHabitacion = dataReader.GetInt32(0);
                         habitacion.Numero = dataReader.GetInt32(1);
                         habitacion.CamasIndividuales = dataReader.GetInt32(2);

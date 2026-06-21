@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,10 +20,7 @@ namespace WinFormsApp1.Forms.fClientes
             _clienteAEditar = cliente;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void fClientesModificar_Load(object sender, EventArgs e)
         {
@@ -44,14 +41,18 @@ namespace WinFormsApp1.Forms.fClientes
 
         private void btGuardar_Click(object sender, EventArgs e)
         {
-            _clienteAEditar.Nombre = textBox1.Text;
-            _clienteAEditar.Apellido = textBox2.Text;
-            _clienteAEditar.Dni = textBox3.Text;
-            _clienteAEditar.Telefono = textBox4.Text;
-            _clienteAEditar.Email = textBox5.Text;
-            _clienteAEditar.Localidad = textBox6.Text;
+            var clienteModificado = new Cliente
+            {
+                IdCliente = _clienteAEditar.IdCliente,
+                Nombre = textBox1.Text,
+                Apellido = textBox2.Text,
+                Dni = textBox3.Text,
+                Telefono = textBox4.Text,
+                Email = textBox5.Text,
+                Localidad = textBox6.Text
+            };
 
-            bool exito = nCliente.ActualizarCliente(_clienteAEditar);
+            bool exito = nCliente.ActualizarCliente(clienteModificado);
 
             if (!exito)
             {
@@ -59,8 +60,16 @@ namespace WinFormsApp1.Forms.fClientes
                 return;
             }
 
+            _clienteAEditar.Nombre = clienteModificado.Nombre;
+            _clienteAEditar.Apellido = clienteModificado.Apellido;
+            _clienteAEditar.Dni = clienteModificado.Dni;
+            _clienteAEditar.Telefono = clienteModificado.Telefono;
+            _clienteAEditar.Email = clienteModificado.Email;
+            _clienteAEditar.Localidad = clienteModificado.Localidad;
+
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
     }
 }
+

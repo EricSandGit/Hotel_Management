@@ -38,15 +38,16 @@ namespace WinFormsApp1.Persistencia
 
         public Reserva ObtenerPorId(int id)
         {
-            Reserva reserva = new Reserva();
+            Reserva reserva = null;
             using (SqliteCommand sqliteCommand = new SqliteCommand("SELECT id_reserva, id_cliente, id_habitacion, id_usuario, fecha_entrada, fecha_salida, cantidad_personas, estado FROM RESERVA WHERE id_reserva = @id"))
             {
                 sqliteCommand.Parameters.Add(new SqliteParameter("@id", id));
                 sqliteCommand.Connection = Conexion.MiConexion;
                 using (SqliteDataReader dataReader = sqliteCommand.ExecuteReader())
                 {
-                    while (dataReader.Read())
+                    if (dataReader.Read())
                     {
+                        reserva = new Reserva();
                         reserva.IdReserva = dataReader.GetInt32(0);
                         reserva.IdCliente = dataReader.GetInt32(1);
                         reserva.IdHabitacion = dataReader.GetInt32(2);

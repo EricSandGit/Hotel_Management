@@ -33,7 +33,7 @@ namespace WinFormsApp1.Controladores
         }
 
         // Alta de cliente con validaciones obligatorias y de duplicados
-        public static bool AgregarCliente(Cliente c)
+        public static bool CrearCliente(Cliente c)
         {
             if (c == null || !ValidarDatosObligatorios(c)) return false;
 
@@ -52,7 +52,7 @@ namespace WinFormsApp1.Controladores
 
             // Evitar duplicados de documento en otros registros
             var existente = BuscarPorDocumento(c.Dni);
-            if (existente != null && existente.Id != c.Id)
+            if (existente != null && existente.IdCliente != c.IdCliente)
                 return false;
 
             return persistencia.Actualizar(c);
@@ -64,8 +64,8 @@ namespace WinFormsApp1.Controladores
         public static bool GuardarCliente(Cliente c)
         {
             if (c == null) return false;
-            if (c.Id <= 0)
-                return AgregarCliente(c);
+            if (c.IdCliente <= 0)
+                return CrearCliente(c);
             return ActualizarCliente(c);
         }
 

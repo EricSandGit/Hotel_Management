@@ -35,15 +35,16 @@ namespace WinFormsApp1.Persistencia
 
         public GastoExtra ObtenerPorId(int id)
         {
-            GastoExtra gasto = new GastoExtra();
+            GastoExtra gasto = null;
             using (SqliteCommand sqliteCommand = new SqliteCommand("SELECT id_gasto, id_estadia, concepto, monto, fecha FROM GASTO_EXTRA WHERE id_gasto = @id"))
             {
                 sqliteCommand.Parameters.Add(new SqliteParameter("@id", id));
                 sqliteCommand.Connection = Conexion.MiConexion;
                 using (SqliteDataReader dataReader = sqliteCommand.ExecuteReader())
                 {
-                    while (dataReader.Read())
+                    if (dataReader.Read())
                     {
+                        gasto = new GastoExtra();
                         gasto.IdGasto = dataReader.GetInt32(0);
                         gasto.IdEstadia = dataReader.GetInt32(1);
                         gasto.Concepto = dataReader.GetString(2);

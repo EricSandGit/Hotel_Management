@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp1.Forms
+namespace WinFormsApp1.Forms
 {
     partial class fLogin
     {
@@ -117,7 +117,7 @@
             btSalir.TabIndex = 6;
             btSalir.Text = "Salir";
             btSalir.UseVisualStyleBackColor = false;
-            btSalir.Click += btSalir_Click;
+           
             // 
             // fLogin
             // 
@@ -136,7 +136,6 @@
             MaximizeBox = false;
             Name = "fLogin";
             Text = "fLogin";
-            Load += fLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -9,6 +9,7 @@ using WinFormsApp1.Controladores;
 using WinFormsApp1.Modelos;
 using WinFormsApp1.Persistencia;
 using WinFormsApp1.Forms.fClientes;
+using WinFormsApp1.Forms.fReservas;
 
 namespace WinFormsApp1.Forms
 {
@@ -16,7 +17,7 @@ namespace WinFormsApp1.Forms
     {
         Usuario _usuario;
         Form _formLogin;
-        Color colorBarraLateral = Color.FromArgb(30,30,30);
+        Color colorBarraLateral = Color.FromArgb(30, 30, 30);
         Color colorBotonSeleccionado = Color.FromArgb(60, 60, 65);
 
         Button botonActivoActual = null;
@@ -31,10 +32,10 @@ namespace WinFormsApp1.Forms
         }
         public void inicializarForm()
         {
-          
+
 
             lbBienvenida.Text = $"Bienvenido, \n{_usuario.Nombre}!";
-            lbRol.Text = $"- {new pRol().ObtenerPorId(_usuario.IdRol).Nombre} -";
+            lbRol.Text = $"- {nRol.ObtenerRolPorId(_usuario.IdRol).Nombre} -";
 
             if (_usuario.IdRol == 1) //Administrador
             {
@@ -85,10 +86,10 @@ namespace WinFormsApp1.Forms
             {
                 fh.TopLevel = false;             // No es una ventana independiente
                 fh.FormBorderStyle = FormBorderStyle.None; // Sacar la barra de arriba 
-                fh.Dock = DockStyle.Fill;        // El form ocupa todo el tamaño del panel
+                fh.Dock = DockStyle.Fill;        // El form ocupa todo el tamaï¿½o del panel
 
                 this.pnContenedor.Controls.Add(fh);
-                this.pnContenedor.Tag = fh; // Guarda en el panel un tag de lo que se está viendo
+                this.pnContenedor.Tag = fh; // Guarda en el panel un tag de lo que se estï¿½ viendo
                 fh.Show();
             }
         }
@@ -110,7 +111,7 @@ namespace WinFormsApp1.Forms
         {
             SeleccionarBoton((Button)sender);
 
-        
+
         }
         private void btGastoExtra_Click(object sender, EventArgs e)
         {
@@ -129,7 +130,7 @@ namespace WinFormsApp1.Forms
         {
             SeleccionarBoton((Button)sender);
 
-            AbrirFormEnPanel(new fAltaReserva());
+            AbrirFormEnPanel(new fListarReservas());
         }
         private void btUsuario_Click(object sender, EventArgs e)
         {
@@ -147,9 +148,14 @@ namespace WinFormsApp1.Forms
                 {
                     loginForm.ReiniciarFormulario();
                 }
-             
+
             }
             this.Close();
+        }
+
+        private void pnLateral_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
