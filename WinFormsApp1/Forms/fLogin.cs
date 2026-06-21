@@ -85,9 +85,9 @@ namespace WinFormsApp1.Forms
             }
         }
 
-        private void fLogin_Load(object sender, EventArgs e)
+        private void btSalir_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

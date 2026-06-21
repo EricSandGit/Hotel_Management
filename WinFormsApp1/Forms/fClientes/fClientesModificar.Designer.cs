@@ -46,9 +46,10 @@
             // 
             // btCancelar
             // 
-            btCancelar.Location = new Point(1003, 810);
+            btCancelar.Location = new Point(472, 395);
+            btCancelar.Margin = new Padding(1, 1, 1, 1);
             btCancelar.Name = "btCancelar";
-            btCancelar.Size = new Size(286, 76);
+            btCancelar.Size = new Size(135, 37);
             btCancelar.TabIndex = 29;
             btCancelar.Text = "Cancelar";
             btCancelar.UseVisualStyleBackColor = true;
@@ -56,9 +57,10 @@
             // 
             // btGuardar
             // 
-            btGuardar.Location = new Point(376, 810);
+            btGuardar.Location = new Point(177, 395);
+            btGuardar.Margin = new Padding(1, 1, 1, 1);
             btGuardar.Name = "btGuardar";
-            btGuardar.Size = new Size(286, 76);
+            btGuardar.Size = new Size(135, 37);
             btGuardar.TabIndex = 28;
             btGuardar.Text = "Guardar";
             btGuardar.UseVisualStyleBackColor = true;
@@ -67,104 +69,116 @@
             // lbLocalidad
             // 
             lbLocalidad.AutoSize = true;
-            lbLocalidad.Location = new Point(467, 662);
+            lbLocalidad.Location = new Point(220, 323);
+            lbLocalidad.Margin = new Padding(1, 0, 1, 0);
             lbLocalidad.Name = "lbLocalidad";
-            lbLocalidad.Size = new Size(144, 41);
+            lbLocalidad.Size = new Size(74, 20);
             lbLocalidad.TabIndex = 27;
             lbLocalidad.Text = "Localidad";
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(642, 662);
+            textBox6.Location = new Point(302, 323);
+            textBox6.Margin = new Padding(1, 1, 1, 1);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(461, 47);
+            textBox6.Size = new Size(219, 27);
             textBox6.TabIndex = 26;
             // 
             // lbCorreo
             // 
             lbCorreo.AutoSize = true;
-            lbCorreo.Location = new Point(348, 552);
+            lbCorreo.Location = new Point(164, 269);
+            lbCorreo.Margin = new Padding(1, 0, 1, 0);
             lbCorreo.Name = "lbCorreo";
-            lbCorreo.Size = new Size(263, 41);
+            lbCorreo.Size = new Size(132, 20);
             lbCorreo.TabIndex = 25;
             lbCorreo.Text = "Correo Electronico";
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(642, 546);
+            textBox5.Location = new Point(302, 266);
+            textBox5.Margin = new Padding(1, 1, 1, 1);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(461, 47);
+            textBox5.Size = new Size(219, 27);
             textBox5.TabIndex = 24;
             // 
             // lbTelefono
             // 
             lbTelefono.AutoSize = true;
-            lbTelefono.Location = new Point(376, 440);
+            lbTelefono.Location = new Point(177, 215);
+            lbTelefono.Margin = new Padding(1, 0, 1, 0);
             lbTelefono.Name = "lbTelefono";
-            lbTelefono.Size = new Size(235, 41);
+            lbTelefono.Size = new Size(119, 20);
             lbTelefono.TabIndex = 23;
             lbTelefono.Text = "Telefono/Celular";
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(642, 434);
+            textBox4.Location = new Point(302, 212);
+            textBox4.Margin = new Padding(1, 1, 1, 1);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(461, 47);
+            textBox4.Size = new Size(219, 27);
             textBox4.TabIndex = 22;
             // 
             // lbDocumento
             // 
             lbDocumento.AutoSize = true;
-            lbDocumento.Location = new Point(436, 317);
+            lbDocumento.Location = new Point(205, 155);
+            lbDocumento.Margin = new Padding(1, 0, 1, 0);
             lbDocumento.Name = "lbDocumento";
-            lbDocumento.Size = new Size(175, 41);
+            lbDocumento.Size = new Size(87, 20);
             lbDocumento.TabIndex = 21;
             lbDocumento.Text = "Documento";
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(642, 317);
+            textBox3.Location = new Point(302, 155);
+            textBox3.Margin = new Padding(1, 1, 1, 1);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(461, 47);
+            textBox3.Size = new Size(219, 27);
             textBox3.TabIndex = 20;
             // 
             // lbApellido
             // 
             lbApellido.AutoSize = true;
-            lbApellido.Location = new Point(483, 197);
+            lbApellido.Location = new Point(227, 96);
+            lbApellido.Margin = new Padding(1, 0, 1, 0);
             lbApellido.Name = "lbApellido";
-            lbApellido.Size = new Size(128, 41);
+            lbApellido.Size = new Size(66, 20);
             lbApellido.TabIndex = 19;
             lbApellido.Text = "Apellido";
             // 
             // lbNombre
             // 
             lbNombre.AutoSize = true;
-            lbNombre.Location = new Point(483, 91);
+            lbNombre.Location = new Point(227, 44);
+            lbNombre.Margin = new Padding(1, 0, 1, 0);
             lbNombre.Name = "lbNombre";
-            lbNombre.Size = new Size(128, 41);
+            lbNombre.Size = new Size(64, 20);
             lbNombre.TabIndex = 18;
             lbNombre.Text = "Nombre";
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(642, 194);
+            textBox2.Location = new Point(302, 95);
+            textBox2.Margin = new Padding(1, 1, 1, 1);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(461, 47);
+            textBox2.Size = new Size(219, 27);
             textBox2.TabIndex = 17;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(642, 91);
+            textBox1.Location = new Point(302, 44);
+            textBox1.Margin = new Padding(1, 1, 1, 1);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(461, 47);
+            textBox1.Size = new Size(219, 27);
             textBox1.TabIndex = 16;
             // 
             // fClientesModificar
             // 
-            AutoScaleDimensions = new SizeF(17F, 41F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1637, 976);
+            ClientSize = new Size(770, 476);
             Controls.Add(btCancelar);
             Controls.Add(btGuardar);
             Controls.Add(lbLocalidad);
@@ -179,8 +193,10 @@
             Controls.Add(lbNombre);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
+            Margin = new Padding(1, 1, 1, 1);
             Name = "fClientesModificar";
             Text = "fClientesModificar";
+            Load += fClientesModificar_Load;
             ResumeLayout(false);
             PerformLayout();
         }
