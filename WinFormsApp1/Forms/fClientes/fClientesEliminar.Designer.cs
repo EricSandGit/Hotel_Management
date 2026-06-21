@@ -36,17 +36,19 @@ namespace WinFormsApp1.Forms.fClientes
             // lbAdvertencia
             // 
             lbAdvertencia.AutoSize = true;
-            lbAdvertencia.Location = new Point(92, 73);
+            lbAdvertencia.Location = new Point(54, 45);
+            lbAdvertencia.Margin = new Padding(2, 0, 2, 0);
             lbAdvertencia.Name = "lbAdvertencia";
-            lbAdvertencia.Size = new Size(507, 41);
+            lbAdvertencia.Size = new Size(312, 25);
             lbAdvertencia.TabIndex = 0;
-            lbAdvertencia.Text = "Estas seguro que lo quieres eliminar?";
+            lbAdvertencia.Text = "¿Estas seguro que lo quieres eliminar?";
             // 
             // btSiEstoySeguro
             // 
-            btSiEstoySeguro.Location = new Point(52, 190);
+            btSiEstoySeguro.Location = new Point(31, 116);
+            btSiEstoySeguro.Margin = new Padding(2);
             btSiEstoySeguro.Name = "btSiEstoySeguro";
-            btSiEstoySeguro.Size = new Size(270, 55);
+            btSiEstoySeguro.Size = new Size(159, 34);
             btSiEstoySeguro.TabIndex = 1;
             btSiEstoySeguro.Text = "Si, estoy seguro";
             btSiEstoySeguro.UseVisualStyleBackColor = true;
@@ -54,9 +56,10 @@ namespace WinFormsApp1.Forms.fClientes
             // 
             // btNoVolver
             // 
-            btNoVolver.Location = new Point(377, 190);
+            btNoVolver.Location = new Point(222, 116);
+            btNoVolver.Margin = new Padding(2);
             btNoVolver.Name = "btNoVolver";
-            btNoVolver.Size = new Size(270, 55);
+            btNoVolver.Size = new Size(159, 34);
             btNoVolver.TabIndex = 2;
             btNoVolver.Text = "No, volver";
             btNoVolver.UseVisualStyleBackColor = true;
@@ -64,14 +67,16 @@ namespace WinFormsApp1.Forms.fClientes
             // 
             // fClientesEliminar
             // 
-            AutoScaleDimensions = new SizeF(17F, 41F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(716, 309);
+            ClientSize = new Size(421, 188);
             Controls.Add(btNoVolver);
             Controls.Add(btSiEstoySeguro);
             Controls.Add(lbAdvertencia);
+            Margin = new Padding(2);
             Name = "fClientesEliminar";
             Text = "fClientesEliminar";
+            Load += fClientesEliminar_Load;
             ResumeLayout(false);
             PerformLayout();
         }

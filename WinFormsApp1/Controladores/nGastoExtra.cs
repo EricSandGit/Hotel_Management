@@ -31,7 +31,7 @@ namespace WinFormsApp1.Controladores
 
             // Asociar correctamente el gasto a una estadía activa
             var estadia = nEstadia.ObtenerEstadiaPorId(g.IdEstadia);
-            if (estadia == null || estadia.IdEstadia <= 0 || !string.Equals(estadia.Estado, "Activa", StringComparison.OrdinalIgnoreCase))
+            if (estadia == null || estadia.IdEstadia <= 0 || !string.Equals(estadia.Estado, "activa", StringComparison.OrdinalIgnoreCase))
                 return false;
 
             int id = persistencia.Agregar(g);

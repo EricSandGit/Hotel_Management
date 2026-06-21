@@ -15,15 +15,13 @@ namespace WinFormsApp1.Forms.fClientes
     {
         private int _idClienteAEliminar;
 
-        // 2. Modificamos esta línea agregando "int idCliente" adentro de los paréntesis
         public fClientesEliminar(int idCliente)
         {
             InitializeComponent();
 
-            // 3. Guardamos el ID que nos llega en nuestra variable
             _idClienteAEliminar = idCliente;
         }
-        
+
 
         private void btNoVolver_Click(object sender, EventArgs e)
         {
@@ -40,6 +38,11 @@ namespace WinFormsApp1.Forms.fClientes
             }
 
             this.Close();
+        }
+
+        private void fClientesEliminar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -23,7 +23,7 @@ namespace WinFormsApp1.Forms
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-        }       
+        }
         public void ReiniciarFormulario()
         {
             //Borramos lo escrito en textboxes
@@ -84,9 +84,11 @@ namespace WinFormsApp1.Forms
                 btIngresar_Click(this, new EventArgs());
             }
         }
-        
 
-        
+        private void fLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSesion));
             lbBienvenida = new Label();
             lbRol = new Label();
             pnLateral = new Panel();
@@ -233,6 +234,7 @@
             Controls.Add(pnContenedor);
             Controls.Add(pnLateral);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(2);
             MaximizeBox = false;
             Name = "fSesion";

@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fAltaReserva));
             dtResLlegada = new DateTimePicker();
             dtResSalida = new DateTimePicker();
-            pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -44,11 +42,8 @@
             label6 = new Label();
             btResAceptar = new Button();
             btCancelar = new Button();
-            pictureBox2 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numResMenores).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numResAdultos).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // dtResLlegada
@@ -65,19 +60,10 @@
             dtResSalida.Size = new Size(334, 31);
             dtResSalida.TabIndex = 1;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(14, 247);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(180, 153);
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 18);
+            label1.Location = new Point(14, 117);
             label1.Name = "label1";
             label1.Size = new Size(114, 25);
             label1.TabIndex = 4;
@@ -105,7 +91,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(12, 117);
+            label4.Location = new Point(14, 18);
             label4.Name = "label4";
             label4.Size = new Size(65, 25);
             label4.TabIndex = 9;
@@ -114,16 +100,15 @@
             // cbResHabitaciones
             // 
             cbResHabitaciones.FormattingEnabled = true;
-            cbResHabitaciones.Location = new Point(12, 58);
+            cbResHabitaciones.Location = new Point(14, 156);
             cbResHabitaciones.Name = "cbResHabitaciones";
             cbResHabitaciones.Size = new Size(182, 33);
             cbResHabitaciones.TabIndex = 10;
-           
             // 
             // cbResCliente
             // 
             cbResCliente.FormattingEnabled = true;
-            cbResCliente.Location = new Point(12, 156);
+            cbResCliente.Location = new Point(12, 56);
             cbResCliente.Name = "cbResCliente";
             cbResCliente.Size = new Size(182, 33);
             cbResCliente.TabIndex = 11;
@@ -180,21 +165,11 @@
             btCancelar.UseVisualStyleBackColor = true;
             btCancelar.Click += btnCancelar_Click;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(586, 247);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(180, 153);
-            pictureBox2.TabIndex = 18;
-            pictureBox2.TabStop = false;
-            // 
             // fAltaReserva
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox2);
             Controls.Add(btCancelar);
             Controls.Add(btResAceptar);
             Controls.Add(label6);
@@ -207,21 +182,18 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(pictureBox1);
             Controls.Add(dtResSalida);
             Controls.Add(dtResLlegada);
             Name = "fAltaReserva";
             Text = "fmReservas";
             Load += fAltaReserva_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)numResMenores).EndInit();
             ((System.ComponentModel.ISupportInitialize)numResAdultos).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
-      
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -232,7 +204,6 @@
 
         private DateTimePicker dtResLlegada;
         private DateTimePicker dtResSalida;
-        private PictureBox pictureBox1;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -245,6 +216,5 @@
         private Label label6;
         private Button btResAceptar;
         private Button btCancelar;
-        private PictureBox pictureBox2;
     }
 }
