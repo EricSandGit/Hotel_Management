@@ -125,7 +125,7 @@
             btReserva.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
             btReserva.FlatStyle = FlatStyle.Flat;
             btReserva.ForeColor = SystemColors.ButtonHighlight;
-            btReserva.Location = new Point(0, 385);
+            btReserva.Location = new Point(-1, 330);
             btReserva.Margin = new Padding(2);
             btReserva.Name = "btReserva";
             btReserva.Size = new Size(225, 54);
@@ -141,7 +141,7 @@
             btHabitacion.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
             btHabitacion.FlatStyle = FlatStyle.Flat;
             btHabitacion.ForeColor = SystemColors.ButtonHighlight;
-            btHabitacion.Location = new Point(0, 330);
+            btHabitacion.Location = new Point(-2, 385);
             btHabitacion.Margin = new Padding(2);
             btHabitacion.Name = "btHabitacion";
             btHabitacion.Size = new Size(225, 54);

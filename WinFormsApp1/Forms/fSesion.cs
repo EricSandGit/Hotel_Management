@@ -36,6 +36,27 @@ namespace WinFormsApp1.Forms
             lbBienvenida.Text = $"Bienvenido, \n{_usuario.Nombre}!";
             lbRol.Text = $"- {new pRol().ObtenerPorId(_usuario.IdRol).Nombre} -";
 
+            if (_usuario.IdRol == 1) //Administrador
+            {
+                //Todo queda habilitado por default para el usuario administrador
+            }
+            else if (_usuario.IdRol == 2) //Recepcionista
+            {
+                //Se desactivan las opciones de agregar usuarios y habitaciones 
+                btHabitacion.Enabled = false;
+                btUsuario.Enabled = false;
+            }
+            else //Rol no registrado no puede hacer nada
+            {
+                btCliente.Enabled = false;
+                btCuenta.Enabled = false;
+                btEstadia.Enabled = false;
+                btGastoExtra.Enabled = false;
+                btReserva.Enabled = false;
+                btHabitacion.Enabled = false;
+                btUsuario.Enabled = false;
+            }
+
         }
 
 
