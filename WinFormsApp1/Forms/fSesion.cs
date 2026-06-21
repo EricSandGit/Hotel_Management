@@ -10,6 +10,7 @@ using WinFormsApp1.Modelos;
 using WinFormsApp1.Persistencia;
 using WinFormsApp1.Forms.fClientes;
 using WinFormsApp1.Forms.fReservas;
+using WinFormsApp1.Forms.fUsuarios;
 
 namespace WinFormsApp1.Forms
 {
@@ -136,6 +137,7 @@ namespace WinFormsApp1.Forms
         {
             SeleccionarBoton((Button)sender);
 
+            AbrirFormEnPanel(new fListarUsuarios());
 
         }
 
