@@ -40,19 +40,20 @@ namespace WinFormsApp1.Forms.fClientes
             // dataGridViewClientes
             // 
             dataGridViewClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewClientes.Location = new Point(18, 17);
-            dataGridViewClientes.Margin = new Padding(2, 2, 2, 2);
+            dataGridViewClientes.Location = new Point(14, 14);
+            dataGridViewClientes.Margin = new Padding(2);
             dataGridViewClientes.Name = "dataGridViewClientes";
             dataGridViewClientes.RowHeadersWidth = 102;
-            dataGridViewClientes.Size = new Size(986, 475);
+            dataGridViewClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewClientes.Size = new Size(789, 380);
             dataGridViewClientes.TabIndex = 0;
             // 
             // btEditarCliente
             // 
-            btEditarCliente.Location = new Point(860, 510);
-            btEditarCliente.Margin = new Padding(2, 2, 2, 2);
+            btEditarCliente.Location = new Point(688, 408);
+            btEditarCliente.Margin = new Padding(2);
             btEditarCliente.Name = "btEditarCliente";
-            btEditarCliente.Size = new Size(144, 46);
+            btEditarCliente.Size = new Size(115, 37);
             btEditarCliente.TabIndex = 1;
             btEditarCliente.Text = "Editar";
             btEditarCliente.UseVisualStyleBackColor = true;
@@ -60,10 +61,10 @@ namespace WinFormsApp1.Forms.fClientes
             // 
             // btEliminarCliente
             // 
-            btEliminarCliente.Location = new Point(705, 510);
-            btEliminarCliente.Margin = new Padding(2, 2, 2, 2);
+            btEliminarCliente.Location = new Point(564, 408);
+            btEliminarCliente.Margin = new Padding(2);
             btEliminarCliente.Name = "btEliminarCliente";
-            btEliminarCliente.Size = new Size(144, 46);
+            btEliminarCliente.Size = new Size(115, 37);
             btEliminarCliente.TabIndex = 2;
             btEliminarCliente.Text = "Eliminar";
             btEliminarCliente.UseVisualStyleBackColor = true;
@@ -71,10 +72,10 @@ namespace WinFormsApp1.Forms.fClientes
             // 
             // btAgregarCliente
             // 
-            btAgregarCliente.Location = new Point(546, 510);
-            btAgregarCliente.Margin = new Padding(2, 2, 2, 2);
+            btAgregarCliente.Location = new Point(437, 408);
+            btAgregarCliente.Margin = new Padding(2);
             btAgregarCliente.Name = "btAgregarCliente";
-            btAgregarCliente.Size = new Size(144, 46);
+            btAgregarCliente.Size = new Size(115, 37);
             btAgregarCliente.TabIndex = 3;
             btAgregarCliente.Text = "Agregar";
             btAgregarCliente.UseVisualStyleBackColor = true;
@@ -83,32 +84,32 @@ namespace WinFormsApp1.Forms.fClientes
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(412, 520);
-            comboBox1.Margin = new Padding(2, 2, 2, 2);
+            comboBox1.Location = new Point(330, 416);
+            comboBox1.Margin = new Padding(2);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 33);
+            comboBox1.Size = new Size(98, 28);
             comboBox1.TabIndex = 4;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(18, 520);
-            textBox1.Margin = new Padding(2, 2, 2, 2);
+            textBox1.Location = new Point(14, 416);
+            textBox1.Margin = new Padding(2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(380, 31);
+            textBox1.Size = new Size(305, 27);
             textBox1.TabIndex = 5;
             // 
             // fClientesListar
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1026, 590);
+            ClientSize = new Size(821, 472);
             Controls.Add(textBox1);
             Controls.Add(comboBox1);
             Controls.Add(btAgregarCliente);
             Controls.Add(btEliminarCliente);
             Controls.Add(btEditarCliente);
             Controls.Add(dataGridViewClientes);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "fClientesListar";
             Text = "fClientesListar";
             ((System.ComponentModel.ISupportInitialize)dataGridViewClientes).EndInit();

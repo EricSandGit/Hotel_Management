@@ -18,6 +18,7 @@ namespace WinFormsApp1.Forms.fClientes
         {
             InitializeComponent();
             _clienteAEditar = cliente;
+           
         }
 
         
