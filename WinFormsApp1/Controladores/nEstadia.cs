@@ -65,20 +65,33 @@ namespace WinFormsApp1.Controladores
             if (DateTime.Today > r.FechaSalida)
                 return false;
 
+            // Verificar si ya existe una estadía asociada a esta reserva
+            var estadiaExistente = ListarEstadias().Find(e => e.IdReserva == r.IdReserva);
+            if (estadiaExistente != null)
+            {
+                // Si ya existe la estadía, sincronizamos el estado de la reserva y retornamos éxito
+                if (!string.Equals(r.Estado, "confirmada", StringComparison.OrdinalIgnoreCase))
+                {
+                    r.Estado = "confirmada";
+                    nReserva.ActualizarReserva(r);
+                }
+                return true;
+            }
+
             var estadia = new Estadia
             {
                 IdReserva = r.IdReserva,
                 IdUsuario = r.IdUsuario,
                 FechaCheckin = DateTime.Now,
                 FechaCheckout = null,
-                Estado = "Activa"
+                Estado = "activa"
             };
 
             int id = persistencia.Agregar(estadia);
             if (id > 0)
             {
                 // Actualizar el estado de la reserva
-                r.Estado = "En Curso";
+                r.Estado = "confirmada";
                 nReserva.ActualizarReserva(r);
                 return true;
             }
@@ -89,12 +102,12 @@ namespace WinFormsApp1.Controladores
         public static bool RegistrarCheckOut(int idEstadia)
         {
             var estadia = persistencia.ObtenerPorId(idEstadia);
-            if (estadia == null || estadia.IdEstadia <= 0 || string.Equals(estadia.Estado, "Finalizada", StringComparison.OrdinalIgnoreCase)) 
+            if (estadia == null || estadia.IdEstadia <= 0 || string.Equals(estadia.Estado, "finalizada", StringComparison.OrdinalIgnoreCase)) 
                 return false;
 
             // Finalizar la estadía
             estadia.FechaCheckout = DateTime.Now;
-            estadia.Estado = "Finalizada";
+            estadia.Estado = "finalizada";
 
             bool ok = persistencia.Actualizar(estadia);
             if (ok)
@@ -103,7 +116,7 @@ namespace WinFormsApp1.Controladores
                 var reserva = nReserva.ObtenerReservaPorId(estadia.IdReserva);
                 if (reserva != null && reserva.IdReserva > 0)
                 {
-                    reserva.Estado = "Finalizada";
+                    reserva.Estado = "confirmada";
                     nReserva.ActualizarReserva(reserva);
                 }
 
