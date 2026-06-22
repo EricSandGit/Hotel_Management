@@ -28,24 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgListarUsuarios = new DataGridView();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             btAgregarUsuario = new Button();
             btEliminarUsuario = new Button();
             btModificarUsuario = new Button();
+            dgListarUsuarios = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dgListarUsuarios).BeginInit();
             SuspendLayout();
-            // 
-            // dgListarUsuarios
-            // 
-            dgListarUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgListarUsuarios.BackgroundColor = Color.FromArgb(165, 150, 135);
-            dgListarUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgListarUsuarios.Location = new Point(32, 33);
-            dgListarUsuarios.Name = "dgListarUsuarios";
-            dgListarUsuarios.RowHeadersWidth = 51;
-            dgListarUsuarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgListarUsuarios.Size = new Size(915, 534);
-            dgListarUsuarios.TabIndex = 0;
             // 
             // btAgregarUsuario
             // 
@@ -92,16 +83,48 @@
             btModificarUsuario.UseVisualStyleBackColor = false;
             btModificarUsuario.Click += btModificarUsuario_Click;
             // 
+            // dgListarUsuarios
+            // 
+            dgListarUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgListarUsuarios.BackgroundColor = Color.FromArgb(165, 150, 135);
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgListarUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgListarUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgListarUsuarios.EnableHeadersVisualStyles = false;
+            dgListarUsuarios.Location = new Point(32, 33);
+            dgListarUsuarios.Name = "dgListarUsuarios";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(195, 180, 165);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgListarUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgListarUsuarios.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(110, 95, 80);
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            dgListarUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dgListarUsuarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgListarUsuarios.Size = new Size(915, 516);
+            dgListarUsuarios.TabIndex = 6;
+            // 
             // fListarUsuarios
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 225, 212);
             ClientSize = new Size(972, 673);
+            Controls.Add(dgListarUsuarios);
             Controls.Add(btModificarUsuario);
             Controls.Add(btEliminarUsuario);
             Controls.Add(btAgregarUsuario);
-            Controls.Add(dgListarUsuarios);
             Name = "fListarUsuarios";
             Text = "fListarUsuarios";
             Load += fListarUsuarios_Load;
@@ -110,10 +133,9 @@
         }
 
         #endregion
-
-        private DataGridView dgListarUsuarios;
         private Button btAgregarUsuario;
         private Button btEliminarUsuario;
         private Button btModificarUsuario;
+        private DataGridView dgListarUsuarios;
     }
 }
