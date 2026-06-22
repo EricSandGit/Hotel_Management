@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,9 +37,9 @@ namespace WinFormsApp1.Forms.fEstadias
             {
                 Estadia estadiaSeleccionada = (Estadia)dgListarEstadias.SelectedRows[0].DataBoundItem;
 
-                fEstadiaEliminar Baja = new fEstadiaEliminar(estadiaSeleccionada.IdEstadia);
+                fEstadiaEliminar baja = new fEstadiaEliminar(estadiaSeleccionada.IdEstadia);
 
-                Baja.ShowDialog();
+                baja.ShowDialog();
                 ActualizarGrilla();
             }
             else
@@ -54,9 +54,9 @@ namespace WinFormsApp1.Forms.fEstadias
             {
                 Estadia estadiaSeleccionada = (Estadia)dgListarEstadias.SelectedRows[0].DataBoundItem;
 
-                fModificarEstadia Modificar = new fModificarEstadia(estadiaSeleccionada);
+                fModificarEstadia modificar = new fModificarEstadia(estadiaSeleccionada);
 
-                if (Modificar.ShowDialog() == DialogResult.OK)
+                if (modificar.ShowDialog() == DialogResult.OK)
                 {
                     ActualizarGrilla();
                 }

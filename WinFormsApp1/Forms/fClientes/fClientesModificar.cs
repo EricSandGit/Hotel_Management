@@ -12,12 +12,12 @@ namespace WinFormsApp1.Forms.fClientes
 {
     public partial class fClientesModificar : Form
     {
-        private Cliente _clienteAEditar;
+        private Cliente clienteAEditar;
 
         public fClientesModificar(Cliente cliente)
         {
             InitializeComponent();
-            _clienteAEditar = cliente;
+            clienteAEditar = cliente;
            
         }
 
@@ -26,12 +26,12 @@ namespace WinFormsApp1.Forms.fClientes
         private void fClientesModificar_Load(object sender, EventArgs e)
         {
             // Cargamos los datos actuales en los textbox
-            textBox1.Text = _clienteAEditar.Nombre;
-            textBox2.Text = _clienteAEditar.Apellido;
-            textBox3.Text = _clienteAEditar.Dni;
-            textBox4.Text = _clienteAEditar.Telefono;
-            textBox5.Text = _clienteAEditar.Email;
-            textBox6.Text = _clienteAEditar.Localidad;
+            textBox1.Text = clienteAEditar.Nombre;
+            textBox2.Text = clienteAEditar.Apellido;
+            textBox3.Text = clienteAEditar.Dni;
+            textBox4.Text = clienteAEditar.Telefono;
+            textBox5.Text = clienteAEditar.Email;
+            textBox6.Text = clienteAEditar.Localidad;
         }
 
         private void btCancelar_Click(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace WinFormsApp1.Forms.fClientes
         {
             var clienteModificado = new Cliente
             {
-                IdCliente = _clienteAEditar.IdCliente,
+                IdCliente = clienteAEditar.IdCliente,
                 Nombre = textBox1.Text,
                 Apellido = textBox2.Text,
                 Dni = textBox3.Text,
@@ -61,12 +61,12 @@ namespace WinFormsApp1.Forms.fClientes
                 return;
             }
 
-            _clienteAEditar.Nombre = clienteModificado.Nombre;
-            _clienteAEditar.Apellido = clienteModificado.Apellido;
-            _clienteAEditar.Dni = clienteModificado.Dni;
-            _clienteAEditar.Telefono = clienteModificado.Telefono;
-            _clienteAEditar.Email = clienteModificado.Email;
-            _clienteAEditar.Localidad = clienteModificado.Localidad;
+            clienteAEditar.Nombre = clienteModificado.Nombre;
+            clienteAEditar.Apellido = clienteModificado.Apellido;
+            clienteAEditar.Dni = clienteModificado.Dni;
+            clienteAEditar.Telefono = clienteModificado.Telefono;
+            clienteAEditar.Email = clienteModificado.Email;
+            clienteAEditar.Localidad = clienteModificado.Localidad;
 
             this.DialogResult = DialogResult.OK;
             this.Close();

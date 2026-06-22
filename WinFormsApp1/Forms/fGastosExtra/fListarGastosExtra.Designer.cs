@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1.Forms
 {
-    partial class fGastosExtra
+    partial class FGastosExtra
     {
         /// <summary>
         /// Required designer variable.

@@ -13,13 +13,13 @@ namespace WinFormsApp1.Forms.fClientes
 {
     public partial class fClientesEliminar : Form
     {
-        private int _idClienteAEliminar;
+        private int idClienteAEliminar;
 
         public fClientesEliminar(int idCliente)
         {
             InitializeComponent();
 
-            _idClienteAEliminar = idCliente;
+            idClienteAEliminar = idCliente;
         }
 
 
@@ -30,7 +30,7 @@ namespace WinFormsApp1.Forms.fClientes
 
         private void btSiEstoySeguro_Click(object sender, EventArgs e)
         {
-            bool exito = nCliente.EliminarCliente(_idClienteAEliminar);
+            bool exito = nCliente.EliminarCliente(idClienteAEliminar);
 
             if (!exito)
             {

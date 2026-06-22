@@ -34,9 +34,9 @@ namespace WinFormsApp1.Forms.fClientes
 
         private void btAgregarCliente_Click(object sender, EventArgs e)
         {
-            fClientesAlta Alta = new fClientesAlta();
+            fClientesAlta alta = new fClientesAlta();
 
-            if (Alta.ShowDialog() == DialogResult.OK)
+            if (alta.ShowDialog() == DialogResult.OK)
             {
                 ActualizarGrilla(); // ya no hace falta el Add manual, se vuelve a leer de la DB
             }
@@ -53,9 +53,9 @@ namespace WinFormsApp1.Forms.fClientes
 
                 Cliente clienteSeleccionado = (Cliente)dataGridViewClientes.SelectedRows[0].DataBoundItem;
 
-                fClientesEliminar Baja = new fClientesEliminar(clienteSeleccionado.IdCliente);
+                fClientesEliminar baja = new fClientesEliminar(clienteSeleccionado.IdCliente);
 
-                Baja.ShowDialog();
+                baja.ShowDialog();
                 ActualizarGrilla();
             }
             else
@@ -72,9 +72,9 @@ namespace WinFormsApp1.Forms.fClientes
             if (dataGridViewClientes.SelectedRows.Count > 0)
             {
                 Cliente clienteSeleccionado = (Cliente)dataGridViewClientes.SelectedRows[0].DataBoundItem;
-                fClientesModificar Modificar = new fClientesModificar(clienteSeleccionado);
+                fClientesModificar modificar = new fClientesModificar(clienteSeleccionado);
 
-                if (Modificar.ShowDialog() == DialogResult.OK)
+                if (modificar.ShowDialog() == DialogResult.OK)
                 {
                     ActualizarGrilla();
                 }

@@ -17,8 +17,8 @@ namespace WinFormsApp1.Forms
 {
     public partial class fSesion : Form
     {
-        Usuario _usuario;
-        Form _formLogin;
+        Usuario usuarioSesion;
+        Form formLoginOriginal;
         Color colorBarraLateral = Color.FromArgb(30, 30, 30);
         Color colorBotonSeleccionado = Color.FromArgb(60, 60, 65);
 
@@ -26,8 +26,8 @@ namespace WinFormsApp1.Forms
         public fSesion(Usuario usuario, Form formLogin)
         {
             InitializeComponent();
-            _usuario = usuario;
-            _formLogin = formLogin;
+            usuarioSesion = usuario;
+            formLoginOriginal = formLogin;
             this.StartPosition = FormStartPosition.CenterScreen;
             inicializarForm();
 
@@ -36,14 +36,14 @@ namespace WinFormsApp1.Forms
         {
 
 
-            lbBienvenida.Text = $"Bienvenido, \n{_usuario.Nombre}!";
-            lbRol.Text = $"- {nRol.ObtenerRolPorId(_usuario.IdRol).Nombre} -";
+            lbBienvenida.Text = $"Bienvenido, \n{usuarioSesion.Nombre}!";
+            lbRol.Text = $"- {nRol.ObtenerRolPorId(usuarioSesion.IdRol).Nombre} -";
 
-            if (_usuario.IdRol == 1) //Administrador
+            if (usuarioSesion.IdRol == 1) //Administrador
             {
                 //Todo queda habilitado por default para el usuario administrador
             }
-            else if (_usuario.IdRol == 2) //Recepcionista
+            else if (usuarioSesion.IdRol == 2) //Recepcionista
             {
                 //Se desactivan las opciones de agregar usuarios y habitaciones 
                 btHabitacion.Enabled = false;
@@ -88,7 +88,7 @@ namespace WinFormsApp1.Forms
             {
                 fh.TopLevel = false;             // No es una ventana independiente
                 fh.FormBorderStyle = FormBorderStyle.None; // Sacar la barra de arriba 
-                fh.Dock = DockStyle.Fill;        // El form ocupa todo el tama�o del panel
+                fh.Dock = DockStyle.Fill;        // El form ocupa todo el tamao del panel
 
                 this.pnContenedor.Controls.Add(fh);
                 this.pnContenedor.Tag = fh; // Guarda en el panel un tag de lo que se esta viendo
@@ -120,7 +120,7 @@ namespace WinFormsApp1.Forms
         {
             SeleccionarBoton((Button)sender);
 
-            AbrirFormEnPanel(new fGastosExtra());
+            AbrirFormEnPanel(new FGastosExtra());
 
         }
         private void btHabitacion_Click(object sender, EventArgs e)
@@ -145,10 +145,10 @@ namespace WinFormsApp1.Forms
 
         private void btSalir_Click(object sender, EventArgs e)
         {
-            if (_formLogin != null)
+            if (formLoginOriginal != null)
             {
-                _formLogin.Show();
-                if (_formLogin is fLogin loginForm)
+                formLoginOriginal.Show();
+                if (formLoginOriginal is fLogin loginForm)
                 {
                     loginForm.ReiniciarFormulario();
                 }
