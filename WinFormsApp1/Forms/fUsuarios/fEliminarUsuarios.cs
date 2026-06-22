@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using WinFormsApp1.Controladores;
 
 namespace WinFormsApp1.Forms.fUsuarios
 {
@@ -16,6 +17,29 @@ namespace WinFormsApp1.Forms.fUsuarios
         {
             InitializeComponent();
             this.idUsuario = idUsuario;
+        }
+
+        private void btNoVolver_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
+
+        private void btSiEstoySeguro_Click(object sender, EventArgs e)
+        {
+            bool exito = nUsuario.EliminarUsuario(idUsuario);
+
+            if (exito)
+            {
+                this.DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                MessageBox.Show("No se pudo eliminar el usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.DialogResult = DialogResult.Cancel;
+            }
+
+            this.Close();
         }
     }
 }

@@ -43,7 +43,7 @@
             // lbRol
             // 
             lbRol.AutoSize = true;
-            lbRol.Location = new Point(120, 54);
+            lbRol.Location = new Point(120, 55);
             lbRol.Name = "lbRol";
             lbRol.Size = new Size(31, 20);
             lbRol.TabIndex = 0;
@@ -52,7 +52,7 @@
             // lbNombre
             // 
             lbNombre.AutoSize = true;
-            lbNombre.Location = new Point(87, 152);
+            lbNombre.Location = new Point(407, 55);
             lbNombre.Name = "lbNombre";
             lbNombre.Size = new Size(64, 20);
             lbNombre.TabIndex = 1;
@@ -61,7 +61,7 @@
             // lbUsername
             // 
             lbUsername.AutoSize = true;
-            lbUsername.Location = new Point(76, 243);
+            lbUsername.Location = new Point(76, 172);
             lbUsername.Name = "lbUsername";
             lbUsername.Size = new Size(75, 20);
             lbUsername.TabIndex = 2;
@@ -70,7 +70,7 @@
             // lbContrasena
             // 
             lbContrasena.AutoSize = true;
-            lbContrasena.Location = new Point(68, 332);
+            lbContrasena.Location = new Point(388, 168);
             lbContrasena.Name = "lbContrasena";
             lbContrasena.Size = new Size(83, 20);
             lbContrasena.TabIndex = 3;
@@ -79,56 +79,67 @@
             // cbRoles
             // 
             cbRoles.FormattingEnabled = true;
-            cbRoles.Location = new Point(157, 51);
+            cbRoles.Location = new Point(157, 52);
             cbRoles.Name = "cbRoles";
             cbRoles.Size = new Size(178, 28);
             cbRoles.TabIndex = 4;
             // 
             // tbNombre
             // 
-            tbNombre.Location = new Point(157, 149);
+            tbNombre.Location = new Point(477, 52);
             tbNombre.Name = "tbNombre";
             tbNombre.Size = new Size(178, 27);
             tbNombre.TabIndex = 5;
             // 
             // tbUsername
             // 
-            tbUsername.Location = new Point(157, 240);
+            tbUsername.Location = new Point(157, 169);
             tbUsername.Name = "tbUsername";
             tbUsername.Size = new Size(178, 27);
             tbUsername.TabIndex = 6;
             // 
             // tbContrasena
             // 
-            tbContrasena.Location = new Point(157, 329);
+            tbContrasena.Location = new Point(477, 169);
             tbContrasena.Name = "tbContrasena";
             tbContrasena.Size = new Size(178, 27);
             tbContrasena.TabIndex = 7;
             // 
             // btGuardar
             // 
-            btGuardar.Location = new Point(423, 360);
+            btGuardar.BackColor = Color.FromArgb(30, 30, 30);
+            btGuardar.FlatAppearance.BorderSize = 0;
+            btGuardar.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
+            btGuardar.FlatStyle = FlatStyle.Flat;
+            btGuardar.ForeColor = SystemColors.ButtonHighlight;
+            btGuardar.Location = new Point(157, 313);
             btGuardar.Name = "btGuardar";
-            btGuardar.Size = new Size(94, 29);
+            btGuardar.Size = new Size(178, 59);
             btGuardar.TabIndex = 8;
             btGuardar.Text = "Guardar";
-            btGuardar.UseVisualStyleBackColor = true;
+            btGuardar.UseVisualStyleBackColor = false;
             btGuardar.Click += btGuardar_Click;
             // 
             // btCancelar
             // 
-            btCancelar.Location = new Point(608, 360);
+            btCancelar.BackColor = Color.FromArgb(30, 30, 30);
+            btCancelar.FlatAppearance.BorderSize = 0;
+            btCancelar.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
+            btCancelar.FlatStyle = FlatStyle.Flat;
+            btCancelar.ForeColor = SystemColors.ButtonHighlight;
+            btCancelar.Location = new Point(452, 313);
             btCancelar.Name = "btCancelar";
-            btCancelar.Size = new Size(94, 29);
+            btCancelar.Size = new Size(178, 59);
             btCancelar.TabIndex = 9;
             btCancelar.Text = "Cancelar";
-            btCancelar.UseVisualStyleBackColor = true;
+            btCancelar.UseVisualStyleBackColor = false;
             btCancelar.Click += btCancelar_Click;
             // 
             // fAltaUsuarios
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(230, 225, 212);
             ClientSize = new Size(800, 450);
             Controls.Add(btCancelar);
             Controls.Add(btGuardar);

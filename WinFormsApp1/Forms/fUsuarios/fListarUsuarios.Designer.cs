@@ -85,6 +85,10 @@
             // 
             // dgListarUsuarios
             // 
+            dgListarUsuarios.AllowUserToAddRows = false;
+            dgListarUsuarios.AllowUserToDeleteRows = false;
+            dgListarUsuarios.AllowUserToResizeColumns = false;
+            dgListarUsuarios.AllowUserToResizeRows = false;
             dgListarUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgListarUsuarios.BackgroundColor = Color.FromArgb(165, 150, 135);
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;

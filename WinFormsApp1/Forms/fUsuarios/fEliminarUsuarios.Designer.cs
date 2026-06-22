@@ -28,12 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "fEliminarUsuarios";
+            lbEstasSeguro = new Label();
+            btSiEstoySeguro = new Button();
+            btNoVolver = new Button();
+            SuspendLayout();
+            // 
+            // lbEstasSeguro
+            // 
+            lbEstasSeguro.AutoSize = true;
+            lbEstasSeguro.Location = new Point(38, 29);
+            lbEstasSeguro.Name = "lbEstasSeguro";
+            lbEstasSeguro.Size = new Size(265, 20);
+            lbEstasSeguro.TabIndex = 0;
+            lbEstasSeguro.Text = "¿Estás seguro de que quieres eliminar?";
+            // 
+            // btSiEstoySeguro
+            // 
+            btSiEstoySeguro.BackColor = Color.FromArgb(30, 30, 30);
+            btSiEstoySeguro.FlatAppearance.BorderSize = 0;
+            btSiEstoySeguro.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
+            btSiEstoySeguro.FlatStyle = FlatStyle.Flat;
+            btSiEstoySeguro.ForeColor = SystemColors.ButtonHighlight;
+            btSiEstoySeguro.Location = new Point(12, 85);
+            btSiEstoySeguro.Name = "btSiEstoySeguro";
+            btSiEstoySeguro.Size = new Size(139, 35);
+            btSiEstoySeguro.TabIndex = 9;
+            btSiEstoySeguro.Text = "Sí, estoy seguro";
+            btSiEstoySeguro.UseVisualStyleBackColor = false;
+            btSiEstoySeguro.Click += btGuardar_Click;
+            // 
+            // btNoVolver
+            // 
+            btNoVolver.BackColor = Color.FromArgb(30, 30, 30);
+            btNoVolver.FlatAppearance.BorderSize = 0;
+            btNoVolver.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
+            btNoVolver.FlatStyle = FlatStyle.Flat;
+            btNoVolver.ForeColor = SystemColors.ButtonHighlight;
+            btNoVolver.Location = new Point(191, 85);
+            btNoVolver.Name = "btNoVolver";
+            btNoVolver.Size = new Size(139, 35);
+            btNoVolver.TabIndex = 10;
+            btNoVolver.Text = "No, volver";
+            btNoVolver.UseVisualStyleBackColor = false;
+            btNoVolver.Click += btNoVolver_Click;
+            // 
+            // fEliminarUsuarios
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(230, 225, 212);
+            ClientSize = new Size(342, 154);
+            Controls.Add(btNoVolver);
+            Controls.Add(btSiEstoySeguro);
+            Controls.Add(lbEstasSeguro);
+            Name = "fEliminarUsuarios";
+            Text = "fEliminarUsuarios";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lbEstasSeguro;
+        private Button btSiEstoySeguro;
+        private Button btNoVolver;
     }
 }
