@@ -28,9 +28,9 @@ namespace WinFormsApp1.Forms.fEstadias
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             dgListarEstadias = new DataGridView();
             btModificarEstadia = new Button();
             btEliminarEstadia = new Button();
@@ -45,44 +45,44 @@ namespace WinFormsApp1.Forms.fEstadias
             dgListarEstadias.AllowUserToResizeRows = false;
             dgListarEstadias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgListarEstadias.BackgroundColor = Color.FromArgb(165, 150, 135);
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = SystemColors.Control;
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Control;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            dgListarEstadias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgListarEstadias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgListarEstadias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgListarEstadias.EnableHeadersVisualStyles = false;
             dgListarEstadias.GridColor = Color.PowderBlue;
-            dgListarEstadias.Location = new Point(30, 27);
+            dgListarEstadias.Location = new Point(24, 22);
             dgListarEstadias.Margin = new Padding(2);
             dgListarEstadias.Name = "dgListarEstadias";
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = SystemColors.Control;
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle8.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(195, 180, 165);
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            dgListarEstadias.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(195, 180, 165);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgListarEstadias.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgListarEstadias.RowHeadersWidth = 62;
-            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(110, 95, 80);
-            dataGridViewCellStyle9.SelectionForeColor = Color.White;
-            dgListarEstadias.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(110, 95, 80);
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            dgListarEstadias.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgListarEstadias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgListarEstadias.Size = new Size(1144, 645);
+            dgListarEstadias.Size = new Size(915, 516);
             dgListarEstadias.TabIndex = 1;
             // 
             // btModificarEstadia
             // 
             btModificarEstadia.BackColor = Color.FromArgb(30, 30, 30);
             btModificarEstadia.ForeColor = SystemColors.ButtonHighlight;
-            btModificarEstadia.Location = new Point(235, 696);
+            btModificarEstadia.Location = new Point(188, 557);
             btModificarEstadia.Margin = new Padding(2);
             btModificarEstadia.Name = "btModificarEstadia";
-            btModificarEstadia.Size = new Size(350, 59);
+            btModificarEstadia.Size = new Size(280, 47);
             btModificarEstadia.TabIndex = 5;
             btModificarEstadia.Text = "Modificar";
             btModificarEstadia.UseVisualStyleBackColor = false;
@@ -92,10 +92,10 @@ namespace WinFormsApp1.Forms.fEstadias
             // 
             btEliminarEstadia.BackColor = Color.FromArgb(30, 30, 30);
             btEliminarEstadia.ForeColor = SystemColors.ButtonHighlight;
-            btEliminarEstadia.Location = new Point(605, 696);
+            btEliminarEstadia.Location = new Point(484, 557);
             btEliminarEstadia.Margin = new Padding(2);
             btEliminarEstadia.Name = "btEliminarEstadia";
-            btEliminarEstadia.Size = new Size(350, 59);
+            btEliminarEstadia.Size = new Size(280, 47);
             btEliminarEstadia.TabIndex = 6;
             btEliminarEstadia.Text = "Eliminar";
             btEliminarEstadia.UseVisualStyleBackColor = false;
@@ -103,14 +103,16 @@ namespace WinFormsApp1.Forms.fEstadias
             // 
             // fListarEstadias
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 225, 212);
-            ClientSize = new Size(1215, 841);
+            ClientSize = new Size(972, 673);
             Controls.Add(btEliminarEstadia);
             Controls.Add(btModificarEstadia);
             Controls.Add(dgListarEstadias);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "fListarEstadias";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "ListarEstadias";
             Load += fListarEstadias_Load;
             ((System.ComponentModel.ISupportInitialize)dgListarEstadias).EndInit();

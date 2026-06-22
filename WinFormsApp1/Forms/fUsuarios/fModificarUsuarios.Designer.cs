@@ -151,6 +151,7 @@
             Controls.Add(lbUsername);
             Controls.Add(lbNombre);
             Controls.Add(lbRol);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "fModificarUsuarios";
             StartPosition = FormStartPosition.CenterParent;
             Text = "fModificarUsuarios";

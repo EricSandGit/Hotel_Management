@@ -51,7 +51,7 @@ namespace WinFormsApp1.Forms.fClientes
             btSiEstoySeguro.FlatStyle = FlatStyle.Flat;
             btSiEstoySeguro.ForeColor = SystemColors.ButtonHighlight;
             btSiEstoySeguro.Location = new Point(25, 93);
-            btSiEstoySeguro.Margin = new Padding(1, 1, 1, 1);
+            btSiEstoySeguro.Margin = new Padding(1);
             btSiEstoySeguro.Name = "btSiEstoySeguro";
             btSiEstoySeguro.Size = new Size(127, 27);
             btSiEstoySeguro.TabIndex = 1;
@@ -67,7 +67,7 @@ namespace WinFormsApp1.Forms.fClientes
             btNoVolver.FlatStyle = FlatStyle.Flat;
             btNoVolver.ForeColor = SystemColors.ButtonHighlight;
             btNoVolver.Location = new Point(177, 93);
-            btNoVolver.Margin = new Padding(1, 1, 1, 1);
+            btNoVolver.Margin = new Padding(1);
             btNoVolver.Name = "btNoVolver";
             btNoVolver.Size = new Size(127, 27);
             btNoVolver.TabIndex = 2;
@@ -84,7 +84,8 @@ namespace WinFormsApp1.Forms.fClientes
             Controls.Add(btNoVolver);
             Controls.Add(btSiEstoySeguro);
             Controls.Add(lbAdvertencia);
-            Margin = new Padding(1, 1, 1, 1);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(1);
             Name = "fClientesEliminar";
             StartPosition = FormStartPosition.CenterParent;
             Text = "fClientesEliminar";

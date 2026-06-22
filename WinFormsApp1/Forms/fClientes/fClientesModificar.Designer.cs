@@ -52,7 +52,7 @@
             btCancelar.FlatStyle = FlatStyle.Flat;
             btCancelar.ForeColor = SystemColors.ButtonHighlight;
             btCancelar.Location = new Point(472, 395);
-            btCancelar.Margin = new Padding(1, 1, 1, 1);
+            btCancelar.Margin = new Padding(1);
             btCancelar.Name = "btCancelar";
             btCancelar.Size = new Size(135, 37);
             btCancelar.TabIndex = 29;
@@ -68,7 +68,7 @@
             btGuardar.FlatStyle = FlatStyle.Flat;
             btGuardar.ForeColor = SystemColors.ButtonHighlight;
             btGuardar.Location = new Point(177, 395);
-            btGuardar.Margin = new Padding(1, 1, 1, 1);
+            btGuardar.Margin = new Padding(1);
             btGuardar.Name = "btGuardar";
             btGuardar.Size = new Size(135, 37);
             btGuardar.TabIndex = 28;
@@ -89,7 +89,7 @@
             // textBox6
             // 
             textBox6.Location = new Point(302, 323);
-            textBox6.Margin = new Padding(1, 1, 1, 1);
+            textBox6.Margin = new Padding(1);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(219, 27);
             textBox6.TabIndex = 26;
@@ -107,7 +107,7 @@
             // textBox5
             // 
             textBox5.Location = new Point(302, 266);
-            textBox5.Margin = new Padding(1, 1, 1, 1);
+            textBox5.Margin = new Padding(1);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(219, 27);
             textBox5.TabIndex = 24;
@@ -125,7 +125,7 @@
             // textBox4
             // 
             textBox4.Location = new Point(302, 212);
-            textBox4.Margin = new Padding(1, 1, 1, 1);
+            textBox4.Margin = new Padding(1);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(219, 27);
             textBox4.TabIndex = 22;
@@ -143,7 +143,7 @@
             // textBox3
             // 
             textBox3.Location = new Point(302, 155);
-            textBox3.Margin = new Padding(1, 1, 1, 1);
+            textBox3.Margin = new Padding(1);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(219, 27);
             textBox3.TabIndex = 20;
@@ -171,7 +171,7 @@
             // textBox2
             // 
             textBox2.Location = new Point(302, 95);
-            textBox2.Margin = new Padding(1, 1, 1, 1);
+            textBox2.Margin = new Padding(1);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(219, 27);
             textBox2.TabIndex = 17;
@@ -179,7 +179,7 @@
             // textBox1
             // 
             textBox1.Location = new Point(302, 44);
-            textBox1.Margin = new Padding(1, 1, 1, 1);
+            textBox1.Margin = new Padding(1);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(219, 27);
             textBox1.TabIndex = 16;
@@ -204,7 +204,8 @@
             Controls.Add(lbNombre);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
-            Margin = new Padding(1, 1, 1, 1);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(1);
             Name = "fClientesModificar";
             StartPosition = FormStartPosition.CenterParent;
             Text = "fClientesModificar";
