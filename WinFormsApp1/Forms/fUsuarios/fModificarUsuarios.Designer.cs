@@ -152,6 +152,7 @@
             Controls.Add(lbNombre);
             Controls.Add(lbRol);
             Name = "fModificarUsuarios";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "fModificarUsuarios";
             Load += fModificarUsuarios_Load;
             ResumeLayout(false);
