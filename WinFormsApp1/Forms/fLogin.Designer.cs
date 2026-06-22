@@ -43,29 +43,26 @@ namespace WinFormsApp1.Forms
             lbUsuario.AutoSize = true;
             lbUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbUsuario.ForeColor = SystemColors.ButtonHighlight;
-            lbUsuario.Location = new Point(171, 179);
-            lbUsuario.Margin = new Padding(4, 0, 4, 0);
+            lbUsuario.Location = new Point(137, 143);
             lbUsuario.Name = "lbUsuario";
-            lbUsuario.Size = new Size(99, 32);
+            lbUsuario.Size = new Size(83, 28);
             lbUsuario.TabIndex = 0;
             lbUsuario.Text = "Usuario:";
             // 
             // tbUsuario
             // 
-            tbUsuario.Location = new Point(282, 179);
-            tbUsuario.Margin = new Padding(4, 4, 4, 4);
+            tbUsuario.Location = new Point(226, 143);
             tbUsuario.Name = "tbUsuario";
-            tbUsuario.Size = new Size(472, 31);
+            tbUsuario.Size = new Size(378, 27);
             tbUsuario.TabIndex = 1;
             tbUsuario.KeyDown += tbUsuario_KeyDown;
             // 
             // tbContrasena
             // 
-            tbContrasena.Location = new Point(282, 294);
-            tbContrasena.Margin = new Padding(4, 4, 4, 4);
+            tbContrasena.Location = new Point(226, 235);
             tbContrasena.Name = "tbContrasena";
             tbContrasena.PasswordChar = '*';
-            tbContrasena.Size = new Size(472, 31);
+            tbContrasena.Size = new Size(378, 27);
             tbContrasena.TabIndex = 3;
             tbContrasena.KeyDown += tbContrasena_KeyDown;
             // 
@@ -74,10 +71,9 @@ namespace WinFormsApp1.Forms
             lbContrasena.AutoSize = true;
             lbContrasena.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbContrasena.ForeColor = SystemColors.ButtonHighlight;
-            lbContrasena.Location = new Point(132, 294);
-            lbContrasena.Margin = new Padding(4, 0, 4, 0);
+            lbContrasena.Location = new Point(106, 235);
             lbContrasena.Name = "lbContrasena";
-            lbContrasena.Size = new Size(139, 32);
+            lbContrasena.Size = new Size(114, 28);
             lbContrasena.TabIndex = 2;
             lbContrasena.Text = "Contraseña:";
             // 
@@ -89,10 +85,9 @@ namespace WinFormsApp1.Forms
             btIngresar.FlatStyle = FlatStyle.Flat;
             btIngresar.Font = new Font("Segoe UI", 12F);
             btIngresar.ForeColor = SystemColors.ButtonHighlight;
-            btIngresar.Location = new Point(368, 420);
-            btIngresar.Margin = new Padding(4, 4, 4, 4);
+            btIngresar.Location = new Point(294, 336);
             btIngresar.Name = "btIngresar";
-            btIngresar.Size = new Size(246, 59);
+            btIngresar.Size = new Size(197, 47);
             btIngresar.TabIndex = 4;
             btIngresar.Text = "Ingresar";
             btIngresar.UseVisualStyleBackColor = false;
@@ -103,10 +98,9 @@ namespace WinFormsApp1.Forms
             lbLogin.AutoSize = true;
             lbLogin.Font = new Font("Segoe UI", 15F);
             lbLogin.ForeColor = SystemColors.ButtonHighlight;
-            lbLogin.Location = new Point(368, 74);
-            lbLogin.Margin = new Padding(4, 0, 4, 0);
+            lbLogin.Location = new Point(294, 59);
             lbLogin.Name = "lbLogin";
-            lbLogin.Size = new Size(258, 41);
+            lbLogin.Size = new Size(218, 35);
             lbLogin.TabIndex = 5;
             lbLogin.Text = "INICIO DE SESIÓN";
             // 
@@ -118,20 +112,20 @@ namespace WinFormsApp1.Forms
             btSalir.FlatStyle = FlatStyle.Flat;
             btSalir.Font = new Font("Segoe UI", 12F);
             btSalir.ForeColor = SystemColors.ButtonHighlight;
-            btSalir.Location = new Point(368, 486);
-            btSalir.Margin = new Padding(4, 4, 4, 4);
+            btSalir.Location = new Point(294, 389);
             btSalir.Name = "btSalir";
-            btSalir.Size = new Size(246, 59);
+            btSalir.Size = new Size(197, 47);
             btSalir.TabIndex = 6;
             btSalir.Text = "Salir";
             btSalir.UseVisualStyleBackColor = false;
+            btSalir.Click += btSalir_Click;
             // 
             // fLogin
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 30, 30);
-            ClientSize = new Size(1000, 562);
+            ClientSize = new Size(800, 450);
             Controls.Add(btSalir);
             Controls.Add(lbLogin);
             Controls.Add(btIngresar);
@@ -141,11 +135,9 @@ namespace WinFormsApp1.Forms
             Controls.Add(lbUsuario);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 4, 4, 4);
             MaximizeBox = false;
             Name = "fLogin";
             Text = "fLogin";
-            Load += fLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }
