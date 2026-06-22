@@ -11,6 +11,7 @@ using WinFormsApp1.Persistencia;
 using WinFormsApp1.Forms.fClientes;
 using WinFormsApp1.Forms.fReservas;
 using WinFormsApp1.Forms.fUsuarios;
+using WinFormsApp1.Forms.fEstadias;
 
 namespace WinFormsApp1.Forms
 {
@@ -90,7 +91,7 @@ namespace WinFormsApp1.Forms
                 fh.Dock = DockStyle.Fill;        // El form ocupa todo el tama�o del panel
 
                 this.pnContenedor.Controls.Add(fh);
-                this.pnContenedor.Tag = fh; // Guarda en el panel un tag de lo que se est� viendo
+                this.pnContenedor.Tag = fh; // Guarda en el panel un tag de lo que se esta viendo
                 fh.Show();
             }
         }
@@ -112,6 +113,7 @@ namespace WinFormsApp1.Forms
         {
             SeleccionarBoton((Button)sender);
 
+            AbrirFormEnPanel(new fListarEstadias());
 
         }
         private void btGastoExtra_Click(object sender, EventArgs e)

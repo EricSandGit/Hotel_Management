@@ -126,6 +126,14 @@ namespace WinFormsApp1.Controladores
             return ok;
         }
 
+        // Comprobar si la estadía tiene dependencias activas (cuentas o gastos extras)
+        public static bool TieneDependencias(int idEstadia)
+        {
+            bool tieneCuenta = nCuenta.ListarCuentas().Exists(c => c.IdEstadia == idEstadia);
+            bool tieneGasto = nGastoExtra.ListarGastos().Exists(g => g.IdEstadia == idEstadia);
+            return tieneCuenta || tieneGasto;
+        }
+
         // Baja de estadía
         public static bool EliminarEstadia(int id) => persistencia.Eliminar(id);
     }

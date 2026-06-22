@@ -7,30 +7,24 @@ using System.Text;
 using System.Windows.Forms;
 using WinFormsApp1.Controladores;
 
-namespace WinFormsApp1.Forms.fReservas
+namespace WinFormsApp1.Forms.fEstadias
 {
-    public partial class fReservasEliminar : Form
+    public partial class fEstadiaEliminar : Form
     {
 
-        private int idReservaAEliminar;
-        public fReservasEliminar(int idReserva)
+        private int idEstadiaAEliminar;
+        public fEstadiaEliminar(int idEstadia)
         {
             InitializeComponent();
-
-            idReservaAEliminar = idReserva;
-
-
+            idEstadiaAEliminar = idEstadia;
         }
-
-
-
 
         private void btEliminar_Click(object sender, EventArgs e)
         {
-            if (nReserva.TieneEstadiaAsignada(idReservaAEliminar))
+            if (nEstadia.TieneDependencias(idEstadiaAEliminar))
             {
                 MessageBox.Show(
-                    "No se puede eliminar la reserva porque ya tiene una estadía asignada y se encuentra en proceso.",
+                    "No se puede eliminar la estadía porque tiene una cuenta o gastos extras asociados.",
                     "Operación no permitida",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
@@ -39,11 +33,11 @@ namespace WinFormsApp1.Forms.fReservas
                 return;
             }
 
-            bool exito = nReserva.EliminarReserva(idReservaAEliminar);
+            bool exito = nEstadia.EliminarEstadia(idEstadiaAEliminar);
 
             if (!exito)
             {
-                MessageBox.Show("No se pudo eliminar la reserva.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No se pudo eliminar la estadia.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             this.Close();
