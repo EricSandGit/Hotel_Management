@@ -32,6 +32,8 @@ namespace WinFormsApp1.Forms.fReservas
             btAgregarLReserva = new Button();
             btEliminarLReserva = new Button();
             btModificarLReserva = new Button();
+            btCheckInLReserva = new Button();
+            btCheckOutLReserva = new Button();
             ((System.ComponentModel.ISupportInitialize)dgListarReservas).BeginInit();
             SuspendLayout();
             // 
@@ -44,7 +46,6 @@ namespace WinFormsApp1.Forms.fReservas
             dgListarReservas.RowHeadersWidth = 62;
             dgListarReservas.Size = new Size(742, 446);
             dgListarReservas.TabIndex = 0;
-            dgListarReservas.CellContentClick += dgListarReservas_CellContentClick;
             // 
             // btAgregarLReserva
             // 
@@ -66,6 +67,7 @@ namespace WinFormsApp1.Forms.fReservas
             btEliminarLReserva.TabIndex = 4;
             btEliminarLReserva.Text = "Eliminar";
             btEliminarLReserva.UseVisualStyleBackColor = true;
+            btEliminarLReserva.Click += btEliminarLReserva_Click;
             // 
             // btModificarLReserva
             // 
@@ -76,6 +78,26 @@ namespace WinFormsApp1.Forms.fReservas
             btModificarLReserva.TabIndex = 5;
             btModificarLReserva.Text = "Modificar";
             btModificarLReserva.UseVisualStyleBackColor = true;
+            btModificarLReserva.Click += btModificarLReserva_Click;
+            // 
+            // btCheckInLReserva
+            // 
+            btCheckInLReserva.Location = new Point(851, 591);
+            btCheckInLReserva.Name = "btCheckInLReserva";
+            btCheckInLReserva.Size = new Size(160, 34);
+            btCheckInLReserva.TabIndex = 6;
+            btCheckInLReserva.Text = "Check In";
+            btCheckInLReserva.UseVisualStyleBackColor = true;
+            btCheckInLReserva.Click += btCheckInLReserva_Click;
+            // 
+            // btCheckOutLReserva
+            // 
+            btCheckOutLReserva.Location = new Point(1022, 591);
+            btCheckOutLReserva.Name = "btCheckOutLReserva";
+            btCheckOutLReserva.Size = new Size(160, 34);
+            btCheckOutLReserva.TabIndex = 7;
+            btCheckOutLReserva.Text = "Check Out";
+            btCheckOutLReserva.UseVisualStyleBackColor = true;
             // 
             // fListarReservas
             // 
@@ -100,5 +122,7 @@ namespace WinFormsApp1.Forms.fReservas
         private Button btAgregarLReserva;
         private Button btEliminarLReserva;
         private Button btModificarLReserva;
+        private Button btCheckInLReserva;
+        private Button btCheckOutLReserva;
     }
 }

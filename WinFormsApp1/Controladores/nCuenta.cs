@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using WinFormsApp1.Modelos;
 using WinFormsApp1.Persistencia;
@@ -75,7 +75,7 @@ namespace WinFormsApp1.Controladores
                 TotalGastos = totalGastos,
                 TotalGeneral = totalGeneral,
                 MontoPagado = 0,
-                Estado = "Impaga"
+                Estado = "pendiente"
             };
 
             int id = persistencia.Agregar(cuenta);
@@ -93,7 +93,7 @@ namespace WinFormsApp1.Controladores
             cuenta.MontoPagado += monto;
             if (cuenta.MontoPagado >= cuenta.TotalGeneral)
             {
-                cuenta.Estado = "Pagada";
+                cuenta.Estado = "pagada";
             }
             return persistencia.Actualizar(cuenta);
         }
