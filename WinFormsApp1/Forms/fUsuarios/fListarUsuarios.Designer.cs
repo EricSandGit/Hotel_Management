@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             dgListarUsuarios = new DataGridView();
-            textBox1 = new TextBox();
-            comboBox1 = new ComboBox();
             btAgregarUsuario = new Button();
             btEliminarUsuario = new Button();
             btModificarUsuario = new Button();
@@ -39,83 +37,81 @@
             // 
             // dgListarUsuarios
             // 
+            dgListarUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgListarUsuarios.BackgroundColor = Color.FromArgb(165, 150, 135);
             dgListarUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgListarUsuarios.Location = new Point(52, 33);
+            dgListarUsuarios.Location = new Point(32, 33);
             dgListarUsuarios.Name = "dgListarUsuarios";
             dgListarUsuarios.RowHeadersWidth = 51;
             dgListarUsuarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgListarUsuarios.Size = new Size(895, 534);
+            dgListarUsuarios.Size = new Size(915, 534);
             dgListarUsuarios.TabIndex = 0;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(52, 600);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(117, 27);
-            textBox1.TabIndex = 1;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(180, 600);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(174, 28);
-            comboBox1.TabIndex = 2;
             // 
             // btAgregarUsuario
             // 
-            btAgregarUsuario.Location = new Point(399, 590);
+            btAgregarUsuario.BackColor = Color.FromArgb(30, 30, 30);
+            btAgregarUsuario.FlatAppearance.BorderSize = 0;
+            btAgregarUsuario.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
+            btAgregarUsuario.FlatStyle = FlatStyle.Flat;
+            btAgregarUsuario.ForeColor = SystemColors.ButtonHighlight;
+            btAgregarUsuario.Location = new Point(32, 590);
             btAgregarUsuario.Name = "btAgregarUsuario";
-            btAgregarUsuario.Size = new Size(163, 47);
+            btAgregarUsuario.Size = new Size(280, 47);
             btAgregarUsuario.TabIndex = 3;
             btAgregarUsuario.Text = "Agregar";
-            btAgregarUsuario.UseVisualStyleBackColor = true;
+            btAgregarUsuario.UseVisualStyleBackColor = false;
             btAgregarUsuario.Click += btAgregarUsuario_Click;
             // 
             // btEliminarUsuario
             // 
-            btEliminarUsuario.Location = new Point(590, 590);
+            btEliminarUsuario.BackColor = Color.FromArgb(30, 30, 30);
+            btEliminarUsuario.FlatAppearance.BorderSize = 0;
+            btEliminarUsuario.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
+            btEliminarUsuario.FlatStyle = FlatStyle.Flat;
+            btEliminarUsuario.ForeColor = SystemColors.ButtonHighlight;
+            btEliminarUsuario.Location = new Point(348, 590);
             btEliminarUsuario.Name = "btEliminarUsuario";
-            btEliminarUsuario.Size = new Size(163, 47);
+            btEliminarUsuario.Size = new Size(280, 47);
             btEliminarUsuario.TabIndex = 4;
             btEliminarUsuario.Text = "Eliminar";
-            btEliminarUsuario.UseVisualStyleBackColor = true;
+            btEliminarUsuario.UseVisualStyleBackColor = false;
             btEliminarUsuario.Click += btEliminarUsuario_Click;
             // 
             // btModificarUsuario
             // 
-            btModificarUsuario.Location = new Point(784, 590);
+            btModificarUsuario.BackColor = Color.FromArgb(30, 30, 30);
+            btModificarUsuario.FlatAppearance.BorderSize = 0;
+            btModificarUsuario.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
+            btModificarUsuario.FlatStyle = FlatStyle.Flat;
+            btModificarUsuario.ForeColor = SystemColors.ButtonHighlight;
+            btModificarUsuario.Location = new Point(667, 590);
             btModificarUsuario.Name = "btModificarUsuario";
-            btModificarUsuario.Size = new Size(163, 47);
+            btModificarUsuario.Size = new Size(280, 47);
             btModificarUsuario.TabIndex = 5;
             btModificarUsuario.Text = "Modificar";
-            btModificarUsuario.UseVisualStyleBackColor = true;
+            btModificarUsuario.UseVisualStyleBackColor = false;
             btModificarUsuario.Click += btModificarUsuario_Click;
             // 
             // fListarUsuarios
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(230, 225, 212);
             ClientSize = new Size(972, 673);
             Controls.Add(btModificarUsuario);
             Controls.Add(btEliminarUsuario);
             Controls.Add(btAgregarUsuario);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox1);
             Controls.Add(dgListarUsuarios);
             Name = "fListarUsuarios";
             Text = "fListarUsuarios";
             Load += fListarUsuarios_Load;
             ((System.ComponentModel.ISupportInitialize)dgListarUsuarios).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private DataGridView dgListarUsuarios;
-        private TextBox textBox1;
-        private ComboBox comboBox1;
         private Button btAgregarUsuario;
         private Button btEliminarUsuario;
         private Button btModificarUsuario;

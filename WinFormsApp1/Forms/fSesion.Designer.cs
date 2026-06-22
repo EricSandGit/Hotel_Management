@@ -217,7 +217,7 @@
             // 
             // pnContenedor
             // 
-            pnContenedor.BackColor = Color.FromArgb(45, 45, 45);
+            pnContenedor.BackColor = Color.FromArgb(230, 225, 212);
             pnContenedor.Location = new Point(225, 0);
             pnContenedor.Margin = new Padding(2);
             pnContenedor.Name = "pnContenedor";
