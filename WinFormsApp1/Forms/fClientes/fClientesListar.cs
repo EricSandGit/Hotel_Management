@@ -13,11 +13,11 @@ namespace WinFormsApp1.Forms.fClientes
 {
     public partial class fClientesListar : Form
     {
-        
+
         public fClientesListar()
         {
             InitializeComponent();
-            this.Load += fClientesListar_Load; 
+            this.Load += fClientesListar_Load;
         }
 
 
@@ -43,7 +43,7 @@ namespace WinFormsApp1.Forms.fClientes
         }
 
 
-        
+
 
         private void btEliminarCliente_Click(object sender, EventArgs e)
         {
@@ -64,7 +64,7 @@ namespace WinFormsApp1.Forms.fClientes
             }
         }
 
-      
+
 
         private void btEditarCliente_Click(object sender, EventArgs e)
         {
@@ -85,7 +85,10 @@ namespace WinFormsApp1.Forms.fClientes
             }
         }
 
-        
+        private void dataGridViewClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 

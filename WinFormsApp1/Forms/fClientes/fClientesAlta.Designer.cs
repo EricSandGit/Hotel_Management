@@ -142,28 +142,39 @@
             // 
             // btGuardar
             // 
+            btGuardar.BackColor = Color.FromArgb(30, 30, 30);
+            btGuardar.FlatAppearance.BorderSize = 0;
+            btGuardar.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
+            btGuardar.FlatStyle = FlatStyle.Flat;
+            btGuardar.ForeColor = SystemColors.ButtonHighlight;
             btGuardar.Location = new Point(367, 818);
             btGuardar.Name = "btGuardar";
             btGuardar.Size = new Size(286, 76);
             btGuardar.TabIndex = 14;
             btGuardar.Text = "Guardar";
-            btGuardar.UseVisualStyleBackColor = true;
+            btGuardar.UseVisualStyleBackColor = false;
             btGuardar.Click += btGuardar_Click_1;
             // 
             // btCancelar
             // 
+            btCancelar.BackColor = Color.FromArgb(30, 30, 30);
+            btCancelar.FlatAppearance.BorderSize = 0;
+            btCancelar.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
+            btCancelar.FlatStyle = FlatStyle.Flat;
+            btCancelar.ForeColor = SystemColors.ButtonHighlight;
             btCancelar.Location = new Point(994, 818);
             btCancelar.Name = "btCancelar";
             btCancelar.Size = new Size(286, 76);
             btCancelar.TabIndex = 15;
             btCancelar.Text = "Cancelar";
-            btCancelar.UseVisualStyleBackColor = true;
+            btCancelar.UseVisualStyleBackColor = false;
             btCancelar.Click += btCancelar_Click_1;
             // 
             // fClientesAlta
             // 
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(230, 225, 212);
             ClientSize = new Size(1627, 978);
             Controls.Add(btCancelar);
             Controls.Add(btGuardar);
