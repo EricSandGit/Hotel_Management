@@ -28,6 +28,9 @@ namespace WinFormsApp1.Forms.fClientes
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             dataGridViewClientes = new DataGridView();
             btEditarCliente = new Button();
             btEliminarCliente = new Button();
@@ -37,58 +40,101 @@ namespace WinFormsApp1.Forms.fClientes
             // 
             // dataGridViewClientes
             // 
+            dataGridViewClientes.AllowUserToAddRows = false;
+            dataGridViewClientes.AllowUserToDeleteRows = false;
+            dataGridViewClientes.AllowUserToResizeColumns = false;
+            dataGridViewClientes.AllowUserToResizeRows = false;
+            dataGridViewClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewClientes.BackgroundColor = Color.FromArgb(165, 150, 135);
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridViewClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewClientes.Location = new Point(14, 14);
-            dataGridViewClientes.Margin = new Padding(2);
+            dataGridViewClientes.EnableHeadersVisualStyles = false;
+            dataGridViewClientes.Location = new Point(39, 48);
+            dataGridViewClientes.Margin = new Padding(4);
             dataGridViewClientes.Name = "dataGridViewClientes";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(195, 180, 165);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridViewClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewClientes.RowHeadersWidth = 102;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(110, 95, 80);
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            dataGridViewClientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewClientes.Size = new Size(789, 380);
+            dataGridViewClientes.Size = new Size(1976, 1071);
             dataGridViewClientes.TabIndex = 0;
+            dataGridViewClientes.CellContentClick += dataGridViewClientes_CellContentClick;
             // 
             // btEditarCliente
             // 
-            btEditarCliente.Location = new Point(688, 408);
-            btEditarCliente.Margin = new Padding(2);
+            btEditarCliente.BackColor = Color.Black;
+            btEditarCliente.FlatAppearance.BorderSize = 0;
+            btEditarCliente.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48, 0);
+            btEditarCliente.FlatStyle = FlatStyle.Flat;
+            btEditarCliente.ForeColor = SystemColors.ButtonHighlight;
+            btEditarCliente.Location = new Point(1420, 1171);
+            btEditarCliente.Margin = new Padding(4);
             btEditarCliente.Name = "btEditarCliente";
-            btEditarCliente.Size = new Size(115, 37);
+            btEditarCliente.Size = new Size(595, 96);
             btEditarCliente.TabIndex = 1;
             btEditarCliente.Text = "Editar";
-            btEditarCliente.UseVisualStyleBackColor = true;
+            btEditarCliente.UseVisualStyleBackColor = false;
             btEditarCliente.Click += btEditarCliente_Click;
             // 
             // btEliminarCliente
             // 
-            btEliminarCliente.Location = new Point(564, 408);
-            btEliminarCliente.Margin = new Padding(2);
+            btEliminarCliente.BackColor = Color.Black;
+            btEliminarCliente.FlatAppearance.BorderSize = 0;
+            btEliminarCliente.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48, 0);
+            btEliminarCliente.FlatStyle = FlatStyle.Flat;
+            btEliminarCliente.ForeColor = SystemColors.ButtonHighlight;
+            btEliminarCliente.Location = new Point(730, 1171);
+            btEliminarCliente.Margin = new Padding(4);
             btEliminarCliente.Name = "btEliminarCliente";
-            btEliminarCliente.Size = new Size(115, 37);
+            btEliminarCliente.Size = new Size(595, 96);
             btEliminarCliente.TabIndex = 2;
             btEliminarCliente.Text = "Eliminar";
-            btEliminarCliente.UseVisualStyleBackColor = true;
+            btEliminarCliente.UseVisualStyleBackColor = false;
             btEliminarCliente.Click += btEliminarCliente_Click;
             // 
             // btAgregarCliente
             // 
-            btAgregarCliente.Location = new Point(437, 408);
-            btAgregarCliente.Margin = new Padding(2);
+            btAgregarCliente.BackColor = Color.Black;
+            btAgregarCliente.FlatAppearance.BorderSize = 0;
+            btAgregarCliente.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48, 0);
+            btAgregarCliente.FlatStyle = FlatStyle.Flat;
+            btAgregarCliente.ForeColor = SystemColors.ButtonHighlight;
+            btAgregarCliente.Location = new Point(39, 1171);
+            btAgregarCliente.Margin = new Padding(4);
             btAgregarCliente.Name = "btAgregarCliente";
-            btAgregarCliente.Size = new Size(115, 37);
+            btAgregarCliente.Size = new Size(595, 96);
             btAgregarCliente.TabIndex = 3;
             btAgregarCliente.Text = "Agregar";
-            btAgregarCliente.UseVisualStyleBackColor = true;
+            btAgregarCliente.UseVisualStyleBackColor = false;
             btAgregarCliente.Click += btAgregarCliente_Click;
             // 
             // fClientesListar
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(972, 673);
+            BackColor = Color.FromArgb(230, 225, 212);
+            ClientSize = new Size(2066, 1380);
             Controls.Add(btAgregarCliente);
             Controls.Add(btEliminarCliente);
             Controls.Add(btEditarCliente);
             Controls.Add(dataGridViewClientes);
-            Margin = new Padding(2);
+            Margin = new Padding(4);
             Name = "fClientesListar";
             Text = "fClientesListar";
             ((System.ComponentModel.ISupportInitialize)dataGridViewClientes).EndInit();
