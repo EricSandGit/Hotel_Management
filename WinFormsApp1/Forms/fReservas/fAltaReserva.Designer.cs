@@ -49,7 +49,7 @@
             // dtResLlegada
             // 
             dtResLlegada.Location = new Point(178, 46);
-            dtResLlegada.Margin = new Padding(2, 2, 2, 2);
+            dtResLlegada.Margin = new Padding(2);
             dtResLlegada.Name = "dtResLlegada";
             dtResLlegada.Size = new Size(268, 27);
             dtResLlegada.TabIndex = 0;
@@ -57,7 +57,7 @@
             // dtResSalida
             // 
             dtResSalida.Location = new Point(178, 125);
-            dtResSalida.Margin = new Padding(2, 2, 2, 2);
+            dtResSalida.Margin = new Padding(2);
             dtResSalida.Name = "dtResSalida";
             dtResSalida.Size = new Size(268, 27);
             dtResSalida.TabIndex = 1;
@@ -107,7 +107,7 @@
             // 
             cbResHabitaciones.FormattingEnabled = true;
             cbResHabitaciones.Location = new Point(11, 125);
-            cbResHabitaciones.Margin = new Padding(2, 2, 2, 2);
+            cbResHabitaciones.Margin = new Padding(2);
             cbResHabitaciones.Name = "cbResHabitaciones";
             cbResHabitaciones.Size = new Size(146, 28);
             cbResHabitaciones.TabIndex = 10;
@@ -116,7 +116,7 @@
             // 
             cbResCliente.FormattingEnabled = true;
             cbResCliente.Location = new Point(10, 45);
-            cbResCliente.Margin = new Padding(2, 2, 2, 2);
+            cbResCliente.Margin = new Padding(2);
             cbResCliente.Name = "cbResCliente";
             cbResCliente.Size = new Size(146, 28);
             cbResCliente.TabIndex = 11;
@@ -124,7 +124,7 @@
             // numResMenores
             // 
             numResMenores.Location = new Point(469, 126);
-            numResMenores.Margin = new Padding(2, 2, 2, 2);
+            numResMenores.Margin = new Padding(2);
             numResMenores.Name = "numResMenores";
             numResMenores.Size = new Size(144, 27);
             numResMenores.TabIndex = 13;
@@ -132,7 +132,7 @@
             // numResAdultos
             // 
             numResAdultos.Location = new Point(469, 46);
-            numResAdultos.Margin = new Padding(2, 2, 2, 2);
+            numResAdultos.Margin = new Padding(2);
             numResAdultos.Name = "numResAdultos";
             numResAdultos.Size = new Size(144, 27);
             numResAdultos.TabIndex = 12;
@@ -160,7 +160,7 @@
             // btResAceptar
             // 
             btResAceptar.Location = new Point(178, 310);
-            btResAceptar.Margin = new Padding(2, 2, 2, 2);
+            btResAceptar.Margin = new Padding(2);
             btResAceptar.Name = "btResAceptar";
             btResAceptar.Size = new Size(110, 27);
             btResAceptar.TabIndex = 16;
@@ -171,7 +171,7 @@
             // btCancelar
             // 
             btCancelar.Location = new Point(336, 310);
-            btCancelar.Margin = new Padding(2, 2, 2, 2);
+            btCancelar.Margin = new Padding(2);
             btCancelar.Name = "btCancelar";
             btCancelar.Size = new Size(110, 27);
             btCancelar.TabIndex = 17;
@@ -198,7 +198,8 @@
             Controls.Add(label1);
             Controls.Add(dtResSalida);
             Controls.Add(dtResLlegada);
-            Margin = new Padding(2, 2, 2, 2);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2);
             Name = "fAltaReserva";
             StartPosition = FormStartPosition.CenterParent;
             Text = "fmReservas";

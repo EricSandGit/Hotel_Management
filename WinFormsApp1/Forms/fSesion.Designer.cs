@@ -32,6 +32,7 @@
             lbBienvenida = new Label();
             lbRol = new Label();
             pnLateral = new Panel();
+            pictureBox1 = new PictureBox();
             btSalir = new Button();
             btUsuario = new Button();
             btReserva = new Button();
@@ -42,6 +43,7 @@
             btCliente = new Button();
             pnContenedor = new Panel();
             pnLateral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lbBienvenida
@@ -58,19 +60,20 @@
             // 
             // lbRol
             // 
-            lbRol.AutoSize = true;
             lbRol.Font = new Font("Segoe UI", 12F, FontStyle.Underline, GraphicsUnit.Point, 0);
             lbRol.ForeColor = SystemColors.ButtonHighlight;
-            lbRol.Location = new Point(2, 630);
+            lbRol.Location = new Point(2, 635);
             lbRol.Margin = new Padding(2, 0, 2, 0);
             lbRol.Name = "lbRol";
-            lbRol.Size = new Size(56, 28);
+            lbRol.Size = new Size(225, 29);
             lbRol.TabIndex = 1;
             lbRol.Text = "-Rol-";
+            lbRol.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pnLateral
             // 
             pnLateral.BackColor = Color.FromArgb(30, 30, 30);
+            pnLateral.Controls.Add(pictureBox1);
             pnLateral.Controls.Add(btSalir);
             pnLateral.Controls.Add(btUsuario);
             pnLateral.Controls.Add(btReserva);
@@ -87,6 +90,16 @@
             pnLateral.Size = new Size(225, 720);
             pnLateral.TabIndex = 2;
             pnLateral.Paint += pnLateral_Paint;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(65, 532);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 100);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 11;
+            pictureBox1.TabStop = false;
             // 
             // btSalir
             // 
@@ -241,6 +254,7 @@
             Text = "fSesion";
             pnLateral.ResumeLayout(false);
             pnLateral.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -258,5 +272,6 @@
         private Button btEstadia;
         private Panel pnContenedor;
         private Button btSalir;
+        private PictureBox pictureBox1;
     }
 }

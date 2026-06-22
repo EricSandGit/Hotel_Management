@@ -81,6 +81,7 @@
             Controls.Add(btNoVolver);
             Controls.Add(btSiEstoySeguro);
             Controls.Add(lbEstasSeguro);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "fEliminarUsuarios";
             StartPosition = FormStartPosition.CenterParent;
             Text = "fEliminarUsuarios";
