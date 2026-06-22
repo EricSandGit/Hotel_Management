@@ -13,7 +13,7 @@ namespace WinFormsApp1.Forms
 {
     public partial class fGastosExtra : Form
     {
-        
+
         public fGastosExtra()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace WinFormsApp1.Forms
         {
             List<Estadia> listaEstadia = nEstadia.ListarEstadias();
 
-            cbEstadias.DropDownStyle =ComboBoxStyle.DropDownList;
+            cbEstadias.DropDownStyle = ComboBoxStyle.DropDownList;
             cbEstadias.DataSource = listaEstadia;
             cbEstadias.DisplayMember = "IdEstadia";
             cbEstadias.ValueMember = "IdEstadia";
@@ -47,6 +47,11 @@ namespace WinFormsApp1.Forms
                 dgGastosExtra.DataSource = gastosFiltrados;
 
             }
+        }
+
+        private void btAgregarGE_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
