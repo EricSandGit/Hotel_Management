@@ -17,161 +17,166 @@ namespace WinFormsApp1.Forms.fEstadias
 
         private void InitializeComponent()
         {
-            this.btCancelar = new System.Windows.Forms.Button();
-            this.btAceptar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbEstReserva = new System.Windows.Forms.ComboBox();
-            this.cbEstUsuario = new System.Windows.Forms.ComboBox();
-            this.dtCheckin = new System.Windows.Forms.DateTimePicker();
-            this.dtCheckout = new System.Windows.Forms.DateTimePicker();
-            this.cbEstado = new System.Windows.Forms.ComboBox();
-            this.chkCheckoutNulo = new System.Windows.Forms.CheckBox();
-            this.SuspendLayout();
+            btCancelar = new Button();
+            btAceptar = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            cbEstReserva = new ComboBox();
+            cbEstUsuario = new ComboBox();
+            dtCheckin = new DateTimePicker();
+            dtCheckout = new DateTimePicker();
+            cbEstado = new ComboBox();
+            chkCheckoutNulo = new CheckBox();
+            SuspendLayout();
             // 
             // btCancelar
             // 
-            this.btCancelar.Location = new System.Drawing.Point(400, 320);
-            this.btCancelar.Name = "btCancelar";
-            this.btCancelar.Size = new System.Drawing.Size(120, 35);
-            this.btCancelar.TabIndex = 6;
-            this.btCancelar.Text = "Cancelar";
-            this.btCancelar.UseVisualStyleBackColor = true;
-            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
+            btCancelar.Location = new Point(400, 320);
+            btCancelar.Name = "btCancelar";
+            btCancelar.Size = new Size(120, 35);
+            btCancelar.TabIndex = 6;
+            btCancelar.Text = "Cancelar";
+            btCancelar.UseVisualStyleBackColor = true;
+            btCancelar.Click += btCancelar_Click;
             // 
             // btAceptar
             // 
-            this.btAceptar.Location = new System.Drawing.Point(220, 320);
-            this.btAceptar.Name = "btAceptar";
-            this.btAceptar.Size = new System.Drawing.Size(120, 35);
-            this.btAceptar.TabIndex = 5;
-            this.btAceptar.Text = "Aceptar";
-            this.btAceptar.UseVisualStyleBackColor = true;
-            this.btAceptar.Click += new System.EventHandler(this.btAceptar_Click);
+            btAceptar.Location = new Point(220, 320);
+            btAceptar.Name = "btAceptar";
+            btAceptar.Size = new Size(120, 35);
+            btAceptar.TabIndex = 5;
+            btAceptar.Text = "Aceptar";
+            btAceptar.UseVisualStyleBackColor = true;
+            btAceptar.Click += btAceptar_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 20);
-            this.label1.Text = "Reserva ID";
+            label1.AutoSize = true;
+            label1.Location = new Point(30, 30);
+            label1.Name = "label1";
+            label1.Size = new Size(79, 20);
+            label1.TabIndex = 12;
+            label1.Text = "Reserva ID";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
-            this.label2.Text = "Usuario ID";
+            label2.AutoSize = true;
+            label2.Location = new Point(30, 100);
+            label2.Name = "label2";
+            label2.Size = new Size(78, 20);
+            label2.TabIndex = 11;
+            label2.Text = "Usuario ID";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 170);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 20);
-            this.label3.Text = "Fecha Check-in";
+            label3.AutoSize = true;
+            label3.Location = new Point(30, 170);
+            label3.Name = "label3";
+            label3.Size = new Size(108, 20);
+            label3.TabIndex = 10;
+            label3.Text = "Fecha Check-in";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(350, 170);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 20);
-            this.label4.Text = "Fecha Check-out";
+            label4.AutoSize = true;
+            label4.Location = new Point(350, 170);
+            label4.Name = "label4";
+            label4.Size = new Size(118, 20);
+            label4.TabIndex = 9;
+            label4.Text = "Fecha Check-out";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(350, 30);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 20);
-            this.label5.Text = "Estado";
+            label5.AutoSize = true;
+            label5.Location = new Point(350, 30);
+            label5.Name = "label5";
+            label5.Size = new Size(54, 20);
+            label5.TabIndex = 8;
+            label5.Text = "Estado";
             // 
             // cbEstReserva
             // 
-            this.cbEstReserva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbEstReserva.FormattingEnabled = true;
-            this.cbEstReserva.Location = new System.Drawing.Point(30, 60);
-            this.cbEstReserva.Name = "cbEstReserva";
-            this.cbEstReserva.Size = new System.Drawing.Size(250, 28);
-            this.cbEstReserva.TabIndex = 0;
+            cbEstReserva.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbEstReserva.FormattingEnabled = true;
+            cbEstReserva.Location = new Point(30, 60);
+            cbEstReserva.Name = "cbEstReserva";
+            cbEstReserva.Size = new Size(250, 28);
+            cbEstReserva.TabIndex = 0;
             // 
             // cbEstUsuario
             // 
-            this.cbEstUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbEstUsuario.FormattingEnabled = true;
-            this.cbEstUsuario.Location = new System.Drawing.Point(30, 130);
-            this.cbEstUsuario.Name = "cbEstUsuario";
-            this.cbEstUsuario.Size = new System.Drawing.Size(250, 28);
-            this.cbEstUsuario.TabIndex = 1;
+            cbEstUsuario.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbEstUsuario.FormattingEnabled = true;
+            cbEstUsuario.Location = new Point(30, 130);
+            cbEstUsuario.Name = "cbEstUsuario";
+            cbEstUsuario.Size = new Size(250, 28);
+            cbEstUsuario.TabIndex = 1;
             // 
             // dtCheckin
             // 
-            this.dtCheckin.Location = new System.Drawing.Point(30, 200);
-            this.dtCheckin.Name = "dtCheckin";
-            this.dtCheckin.Size = new System.Drawing.Size(250, 27);
-            this.dtCheckin.TabIndex = 2;
+            dtCheckin.Location = new Point(30, 200);
+            dtCheckin.Name = "dtCheckin";
+            dtCheckin.Size = new Size(250, 27);
+            dtCheckin.TabIndex = 2;
             // 
             // dtCheckout
             // 
-            this.dtCheckout.Enabled = false;
-            this.dtCheckout.Location = new System.Drawing.Point(350, 200);
-            this.dtCheckout.Name = "dtCheckout";
-            this.dtCheckout.Size = new System.Drawing.Size(250, 27);
-            this.dtCheckout.TabIndex = 4;
+            dtCheckout.Enabled = false;
+            dtCheckout.Location = new Point(350, 200);
+            dtCheckout.Name = "dtCheckout";
+            dtCheckout.Size = new Size(250, 27);
+            dtCheckout.TabIndex = 4;
             // 
             // cbEstado
             // 
-            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Items.AddRange(new object[] {
-            "activa",
-            "finalizada"});
-            this.cbEstado.Location = new System.Drawing.Point(350, 60);
-            this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(250, 28);
-            this.cbEstado.TabIndex = 3;
+            cbEstado.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbEstado.FormattingEnabled = true;
+            cbEstado.Items.AddRange(new object[] { "activa", "finalizada" });
+            cbEstado.Location = new Point(350, 60);
+            cbEstado.Name = "cbEstado";
+            cbEstado.Size = new Size(250, 28);
+            cbEstado.TabIndex = 3;
             // 
             // chkCheckoutNulo
             // 
-            this.chkCheckoutNulo.AutoSize = true;
-            this.chkCheckoutNulo.Location = new System.Drawing.Point(350, 240);
-            this.chkCheckoutNulo.Name = "chkCheckoutNulo";
-            this.chkCheckoutNulo.Size = new System.Drawing.Size(163, 24);
-            this.chkCheckoutNulo.TabIndex = 7;
-            this.chkCheckoutNulo.Text = "Sin Check-out (Nulo)";
-            this.chkCheckoutNulo.UseVisualStyleBackColor = true;
-            this.chkCheckoutNulo.CheckedChanged += new System.EventHandler(this.chkCheckoutNulo_CheckedChanged);
+            chkCheckoutNulo.AutoSize = true;
+            chkCheckoutNulo.Location = new Point(350, 240);
+            chkCheckoutNulo.Name = "chkCheckoutNulo";
+            chkCheckoutNulo.Size = new Size(168, 24);
+            chkCheckoutNulo.TabIndex = 7;
+            chkCheckoutNulo.Text = "Sin Check-out (Nulo)";
+            chkCheckoutNulo.UseVisualStyleBackColor = true;
+            chkCheckoutNulo.CheckedChanged += chkCheckoutNulo_CheckedChanged;
             // 
             // fModificarEstadia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(230, 225, 212);
-            this.ClientSize = new System.Drawing.Size(650, 390);
-            this.Controls.Add(this.chkCheckoutNulo);
-            this.Controls.Add(this.cbEstado);
-            this.Controls.Add(this.dtCheckout);
-            this.Controls.Add(this.dtCheckin);
-            this.Controls.Add(this.cbEstUsuario);
-            this.Controls.Add(this.cbEstReserva);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btAceptar);
-            this.Controls.Add(this.btCancelar);
-            this.Name = "fModificarEstadia";
-            this.Text = "Modificar Estadía";
-            this.Load += new System.EventHandler(this.fModificarEstadia_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(230, 225, 212);
+            ClientSize = new Size(650, 390);
+            Controls.Add(chkCheckoutNulo);
+            Controls.Add(cbEstado);
+            Controls.Add(dtCheckout);
+            Controls.Add(dtCheckin);
+            Controls.Add(cbEstUsuario);
+            Controls.Add(cbEstReserva);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(btAceptar);
+            Controls.Add(btCancelar);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "fModificarEstadia";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Modificar Estadía";
+            Load += fModificarEstadia_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

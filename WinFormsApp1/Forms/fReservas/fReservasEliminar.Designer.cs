@@ -46,7 +46,7 @@
             // btEliminar
             // 
             btEliminar.Location = new Point(66, 143);
-            btEliminar.Margin = new Padding(2, 2, 2, 2);
+            btEliminar.Margin = new Padding(2);
             btEliminar.Name = "btEliminar";
             btEliminar.Size = new Size(118, 27);
             btEliminar.TabIndex = 1;
@@ -57,7 +57,7 @@
             // btCancelar
             // 
             btCancelar.Location = new Point(198, 143);
-            btCancelar.Margin = new Padding(2, 2, 2, 2);
+            btCancelar.Margin = new Padding(2);
             btCancelar.Name = "btCancelar";
             btCancelar.Size = new Size(118, 27);
             btCancelar.TabIndex = 2;
@@ -73,7 +73,8 @@
             Controls.Add(btCancelar);
             Controls.Add(btEliminar);
             Controls.Add(label1);
-            Margin = new Padding(2, 2, 2, 2);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2);
             Name = "fReservasEliminar";
             StartPosition = FormStartPosition.CenterParent;
             Text = "fReservasEliminar";

@@ -36,8 +36,8 @@ namespace WinFormsApp1.Forms
         {
 
 
-            lbBienvenida.Text = $"Bienvenido, \n{usuarioSesion.Nombre}!";
-            lbRol.Text = $"- {nRol.ObtenerRolPorId(usuarioSesion.IdRol).Nombre} -";
+            lbBienvenida.Text = $"Bienvenido, \n{usuarioSesion.Nombre.Replace(" ", "\n")}!";
+            lbRol.Text = $"{nRol.ObtenerRolPorId(usuarioSesion.IdRol).Nombre}";
 
             if (usuarioSesion.IdRol == 1) //Administrador
             {

@@ -39,7 +39,7 @@
             btCancelar.ForeColor = SystemColors.ControlLightLight;
             btCancelar.Location = new Point(288, 185);
             btCancelar.Name = "btCancelar";
-            btCancelar.Size = new Size(147, 34);
+            btCancelar.Size = new Size(118, 27);
             btCancelar.TabIndex = 5;
             btCancelar.Text = "No, Volver";
             btCancelar.UseVisualStyleBackColor = false;
@@ -51,7 +51,7 @@
             btEliminar.ForeColor = SystemColors.ControlLightLight;
             btEliminar.Location = new Point(123, 185);
             btEliminar.Name = "btEliminar";
-            btEliminar.Size = new Size(147, 34);
+            btEliminar.Size = new Size(118, 27);
             btEliminar.TabIndex = 4;
             btEliminar.Text = "Si, Estoy seguro";
             btEliminar.UseVisualStyleBackColor = false;
@@ -64,20 +64,23 @@
             label1.ForeColor = SystemColors.ActiveCaptionText;
             label1.Location = new Point(123, 72);
             label1.Name = "label1";
-            label1.Size = new Size(312, 25);
+            label1.Size = new Size(261, 20);
             label1.TabIndex = 3;
             label1.Text = "¿Estas seguro que lo quieres eliminar?";
             // 
             // fEstadiaEliminar
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 225, 212);
             ClientSize = new Size(558, 291);
             Controls.Add(btCancelar);
             Controls.Add(btEliminar);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2, 2, 2, 2);
             Name = "fEstadiaEliminar";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "fEstadiaEliminar";
             ResumeLayout(false);
             PerformLayout();
