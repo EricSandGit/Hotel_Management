@@ -55,7 +55,7 @@
             btSiEstoySeguro.TabIndex = 9;
             btSiEstoySeguro.Text = "Sí, estoy seguro";
             btSiEstoySeguro.UseVisualStyleBackColor = false;
-            btSiEstoySeguro.Click += btGuardar_Click;
+            btSiEstoySeguro.Click += btSiEstoySeguro_Click;
             // 
             // btNoVolver
             // 
