@@ -35,27 +35,33 @@
             // 
             // btCancelar
             // 
+            btCancelar.BackColor = Color.Black;
+            btCancelar.ForeColor = SystemColors.ControlLightLight;
             btCancelar.Location = new Point(288, 185);
             btCancelar.Name = "btCancelar";
             btCancelar.Size = new Size(147, 34);
             btCancelar.TabIndex = 5;
             btCancelar.Text = "No, Volver";
-            btCancelar.UseVisualStyleBackColor = true;
+            btCancelar.UseVisualStyleBackColor = false;
             btCancelar.Click += btCancelar_Click;
             // 
             // btEliminar
             // 
+            btEliminar.BackColor = Color.Black;
+            btEliminar.ForeColor = SystemColors.ControlLightLight;
             btEliminar.Location = new Point(123, 185);
             btEliminar.Name = "btEliminar";
             btEliminar.Size = new Size(147, 34);
             btEliminar.TabIndex = 4;
             btEliminar.Text = "Si, Estoy seguro";
-            btEliminar.UseVisualStyleBackColor = true;
+            btEliminar.UseVisualStyleBackColor = false;
             btEliminar.Click += btEliminar_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(230, 225, 212);
+            label1.ForeColor = SystemColors.ActiveCaptionText;
             label1.Location = new Point(123, 72);
             label1.Name = "label1";
             label1.Size = new Size(312, 25);
@@ -66,6 +72,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(230, 225, 212);
             ClientSize = new Size(558, 291);
             Controls.Add(btCancelar);
             Controls.Add(btEliminar);

@@ -83,6 +83,13 @@ namespace WinFormsApp1.Forms.fReservas
 
                 if (reservaSeleccionada.Estado.Equals("pendiente", StringComparison.OrdinalIgnoreCase))
                 {
+                    // Validar si es el día del Check-In
+                    if (DateTime.Today != reservaSeleccionada.FechaEntrada.Date)
+                    {
+                        MessageBox.Show($"No se puede realizar el Check-In hoy. La fecha de entrada de la reserva es el {reservaSeleccionada.FechaEntrada:dd/MM/yyyy}.", "Fecha incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
                     DialogResult result = MessageBox.Show($"¿Desea registrar el Check-In para la reserva #{reservaSeleccionada.IdReserva}?", "Confirmar Check-In", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
@@ -118,6 +125,13 @@ namespace WinFormsApp1.Forms.fReservas
 
                 if (reservaSeleccionada.Estado.Equals("confirmada", StringComparison.OrdinalIgnoreCase))
                 {
+                    // Validar si es el día del Check-Out
+                    if (DateTime.Today != reservaSeleccionada.FechaSalida.Date)
+                    {
+                        MessageBox.Show($"No se puede realizar el Check-Out hoy. La fecha de salida de la reserva es el {reservaSeleccionada.FechaSalida:dd/MM/yyyy}.", "Fecha incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
                     DialogResult result = MessageBox.Show($"¿Desea registrar el Check-Out para la reserva #{reservaSeleccionada.IdReserva}?", "Confirmar Check-Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
