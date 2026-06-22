@@ -1,20 +1,20 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using WinFormsApp1.Controladores;
 using WinFormsApp1.Modelos;
-using WinFormsApp1.Persistencia;
+using WinFormsApp1.Forms.fGastosExtra;
 
 namespace WinFormsApp1.Forms
 {
-    public partial class fGastosExtra : Form
+    public partial class FGastosExtra : Form
     {
-
-        public fGastosExtra()
+        public FGastosExtra()
         {
             InitializeComponent();
         }
@@ -27,7 +27,6 @@ namespace WinFormsApp1.Forms
             cbEstadias.DataSource = listaEstadia;
             cbEstadias.DisplayMember = "IdEstadia";
             cbEstadias.ValueMember = "IdEstadia";
-
         }
 
         private void cbEstadias_Click(object sender, EventArgs e)
@@ -35,23 +34,34 @@ namespace WinFormsApp1.Forms
 
         }
 
-        private void cbEstadias_SelectedIndexChanged(object sender, EventArgs e)
+        private void ActualizarGrilla()
         {
             Estadia seleccionarEstadia = (Estadia)cbEstadias.SelectedItem;
             if (seleccionarEstadia != null)
             {
-
                 List<GastoExtra> todosLosGastos = nGastoExtra.ListarGastos();
                 List<GastoExtra> gastosFiltrados = todosLosGastos.Where(g => g.IdEstadia == seleccionarEstadia.IdEstadia).ToList();
                 dgGastosExtra.DataSource = null;
                 dgGastosExtra.DataSource = gastosFiltrados;
-
             }
+            else
+            {
+                dgGastosExtra.DataSource = null;
+            }
+        }
+
+        private void cbEstadias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ActualizarGrilla();
         }
 
         private void btAgregarGE_Click(object sender, EventArgs e)
         {
-            
+            fAgregarGastosExtra alta = new fAgregarGastosExtra();
+            if (alta.ShowDialog() == DialogResult.OK)
+            {
+                ActualizarGrilla();
+            }
         }
     }
 }

@@ -45,9 +45,9 @@ namespace WinFormsApp1.Forms.fReservas
             {
                 Reserva reservaSeleccionado = (Reserva)dgListarReservas.SelectedRows[0].DataBoundItem;
 
-                fReservasEliminar Baja = new fReservasEliminar(reservaSeleccionado.IdReserva);
+                fReservasEliminar baja = new fReservasEliminar(reservaSeleccionado.IdReserva);
 
-                Baja.ShowDialog();
+                baja.ShowDialog();
                 ActualizarGrilla();
             }
             else
@@ -62,9 +62,9 @@ namespace WinFormsApp1.Forms.fReservas
             {
                 Reserva reservaSeleccionado = (Reserva)dgListarReservas.SelectedRows[0].DataBoundItem;
 
-                fModificarReserva Modificar = new fModificarReserva(reservaSeleccionado);
+                fModificarReserva modificar = new fModificarReserva(reservaSeleccionado);
 
-                if (Modificar.ShowDialog() == DialogResult.OK)
+                if (modificar.ShowDialog() == DialogResult.OK)
                 {
                     ActualizarGrilla();
                 }

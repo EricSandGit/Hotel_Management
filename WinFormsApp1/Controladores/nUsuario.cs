@@ -65,6 +65,14 @@ namespace WinFormsApp1.Controladores
         // Consulta de usuario por id
         public static Usuario ObtenerUsuarioPorId(int id) => persistencia.ObtenerPorId(id);
 
+        // Comprobar si el usuario tiene asignaciones (reservas o estadías creadas por él)
+        public static bool TieneAsignaciones(int idUsuario)
+        {
+            bool tieneReservas = nReserva.ListarReservas().Exists(r => r.IdUsuario == idUsuario);
+            bool tieneEstadias = nEstadia.ListarEstadias().Exists(e => e.IdUsuario == idUsuario);
+            return tieneReservas || tieneEstadias;
+        }
+
         // Eliminar usuario (Baja)
         public static bool EliminarUsuario(int id) => persistencia.Eliminar(id);
     }
