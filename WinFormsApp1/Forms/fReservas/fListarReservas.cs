@@ -15,7 +15,7 @@ namespace WinFormsApp1.Forms.fReservas
         public fListarReservas()
         {
             InitializeComponent();
-            this.Load += fListarReservas_Load;
+            
         }
 
         private void fListarReservas_Load(object sender, EventArgs e)
@@ -123,7 +123,7 @@ namespace WinFormsApp1.Forms.fReservas
                     {
                         // Buscar la estadía activa para esta reserva
                         Estadia estadiaActiva = nEstadia.ListarEstadias()
-                            .Find(est => est.IdReserva == reservaSeleccionada.IdReserva && 
+                            .Find(est => est.IdReserva == reservaSeleccionada.IdReserva &&
                                          string.Equals(est.Estado, "activa", StringComparison.OrdinalIgnoreCase));
 
                         if (estadiaActiva != null)
@@ -155,6 +155,11 @@ namespace WinFormsApp1.Forms.fReservas
             {
                 MessageBox.Show("Por favor, seleccione una reserva de la lista primero.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void dgListarReservas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

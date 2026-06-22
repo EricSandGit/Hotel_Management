@@ -94,6 +94,12 @@ namespace WinFormsApp1.Controladores
             return persistencia.Actualizar(r);
         }
 
+        // Comprobar si la reserva tiene una estadía asignada
+        public static bool TieneEstadiaAsignada(int idReserva)
+        {
+            return nEstadia.ListarEstadias().Exists(e => e.IdReserva == idReserva);
+        }
+
         // Baja de reserva
         public static bool EliminarReserva(int id) => persistencia.Eliminar(id);
     }
