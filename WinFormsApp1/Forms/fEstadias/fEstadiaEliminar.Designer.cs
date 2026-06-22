@@ -35,31 +35,34 @@
             // 
             // btCancelar
             // 
-            btCancelar.Location = new Point(230, 148);
-            btCancelar.Margin = new Padding(2, 2, 2, 2);
+            btCancelar.BackColor = Color.Black;
+            btCancelar.ForeColor = SystemColors.ControlLightLight;
+            btCancelar.Location = new Point(288, 185);
             btCancelar.Name = "btCancelar";
             btCancelar.Size = new Size(118, 27);
             btCancelar.TabIndex = 5;
             btCancelar.Text = "No, Volver";
-            btCancelar.UseVisualStyleBackColor = true;
+            btCancelar.UseVisualStyleBackColor = false;
             btCancelar.Click += btCancelar_Click;
             // 
             // btEliminar
             // 
-            btEliminar.Location = new Point(98, 148);
-            btEliminar.Margin = new Padding(2, 2, 2, 2);
+            btEliminar.BackColor = Color.Black;
+            btEliminar.ForeColor = SystemColors.ControlLightLight;
+            btEliminar.Location = new Point(123, 185);
             btEliminar.Name = "btEliminar";
             btEliminar.Size = new Size(118, 27);
             btEliminar.TabIndex = 4;
             btEliminar.Text = "Si, Estoy seguro";
-            btEliminar.UseVisualStyleBackColor = true;
+            btEliminar.UseVisualStyleBackColor = false;
             btEliminar.Click += btEliminar_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(98, 58);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.BackColor = Color.FromArgb(230, 225, 212);
+            label1.ForeColor = SystemColors.ActiveCaptionText;
+            label1.Location = new Point(123, 72);
             label1.Name = "label1";
             label1.Size = new Size(261, 20);
             label1.TabIndex = 3;
@@ -69,7 +72,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(446, 233);
+            BackColor = Color.FromArgb(230, 225, 212);
+            ClientSize = new Size(558, 291);
             Controls.Add(btCancelar);
             Controls.Add(btEliminar);
             Controls.Add(label1);

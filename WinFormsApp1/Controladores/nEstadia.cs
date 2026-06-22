@@ -57,6 +57,10 @@ namespace WinFormsApp1.Controladores
         {
             if (r == null || r.IdReserva <= 0) return false;
 
+            // No permitir check-in si no es el día de la reserva (FechaEntrada)
+            if (DateTime.Today != r.FechaEntrada.Date)
+                return false;
+
             // Verificar capacidad de la habitación
             if (!nReserva.ValidarCapacidad(r.IdHabitacion, r.CantidadPersonas))
                 return false;
@@ -105,6 +109,14 @@ namespace WinFormsApp1.Controladores
             if (estadia == null || estadia.IdEstadia <= 0 || string.Equals(estadia.Estado, "finalizada", StringComparison.OrdinalIgnoreCase)) 
                 return false;
 
+            // Buscar la reserva asociada para validar la fecha de salida
+            var reserva = nReserva.ObtenerReservaPorId(estadia.IdReserva);
+            if (reserva == null) return false;
+
+            // No permitir check-out si no es el día de la salida
+            if (DateTime.Today != reserva.FechaSalida.Date)
+                return false;
+
             // Finalizar la estadía
             estadia.FechaCheckout = DateTime.Now;
             estadia.Estado = "finalizada";
@@ -113,12 +125,8 @@ namespace WinFormsApp1.Controladores
             if (ok)
             {
                 // Finalizar la reserva asociada
-                var reserva = nReserva.ObtenerReservaPorId(estadia.IdReserva);
-                if (reserva != null && reserva.IdReserva > 0)
-                {
-                    reserva.Estado = "confirmada";
-                    nReserva.ActualizarReserva(reserva);
-                }
+                reserva.Estado = "confirmada";
+                nReserva.ActualizarReserva(reserva);
 
                 // Generar automáticamente la cuenta consolidada para esta estadía
                 nCuenta.GenerarCuenta(idEstadia);
