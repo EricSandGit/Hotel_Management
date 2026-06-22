@@ -32,8 +32,6 @@ namespace WinFormsApp1.Forms.fClientes
             btEditarCliente = new Button();
             btEliminarCliente = new Button();
             btAgregarCliente = new Button();
-            comboBox1 = new ComboBox();
-            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridViewClientes).BeginInit();
             SuspendLayout();
             // 
@@ -81,30 +79,11 @@ namespace WinFormsApp1.Forms.fClientes
             btAgregarCliente.UseVisualStyleBackColor = true;
             btAgregarCliente.Click += btAgregarCliente_Click;
             // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(330, 416);
-            comboBox1.Margin = new Padding(2);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(98, 28);
-            comboBox1.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(14, 416);
-            textBox1.Margin = new Padding(2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(305, 27);
-            textBox1.TabIndex = 5;
-            // 
             // fClientesListar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(821, 472);
-            Controls.Add(textBox1);
-            Controls.Add(comboBox1);
+            ClientSize = new Size(972, 673);
             Controls.Add(btAgregarCliente);
             Controls.Add(btEliminarCliente);
             Controls.Add(btEditarCliente);
@@ -114,7 +93,6 @@ namespace WinFormsApp1.Forms.fClientes
             Text = "fClientesListar";
             ((System.ComponentModel.ISupportInitialize)dataGridViewClientes).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -123,7 +101,5 @@ namespace WinFormsApp1.Forms.fClientes
         private Button btEditarCliente;
         private Button btEliminarCliente;
         private Button btAgregarCliente;
-        private ComboBox comboBox1;
-        private TextBox textBox1;
     }
 }

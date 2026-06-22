@@ -29,8 +29,6 @@ namespace WinFormsApp1.Forms.fReservas
         private void InitializeComponent()
         {
             dgListarReservas = new DataGridView();
-            textBox1 = new TextBox();
-            comboBox1 = new ComboBox();
             btAgregarLReserva = new Button();
             btEliminarLReserva = new Button();
             btModificarLReserva = new Button();
@@ -40,34 +38,20 @@ namespace WinFormsApp1.Forms.fReservas
             // dgListarReservas
             // 
             dgListarReservas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgListarReservas.Location = new Point(12, 18);
+            dgListarReservas.Location = new Point(10, 14);
+            dgListarReservas.Margin = new Padding(2);
             dgListarReservas.Name = "dgListarReservas";
             dgListarReservas.RowHeadersWidth = 62;
-            dgListarReservas.Size = new Size(928, 558);
+            dgListarReservas.Size = new Size(742, 446);
             dgListarReservas.TabIndex = 0;
             dgListarReservas.CellContentClick += dgListarReservas_CellContentClick;
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(12, 594);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(284, 31);
-            textBox1.TabIndex = 1;
-            textBox1.TextChanged += textBox1_TextChanged;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(326, 592);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(152, 33);
-            comboBox1.TabIndex = 2;
-            // 
             // btAgregarLReserva
             // 
-            btAgregarLReserva.Location = new Point(497, 590);
+            btAgregarLReserva.Location = new Point(398, 472);
+            btAgregarLReserva.Margin = new Padding(2);
             btAgregarLReserva.Name = "btAgregarLReserva";
-            btAgregarLReserva.Size = new Size(112, 34);
+            btAgregarLReserva.Size = new Size(90, 27);
             btAgregarLReserva.TabIndex = 3;
             btAgregarLReserva.Text = "Agregar";
             btAgregarLReserva.UseVisualStyleBackColor = true;
@@ -75,46 +59,44 @@ namespace WinFormsApp1.Forms.fReservas
             // 
             // btEliminarLReserva
             // 
-            btEliminarLReserva.Location = new Point(615, 591);
+            btEliminarLReserva.Location = new Point(492, 473);
+            btEliminarLReserva.Margin = new Padding(2);
             btEliminarLReserva.Name = "btEliminarLReserva";
-            btEliminarLReserva.Size = new Size(112, 34);
+            btEliminarLReserva.Size = new Size(90, 27);
             btEliminarLReserva.TabIndex = 4;
             btEliminarLReserva.Text = "Eliminar";
             btEliminarLReserva.UseVisualStyleBackColor = true;
             // 
             // btModificarLReserva
             // 
-            btModificarLReserva.Location = new Point(733, 591);
+            btModificarLReserva.Location = new Point(586, 473);
+            btModificarLReserva.Margin = new Padding(2);
             btModificarLReserva.Name = "btModificarLReserva";
-            btModificarLReserva.Size = new Size(112, 34);
+            btModificarLReserva.Size = new Size(90, 27);
             btModificarLReserva.TabIndex = 5;
             btModificarLReserva.Text = "Modificar";
             btModificarLReserva.UseVisualStyleBackColor = true;
             // 
             // fListarReservas
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(968, 664);
+            ClientSize = new Size(972, 673);
             Controls.Add(btModificarLReserva);
             Controls.Add(btEliminarLReserva);
             Controls.Add(btAgregarLReserva);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox1);
             Controls.Add(dgListarReservas);
+            Margin = new Padding(2);
             Name = "fListarReservas";
             Text = "fListarReservas";
             Load += fListarReservas_Load;
             ((System.ComponentModel.ISupportInitialize)dgListarReservas).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private DataGridView dgListarReservas;
-        private TextBox textBox1;
-        private ComboBox comboBox1;
         private Button btAgregarLReserva;
         private Button btEliminarLReserva;
         private Button btModificarLReserva;
