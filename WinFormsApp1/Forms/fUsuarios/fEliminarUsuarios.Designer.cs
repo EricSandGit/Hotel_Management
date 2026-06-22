@@ -82,6 +82,7 @@
             Controls.Add(btSiEstoySeguro);
             Controls.Add(lbEstasSeguro);
             Name = "fEliminarUsuarios";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "fEliminarUsuarios";
             ResumeLayout(false);
             PerformLayout();

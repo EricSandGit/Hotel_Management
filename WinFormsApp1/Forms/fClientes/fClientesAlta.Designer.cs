@@ -46,97 +46,109 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(633, 99);
+            textBox1.Location = new Point(298, 48);
+            textBox1.Margin = new Padding(1, 1, 1, 1);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(461, 47);
+            textBox1.Size = new Size(219, 27);
             textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(633, 202);
+            textBox2.Location = new Point(298, 99);
+            textBox2.Margin = new Padding(1, 1, 1, 1);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(461, 47);
+            textBox2.Size = new Size(219, 27);
             textBox2.TabIndex = 1;
             // 
             // lbNombre
             // 
             lbNombre.AutoSize = true;
-            lbNombre.Location = new Point(474, 99);
+            lbNombre.Location = new Point(223, 48);
+            lbNombre.Margin = new Padding(1, 0, 1, 0);
             lbNombre.Name = "lbNombre";
-            lbNombre.Size = new Size(128, 41);
+            lbNombre.Size = new Size(64, 20);
             lbNombre.TabIndex = 3;
             lbNombre.Text = "Nombre";
             // 
             // lbApellido
             // 
             lbApellido.AutoSize = true;
-            lbApellido.Location = new Point(474, 205);
+            lbApellido.Location = new Point(223, 100);
+            lbApellido.Margin = new Padding(1, 0, 1, 0);
             lbApellido.Name = "lbApellido";
-            lbApellido.Size = new Size(128, 41);
+            lbApellido.Size = new Size(66, 20);
             lbApellido.TabIndex = 4;
             lbApellido.Text = "Apellido";
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(633, 325);
+            textBox3.Location = new Point(298, 159);
+            textBox3.Margin = new Padding(1, 1, 1, 1);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(461, 47);
+            textBox3.Size = new Size(219, 27);
             textBox3.TabIndex = 6;
             // 
             // lbDocumento
             // 
             lbDocumento.AutoSize = true;
-            lbDocumento.Location = new Point(427, 325);
+            lbDocumento.Location = new Point(201, 159);
+            lbDocumento.Margin = new Padding(1, 0, 1, 0);
             lbDocumento.Name = "lbDocumento";
-            lbDocumento.Size = new Size(175, 41);
+            lbDocumento.Size = new Size(87, 20);
             lbDocumento.TabIndex = 7;
             lbDocumento.Text = "Documento";
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(633, 442);
+            textBox4.Location = new Point(298, 216);
+            textBox4.Margin = new Padding(1, 1, 1, 1);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(461, 47);
+            textBox4.Size = new Size(219, 27);
             textBox4.TabIndex = 8;
             // 
             // lbTelefono
             // 
             lbTelefono.AutoSize = true;
-            lbTelefono.Location = new Point(367, 448);
+            lbTelefono.Location = new Point(173, 219);
+            lbTelefono.Margin = new Padding(1, 0, 1, 0);
             lbTelefono.Name = "lbTelefono";
-            lbTelefono.Size = new Size(235, 41);
+            lbTelefono.Size = new Size(119, 20);
             lbTelefono.TabIndex = 9;
             lbTelefono.Text = "Telefono/Celular";
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(633, 554);
+            textBox5.Location = new Point(298, 270);
+            textBox5.Margin = new Padding(1, 1, 1, 1);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(461, 47);
+            textBox5.Size = new Size(219, 27);
             textBox5.TabIndex = 10;
             // 
             // lbCorreo
             // 
             lbCorreo.AutoSize = true;
-            lbCorreo.Location = new Point(339, 560);
+            lbCorreo.Location = new Point(160, 273);
+            lbCorreo.Margin = new Padding(1, 0, 1, 0);
             lbCorreo.Name = "lbCorreo";
-            lbCorreo.Size = new Size(255, 41);
+            lbCorreo.Size = new Size(128, 20);
             lbCorreo.TabIndex = 11;
             lbCorreo.Text = "CorreoElectronico";
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(633, 670);
+            textBox6.Location = new Point(298, 327);
+            textBox6.Margin = new Padding(1, 1, 1, 1);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(461, 47);
+            textBox6.Size = new Size(219, 27);
             textBox6.TabIndex = 12;
             // 
             // lbLocalidad
             // 
             lbLocalidad.AutoSize = true;
-            lbLocalidad.Location = new Point(458, 670);
+            lbLocalidad.Location = new Point(216, 327);
+            lbLocalidad.Margin = new Padding(1, 0, 1, 0);
             lbLocalidad.Name = "lbLocalidad";
-            lbLocalidad.Size = new Size(144, 41);
+            lbLocalidad.Size = new Size(74, 20);
             lbLocalidad.TabIndex = 13;
             lbLocalidad.Text = "Localidad";
             // 
@@ -147,9 +159,10 @@
             btGuardar.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
             btGuardar.FlatStyle = FlatStyle.Flat;
             btGuardar.ForeColor = SystemColors.ButtonHighlight;
-            btGuardar.Location = new Point(367, 818);
+            btGuardar.Location = new Point(173, 399);
+            btGuardar.Margin = new Padding(1, 1, 1, 1);
             btGuardar.Name = "btGuardar";
-            btGuardar.Size = new Size(286, 76);
+            btGuardar.Size = new Size(135, 37);
             btGuardar.TabIndex = 14;
             btGuardar.Text = "Guardar";
             btGuardar.UseVisualStyleBackColor = false;
@@ -162,9 +175,10 @@
             btCancelar.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
             btCancelar.FlatStyle = FlatStyle.Flat;
             btCancelar.ForeColor = SystemColors.ButtonHighlight;
-            btCancelar.Location = new Point(994, 818);
+            btCancelar.Location = new Point(468, 399);
+            btCancelar.Margin = new Padding(1, 1, 1, 1);
             btCancelar.Name = "btCancelar";
-            btCancelar.Size = new Size(286, 76);
+            btCancelar.Size = new Size(135, 37);
             btCancelar.TabIndex = 15;
             btCancelar.Text = "Cancelar";
             btCancelar.UseVisualStyleBackColor = false;
@@ -172,10 +186,10 @@
             // 
             // fClientesAlta
             // 
-            AutoScaleDimensions = new SizeF(17F, 41F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 225, 212);
-            ClientSize = new Size(1627, 978);
+            ClientSize = new Size(766, 477);
             Controls.Add(btCancelar);
             Controls.Add(btGuardar);
             Controls.Add(lbLocalidad);
@@ -190,7 +204,9 @@
             Controls.Add(lbNombre);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
+            Margin = new Padding(1, 1, 1, 1);
             Name = "fClientesAlta";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "fClientesAlta";
             ResumeLayout(false);
             PerformLayout();

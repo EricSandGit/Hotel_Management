@@ -152,6 +152,7 @@
             Controls.Add(lbNombre);
             Controls.Add(lbRol);
             Name = "fAltaUsuarios";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "fAltaUsuarios";
             Load += fAltaUsuarios_Load;
             ResumeLayout(false);

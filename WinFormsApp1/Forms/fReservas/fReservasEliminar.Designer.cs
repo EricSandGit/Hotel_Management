@@ -36,17 +36,19 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(83, 66);
+            label1.Location = new Point(66, 53);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(312, 25);
+            label1.Size = new Size(261, 20);
             label1.TabIndex = 0;
             label1.Text = "¿Estas seguro que lo quieres eliminar?";
             // 
             // btEliminar
             // 
-            btEliminar.Location = new Point(83, 179);
+            btEliminar.Location = new Point(66, 143);
+            btEliminar.Margin = new Padding(2, 2, 2, 2);
             btEliminar.Name = "btEliminar";
-            btEliminar.Size = new Size(147, 34);
+            btEliminar.Size = new Size(118, 27);
             btEliminar.TabIndex = 1;
             btEliminar.Text = "Si, Estoy seguro";
             btEliminar.UseVisualStyleBackColor = true;
@@ -54,9 +56,10 @@
             // 
             // btCancelar
             // 
-            btCancelar.Location = new Point(248, 179);
+            btCancelar.Location = new Point(198, 143);
+            btCancelar.Margin = new Padding(2, 2, 2, 2);
             btCancelar.Name = "btCancelar";
-            btCancelar.Size = new Size(147, 34);
+            btCancelar.Size = new Size(118, 27);
             btCancelar.TabIndex = 2;
             btCancelar.Text = "No, Volver";
             btCancelar.UseVisualStyleBackColor = true;
@@ -64,13 +67,15 @@
             // 
             // fReservasEliminar
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(480, 252);
+            ClientSize = new Size(384, 202);
             Controls.Add(btCancelar);
             Controls.Add(btEliminar);
             Controls.Add(label1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "fReservasEliminar";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "fReservasEliminar";
             ResumeLayout(false);
             PerformLayout();
