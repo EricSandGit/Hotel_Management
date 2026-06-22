@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,9 +30,9 @@ namespace WinFormsApp1.Forms.fUsuarios
 
         private void btAgregarUsuario_Click(object sender, EventArgs e)
         {
-            fAltaUsuarios Alta = new fAltaUsuarios();
+            fAltaUsuarios alta = new fAltaUsuarios();
 
-            if (Alta.ShowDialog() == DialogResult.OK)
+            if (alta.ShowDialog() == DialogResult.OK)
             {
                 ActualizarGrilla();
             }
@@ -43,9 +43,9 @@ namespace WinFormsApp1.Forms.fUsuarios
             if (dgListarUsuarios.SelectedRows.Count > 0)
             {
                 Usuario usuarioSeleccionado = (Usuario)dgListarUsuarios.SelectedRows[0].DataBoundItem;
-                fEliminarUsuarios Baja = new fEliminarUsuarios(usuarioSeleccionado.IdUsuario);
+                fEliminarUsuarios baja = new fEliminarUsuarios(usuarioSeleccionado.IdUsuario);
 
-                Baja.ShowDialog();
+                baja.ShowDialog();
                 ActualizarGrilla();
             }
             else
@@ -59,9 +59,9 @@ namespace WinFormsApp1.Forms.fUsuarios
             if (dgListarUsuarios.SelectedRows.Count > 0)
             {
                 Usuario usuarioSeleccionado = (Usuario)dgListarUsuarios.SelectedRows[0].DataBoundItem;
-                fModificarUsuarios Modificar = new fModificarUsuarios(usuarioSeleccionado);
+                fModificarUsuarios modificar = new fModificarUsuarios(usuarioSeleccionado);
 
-                if (Modificar.ShowDialog() == DialogResult.OK)
+                if (modificar.ShowDialog() == DialogResult.OK)
                 {
                     ActualizarGrilla();
                 }

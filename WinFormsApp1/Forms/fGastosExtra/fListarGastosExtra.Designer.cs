@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1.Forms
 {
-    partial class fGastosExtra
+    partial class FGastosExtra
     {
         /// <summary>
         /// Required designer variable.
@@ -28,27 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lbGastosExtra = new Label();
             cbEstadias = new ComboBox();
             lbSeleccionar = new Label();
             dgGastosExtra = new DataGridView();
+            btAgregarGE = new Button();
             ((System.ComponentModel.ISupportInitialize)dgGastosExtra).BeginInit();
             SuspendLayout();
             // 
-            // lbGastosExtra
-            // 
-            lbGastosExtra.AutoSize = true;
-            lbGastosExtra.Font = new Font("Segoe UI Black", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbGastosExtra.Location = new Point(61, 57);
-            lbGastosExtra.Name = "lbGastosExtra";
-            lbGastosExtra.Size = new Size(247, 41);
-            lbGastosExtra.TabIndex = 0;
-            lbGastosExtra.Text = "GASTOS EXTRA";
-            // 
             // cbEstadias
             // 
+            cbEstadias.BackColor = Color.White;
+            cbEstadias.ForeColor = SystemColors.InactiveBorder;
             cbEstadias.FormattingEnabled = true;
-            cbEstadias.Location = new Point(61, 183);
+            cbEstadias.Location = new Point(829, 742);
             cbEstadias.Name = "cbEstadias";
             cbEstadias.Size = new Size(245, 33);
             cbEstadias.TabIndex = 1;
@@ -58,7 +50,7 @@
             // lbSeleccionar
             // 
             lbSeleccionar.AutoSize = true;
-            lbSeleccionar.Location = new Point(84, 155);
+            lbSeleccionar.Location = new Point(850, 714);
             lbSeleccionar.Name = "lbSeleccionar";
             lbSeleccionar.Size = new Size(201, 25);
             lbSeleccionar.TabIndex = 2;
@@ -66,23 +58,40 @@
             // 
             // dgGastosExtra
             // 
+            dgGastosExtra.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgGastosExtra.BackgroundColor = Color.FromArgb(165, 150, 135);
             dgGastosExtra.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgGastosExtra.GridColor = SystemColors.Info;
-            dgGastosExtra.Location = new Point(381, 57);
+            dgGastosExtra.GridColor = Color.FromArgb(165, 150, 135);
+            dgGastosExtra.Location = new Point(30, 44);
             dgGastosExtra.Name = "dgGastosExtra";
             dgGastosExtra.RowHeadersWidth = 62;
-            dgGastosExtra.Size = new Size(760, 428);
+            dgGastosExtra.Size = new Size(1144, 645);
             dgGastosExtra.TabIndex = 3;
+            // 
+            // btAgregarGE
+            // 
+            btAgregarGE.BackColor = Color.FromArgb(30, 30, 30);
+            btAgregarGE.FlatAppearance.BorderSize = 0;
+            btAgregarGE.FlatStyle = FlatStyle.Flat;
+            btAgregarGE.ForeColor = SystemColors.ButtonHighlight;
+            btAgregarGE.Location = new Point(30, 742);
+            btAgregarGE.Name = "btAgregarGE";
+            btAgregarGE.Size = new Size(350, 59);
+            btAgregarGE.TabIndex = 4;
+            btAgregarGE.Text = "Agregar";
+            btAgregarGE.UseVisualStyleBackColor = false;
+            btAgregarGE.Click += btAgregarGE_Click;
             // 
             // fGastosExtra
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1207, 534);
+            BackColor = Color.FromArgb(230, 225, 212);
+            ClientSize = new Size(1215, 841);
+            Controls.Add(btAgregarGE);
             Controls.Add(dgGastosExtra);
             Controls.Add(lbSeleccionar);
             Controls.Add(cbEstadias);
-            Controls.Add(lbGastosExtra);
             Name = "fGastosExtra";
             Text = "fGastosExtra";
             Load += fGastosExtra_Load;
@@ -92,10 +101,9 @@
         }
 
         #endregion
-
-        private Label lbGastosExtra;
         private ComboBox cbEstadias;
         private Label lbSeleccionar;
         private DataGridView dgGastosExtra;
+        private Button btAgregarGE;
     }
 }

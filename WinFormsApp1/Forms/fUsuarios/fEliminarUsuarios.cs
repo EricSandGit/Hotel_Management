@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +27,19 @@ namespace WinFormsApp1.Forms.fUsuarios
 
         private void btSiEstoySeguro_Click(object sender, EventArgs e)
         {
+            if (nUsuario.TieneAsignaciones(idUsuario))
+            {
+                MessageBox.Show(
+                    "No se puede eliminar el usuario porque ha registrado reservas o estadías activas en el sistema.",
+                    "Operación no permitida",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                this.DialogResult = DialogResult.Cancel;
+                this.Close();
+                return;
+            }
+
             bool exito = nUsuario.EliminarUsuario(idUsuario);
 
             if (exito)
