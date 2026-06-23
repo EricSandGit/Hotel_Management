@@ -12,6 +12,7 @@ using WinFormsApp1.Forms.fClientes;
 using WinFormsApp1.Forms.fReservas;
 using WinFormsApp1.Forms.fUsuarios;
 using WinFormsApp1.Forms.fEstadias;
+using WinFormsApp1.Forms.fHabitaciones;
 
 namespace WinFormsApp1.Forms
 {
@@ -126,6 +127,7 @@ namespace WinFormsApp1.Forms
         private void btHabitacion_Click(object sender, EventArgs e)
         {
             SeleccionarBoton((Button)sender);
+            AbrirFormEnPanel(new fHabitacionesListar());
 
 
         }

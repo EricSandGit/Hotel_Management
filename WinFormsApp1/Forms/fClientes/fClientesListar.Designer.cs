@@ -56,8 +56,8 @@ namespace WinFormsApp1.Forms.fClientes
             dataGridViewClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewClientes.EnableHeadersVisualStyles = false;
-            dataGridViewClientes.Location = new Point(18, 23);
-            dataGridViewClientes.Margin = new Padding(2, 2, 2, 2);
+            dataGridViewClientes.Location = new Point(16, 17);
+            dataGridViewClientes.Margin = new Padding(2);
             dataGridViewClientes.Name = "dataGridViewClientes";
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
@@ -72,7 +72,7 @@ namespace WinFormsApp1.Forms.fClientes
             dataGridViewCellStyle3.SelectionForeColor = Color.White;
             dataGridViewClientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewClientes.Size = new Size(930, 522);
+            dataGridViewClientes.Size = new Size(814, 392);
             dataGridViewClientes.TabIndex = 0;
             dataGridViewClientes.CellContentClick += dataGridViewClientes_CellContentClick;
             // 
@@ -83,10 +83,10 @@ namespace WinFormsApp1.Forms.fClientes
             btEditarCliente.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48, 0);
             btEditarCliente.FlatStyle = FlatStyle.Flat;
             btEditarCliente.ForeColor = SystemColors.ButtonHighlight;
-            btEditarCliente.Location = new Point(668, 571);
-            btEditarCliente.Margin = new Padding(2, 2, 2, 2);
+            btEditarCliente.Location = new Point(584, 428);
+            btEditarCliente.Margin = new Padding(2);
             btEditarCliente.Name = "btEditarCliente";
-            btEditarCliente.Size = new Size(280, 47);
+            btEditarCliente.Size = new Size(245, 35);
             btEditarCliente.TabIndex = 1;
             btEditarCliente.Text = "Editar";
             btEditarCliente.UseVisualStyleBackColor = false;
@@ -99,10 +99,10 @@ namespace WinFormsApp1.Forms.fClientes
             btEliminarCliente.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48, 0);
             btEliminarCliente.FlatStyle = FlatStyle.Flat;
             btEliminarCliente.ForeColor = SystemColors.ButtonHighlight;
-            btEliminarCliente.Location = new Point(344, 571);
-            btEliminarCliente.Margin = new Padding(2, 2, 2, 2);
+            btEliminarCliente.Location = new Point(301, 428);
+            btEliminarCliente.Margin = new Padding(2);
             btEliminarCliente.Name = "btEliminarCliente";
-            btEliminarCliente.Size = new Size(280, 47);
+            btEliminarCliente.Size = new Size(245, 35);
             btEliminarCliente.TabIndex = 2;
             btEliminarCliente.Text = "Eliminar";
             btEliminarCliente.UseVisualStyleBackColor = false;
@@ -115,10 +115,10 @@ namespace WinFormsApp1.Forms.fClientes
             btAgregarCliente.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48, 0);
             btAgregarCliente.FlatStyle = FlatStyle.Flat;
             btAgregarCliente.ForeColor = SystemColors.ButtonHighlight;
-            btAgregarCliente.Location = new Point(18, 571);
-            btAgregarCliente.Margin = new Padding(2, 2, 2, 2);
+            btAgregarCliente.Location = new Point(16, 428);
+            btAgregarCliente.Margin = new Padding(2);
             btAgregarCliente.Name = "btAgregarCliente";
-            btAgregarCliente.Size = new Size(280, 47);
+            btAgregarCliente.Size = new Size(245, 35);
             btAgregarCliente.TabIndex = 3;
             btAgregarCliente.Text = "Agregar";
             btAgregarCliente.UseVisualStyleBackColor = false;
@@ -126,15 +126,15 @@ namespace WinFormsApp1.Forms.fClientes
             // 
             // fClientesListar
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 225, 212);
-            ClientSize = new Size(905, 515);
+            ClientSize = new Size(847, 482);
             Controls.Add(btAgregarCliente);
             Controls.Add(btEliminarCliente);
             Controls.Add(btEditarCliente);
             Controls.Add(dataGridViewClientes);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "fClientesListar";
             Text = "fClientesListar";
             ((System.ComponentModel.ISupportInitialize)dataGridViewClientes).EndInit();
