@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp1.Forms
+namespace WinFormsApp1.Forms
 {
     partial class fCuentaCliente
     {
@@ -34,6 +34,7 @@
             cbEstadia = new ComboBox();
             lbSeleccionar = new Label();
             dgCuenta = new DataGridView();
+            btPagar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgCuenta).BeginInit();
             SuspendLayout();
             // 
@@ -91,12 +92,26 @@
             dgCuenta.Size = new Size(1144, 645);
             dgCuenta.TabIndex = 7;
             // 
+            // btPagar
+            // 
+            btPagar.BackColor = Color.FromArgb(30, 30, 30);
+            btPagar.FlatStyle = FlatStyle.Flat;
+            btPagar.ForeColor = Color.White;
+            btPagar.Location = new Point(500, 712);
+            btPagar.Name = "btPagar";
+            btPagar.Size = new Size(350, 59);
+            btPagar.TabIndex = 8;
+            btPagar.Text = "Pagar Cuenta";
+            btPagar.UseVisualStyleBackColor = false;
+            btPagar.Click += btPagar_Click;
+            // 
             // fCuentaCliente
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 225, 212);
             ClientSize = new Size(1215, 841);
+            Controls.Add(btPagar);
             Controls.Add(dgCuenta);
             Controls.Add(lbSeleccionar);
             Controls.Add(cbEstadia);
@@ -112,5 +127,6 @@
         private ComboBox cbEstadia;
         private Label lbSeleccionar;
         private DataGridView dgCuenta;
+        private Button btPagar;
     }
 }
