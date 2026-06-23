@@ -135,7 +135,7 @@ namespace WinFormsApp1.Forms
         {
             SeleccionarBoton((Button)sender);
 
-            AbrirFormEnPanel(new fListarReservas());
+            AbrirFormEnPanel(new fListarReservas(usuarioSesion.IdUsuario));
         }
         private void btUsuario_Click(object sender, EventArgs e)
         {

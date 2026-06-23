@@ -62,7 +62,7 @@ namespace WinFormsApp1.Controladores
             if (h == null || h.IdHabitacion <= 0) return false;
 
             // Validar campos obligatorios y consistencia
-            if (h.Numero <= 0 || h.PrecioPorNoche <= 0)
+            if (h.Numero <= 0)
                 return false;
 
             // Validar que la cantidad de camas sea válida
@@ -73,6 +73,11 @@ namespace WinFormsApp1.Controladores
             var todas = ListarHabitaciones();
             if (todas.Exists(x => x.Numero == h.Numero && x.IdHabitacion != h.IdHabitacion))
                 return false;
+
+            if (h.PrecioPorNoche <= 0)
+            {
+                h.PrecioPorNoche = CalcularPrecioBase(h.CamasIndividuales, h.CamasMatrimoniales);
+            }
 
             return persistencia.Actualizar(h);
         }

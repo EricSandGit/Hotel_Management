@@ -11,6 +11,7 @@ namespace WinFormsApp1.Modelos
         public int CamasIndividuales { get; set; }
         public int CamasMatrimoniales { get; set; }
         public double PrecioPorNoche { get; set; }
+        public string InfoConCamas => $"{Numero} ({CamasIndividuales}CI, {CamasMatrimoniales}CM)";
 
         public Habitacion() { }
 

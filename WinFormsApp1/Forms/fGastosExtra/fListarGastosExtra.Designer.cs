@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp1.Forms
+namespace WinFormsApp1.Forms
 {
     partial class FGastosExtra
     {
@@ -42,7 +42,6 @@
             // cbEstadias
             // 
             cbEstadias.BackColor = Color.White;
-            cbEstadias.ForeColor = SystemColors.InactiveBorder;
             cbEstadias.FormattingEnabled = true;
             cbEstadias.Location = new Point(829, 742);
             cbEstadias.Name = "cbEstadias";
@@ -77,10 +76,11 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgGastosExtra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgGastosExtra.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgGastosExtra.Enabled = false;
+            dgGastosExtra.ReadOnly = true;
             dgGastosExtra.EnableHeadersVisualStyles = false;
             dgGastosExtra.GridColor = Color.FromArgb(165, 150, 135);
             dgGastosExtra.Location = new Point(30, 44);
+            dgGastosExtra.MultiSelect = false;
             dgGastosExtra.Name = "dgGastosExtra";
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
