@@ -41,7 +41,7 @@
             btNoVolver.FlatStyle = FlatStyle.Flat;
             btNoVolver.ForeColor = SystemColors.ButtonHighlight;
             btNoVolver.Location = new Point(159, 67);
-            btNoVolver.Margin = new Padding(1, 1, 1, 1);
+            btNoVolver.Margin = new Padding(1);
             btNoVolver.Name = "btNoVolver";
             btNoVolver.Size = new Size(111, 20);
             btNoVolver.TabIndex = 5;
@@ -57,7 +57,7 @@
             btSiEstoySeguro.FlatStyle = FlatStyle.Flat;
             btSiEstoySeguro.ForeColor = SystemColors.ButtonHighlight;
             btSiEstoySeguro.Location = new Point(25, 67);
-            btSiEstoySeguro.Margin = new Padding(1, 1, 1, 1);
+            btSiEstoySeguro.Margin = new Padding(1);
             btSiEstoySeguro.Name = "btSiEstoySeguro";
             btSiEstoySeguro.Size = new Size(111, 20);
             btSiEstoySeguro.TabIndex = 4;
@@ -84,8 +84,10 @@
             Controls.Add(btNoVolver);
             Controls.Add(btSiEstoySeguro);
             Controls.Add(lbAdvertencia);
-            Margin = new Padding(1, 1, 1, 1);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(1);
             Name = "fHabitacionesBaja";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "fHabitacionesBaja";
             ResumeLayout(false);
             PerformLayout();

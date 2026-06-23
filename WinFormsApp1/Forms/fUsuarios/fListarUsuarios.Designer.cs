@@ -45,9 +45,10 @@
             btAgregarUsuario.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
             btAgregarUsuario.FlatStyle = FlatStyle.Flat;
             btAgregarUsuario.ForeColor = SystemColors.ButtonHighlight;
-            btAgregarUsuario.Location = new Point(32, 590);
+            btAgregarUsuario.Location = new Point(28, 442);
+            btAgregarUsuario.Margin = new Padding(3, 2, 3, 2);
             btAgregarUsuario.Name = "btAgregarUsuario";
-            btAgregarUsuario.Size = new Size(280, 47);
+            btAgregarUsuario.Size = new Size(245, 35);
             btAgregarUsuario.TabIndex = 3;
             btAgregarUsuario.Text = "Agregar";
             btAgregarUsuario.UseVisualStyleBackColor = false;
@@ -60,9 +61,10 @@
             btEliminarUsuario.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
             btEliminarUsuario.FlatStyle = FlatStyle.Flat;
             btEliminarUsuario.ForeColor = SystemColors.ButtonHighlight;
-            btEliminarUsuario.Location = new Point(348, 590);
+            btEliminarUsuario.Location = new Point(304, 442);
+            btEliminarUsuario.Margin = new Padding(3, 2, 3, 2);
             btEliminarUsuario.Name = "btEliminarUsuario";
-            btEliminarUsuario.Size = new Size(280, 47);
+            btEliminarUsuario.Size = new Size(245, 35);
             btEliminarUsuario.TabIndex = 4;
             btEliminarUsuario.Text = "Eliminar";
             btEliminarUsuario.UseVisualStyleBackColor = false;
@@ -75,9 +77,10 @@
             btModificarUsuario.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 48);
             btModificarUsuario.FlatStyle = FlatStyle.Flat;
             btModificarUsuario.ForeColor = SystemColors.ButtonHighlight;
-            btModificarUsuario.Location = new Point(667, 590);
+            btModificarUsuario.Location = new Point(584, 442);
+            btModificarUsuario.Margin = new Padding(3, 2, 3, 2);
             btModificarUsuario.Name = "btModificarUsuario";
-            btModificarUsuario.Size = new Size(280, 47);
+            btModificarUsuario.Size = new Size(245, 35);
             btModificarUsuario.TabIndex = 5;
             btModificarUsuario.Text = "Modificar";
             btModificarUsuario.UseVisualStyleBackColor = false;
@@ -101,7 +104,8 @@
             dgListarUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgListarUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgListarUsuarios.EnableHeadersVisualStyles = false;
-            dgListarUsuarios.Location = new Point(32, 33);
+            dgListarUsuarios.Location = new Point(28, 25);
+            dgListarUsuarios.Margin = new Padding(3, 2, 3, 2);
             dgListarUsuarios.Name = "dgListarUsuarios";
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
@@ -116,19 +120,21 @@
             dataGridViewCellStyle3.SelectionForeColor = Color.White;
             dgListarUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgListarUsuarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgListarUsuarios.Size = new Size(915, 516);
+            dgListarUsuarios.Size = new Size(801, 387);
             dgListarUsuarios.TabIndex = 6;
             // 
             // fListarUsuarios
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 225, 212);
-            ClientSize = new Size(972, 673);
+            ClientSize = new Size(850, 505);
             Controls.Add(dgListarUsuarios);
             Controls.Add(btModificarUsuario);
             Controls.Add(btEliminarUsuario);
             Controls.Add(btAgregarUsuario);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "fListarUsuarios";
             Text = "fListarUsuarios";
             Load += fListarUsuarios_Load;
