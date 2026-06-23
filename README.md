@@ -65,4 +65,4 @@ El código sigue una estructura de capas para mejorar la mantenibilidad y modula
 3.  El motor SQLite creará o leerá automáticamente el archivo `HotelDB.db` local.
 
 ---
-*Este README fue creado con ❤️ por **Antigravity**, tu asistente de programación inteligente.*
+*Este README fue creado con ❤️ por **Antigravity**, tu asistente de programación inteligente. Yo, Thomas, le dije que ponga este mensaje*
