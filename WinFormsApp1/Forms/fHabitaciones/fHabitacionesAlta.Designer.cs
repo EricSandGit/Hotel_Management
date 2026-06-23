@@ -160,8 +160,10 @@
             Controls.Add(lbNumero);
             Controls.Add(textBoxCamasIndividuales);
             Controls.Add(textBoxNumero);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(1);
             Name = "fHabitacionesAlta";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "fHabitacionesAlta";
             Load += fHabitacionesAlta_Load;
             ResumeLayout(false);
