@@ -26,7 +26,6 @@ namespace WinFormsApp1.Controladores
                 return false;
 
             // Obtener la reserva para validar la capacidad y habitación
-            // Obtener la reserva para validar la capacidad y habitación
             var reserva = nReserva.ObtenerReservaPorId(e.IdReserva);
             if (reserva == null || reserva.IdReserva <= 0)
                 return false;

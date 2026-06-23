@@ -29,7 +29,7 @@ namespace WinFormsApp1.Controladores
 
                 if (r.IdHabitacion == idHabitacion && !string.Equals(r.Estado, "Cancelada", StringComparison.OrdinalIgnoreCase))
                 {
-                    // Fórmula de traslape: (StartA < EndB) y (EndA > StartB)
+                    // Fórmula de traslape: (InicioA < FinalB) y (FinalA > InicioB)
                     if (fechaEntrada < r.FechaSalida && fechaSalida > r.FechaEntrada)
                     {
                         return false; // Hay superposición de reservas

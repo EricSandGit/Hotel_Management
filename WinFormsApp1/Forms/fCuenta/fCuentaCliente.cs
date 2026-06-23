@@ -48,7 +48,9 @@ namespace WinFormsApp1.Forms
                 Cuenta cuentaAsociada = nCuenta.ListarCuentas().Find(c => c.IdEstadia == estadiaSeleccionada.IdEstadia);
                 string estadoPago = cuentaAsociada != null ? cuentaAsociada.Estado : "pendiente";
 
+                // La funcion CultureInfo("es-AR"): define las convenciones culturales de Argentina (español).
                 var moneda = new System.Globalization.CultureInfo("es-AR");
+                // Afecta formato de números (1.234,56), moneda ($ 1.234,56) y fechas (dd/MM/yyyy).
 
                 dgCuenta.DataSource = new List<object>
                 {
