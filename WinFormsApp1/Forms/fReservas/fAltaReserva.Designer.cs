@@ -203,6 +203,7 @@
             Controls.Add(label1);
             Controls.Add(dtResSalida);
             Controls.Add(dtResLlegada);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
             Name = "fAltaReserva";
             StartPosition = FormStartPosition.CenterParent;

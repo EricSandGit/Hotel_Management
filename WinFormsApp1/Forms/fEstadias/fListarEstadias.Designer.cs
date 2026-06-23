@@ -56,7 +56,7 @@ namespace WinFormsApp1.Forms.fEstadias
             dgListarEstadias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgListarEstadias.EnableHeadersVisualStyles = false;
             dgListarEstadias.GridColor = Color.PowderBlue;
-            dgListarEstadias.Location = new Point(24, 22);
+            dgListarEstadias.Location = new Point(30, 28);
             dgListarEstadias.Margin = new Padding(2);
             dgListarEstadias.Name = "dgListarEstadias";
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -72,17 +72,17 @@ namespace WinFormsApp1.Forms.fEstadias
             dataGridViewCellStyle3.SelectionForeColor = Color.White;
             dgListarEstadias.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgListarEstadias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgListarEstadias.Size = new Size(915, 516);
+            dgListarEstadias.Size = new Size(1144, 645);
             dgListarEstadias.TabIndex = 1;
             // 
             // btModificarEstadia
             // 
             btModificarEstadia.BackColor = Color.FromArgb(30, 30, 30);
             btModificarEstadia.ForeColor = SystemColors.ButtonHighlight;
-            btModificarEstadia.Location = new Point(188, 557);
+            btModificarEstadia.Location = new Point(235, 696);
             btModificarEstadia.Margin = new Padding(2);
             btModificarEstadia.Name = "btModificarEstadia";
-            btModificarEstadia.Size = new Size(280, 47);
+            btModificarEstadia.Size = new Size(350, 59);
             btModificarEstadia.TabIndex = 5;
             btModificarEstadia.Text = "Modificar";
             btModificarEstadia.UseVisualStyleBackColor = false;
@@ -92,10 +92,10 @@ namespace WinFormsApp1.Forms.fEstadias
             // 
             btEliminarEstadia.BackColor = Color.FromArgb(30, 30, 30);
             btEliminarEstadia.ForeColor = SystemColors.ButtonHighlight;
-            btEliminarEstadia.Location = new Point(484, 557);
+            btEliminarEstadia.Location = new Point(605, 696);
             btEliminarEstadia.Margin = new Padding(2);
             btEliminarEstadia.Name = "btEliminarEstadia";
-            btEliminarEstadia.Size = new Size(280, 47);
+            btEliminarEstadia.Size = new Size(350, 59);
             btEliminarEstadia.TabIndex = 6;
             btEliminarEstadia.Text = "Eliminar";
             btEliminarEstadia.UseVisualStyleBackColor = false;
@@ -103,14 +103,15 @@ namespace WinFormsApp1.Forms.fEstadias
             // 
             // fListarEstadias
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 225, 212);
-            ClientSize = new Size(972, 673);
+            ClientSize = new Size(1215, 841);
             Controls.Add(btEliminarEstadia);
             Controls.Add(btModificarEstadia);
             Controls.Add(dgListarEstadias);
-            Margin = new Padding(2, 2, 2, 2);
+            ForeColor = Color.Transparent;
+            Margin = new Padding(2);
             Name = "fListarEstadias";
             StartPosition = FormStartPosition.CenterParent;
             Text = "ListarEstadias";

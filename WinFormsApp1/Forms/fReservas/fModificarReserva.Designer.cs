@@ -94,6 +94,7 @@
             // 
             // numResMenores
             // 
+            numResMenores.BorderStyle = BorderStyle.FixedSingle;
             numResMenores.Location = new Point(598, 162);
             numResMenores.Margin = new Padding(2);
             numResMenores.Name = "numResMenores";
@@ -202,6 +203,7 @@
             Controls.Add(label1);
             Controls.Add(dtResSalida);
             Controls.Add(dtResLlegada);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
             Name = "fModificarReserva";
             StartPosition = FormStartPosition.CenterParent;
