@@ -32,16 +32,40 @@ namespace WinFormsApp1.Forms
 
         private void cbEstadia_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbEstadia.SelectedItem is Estadia estadia)
-            {
-                // 2. Obtenemos los subtotales llamando al controlador (Capa de Negocio)
-                double totalHabitacion = nCuenta.CalcularSubtotalHabitacion(estadia.IdEstadia);
-                double totalGastosExtras = nCuenta.CalcularSubtotalGastos(estadia.IdEstadia);
+            ActualizarGrilla();
+        }
 
-                // 3. Mostramos los datos directamente en tus etiquetas
-                lbCostoEstadia.Text = totalHabitacion.ToString("C2");
-                lbCostoExtras.Text = totalGastosExtras.ToString("C2");
+        private void ActualizarGrilla()
+        {
+            Estadia estadiaSeleccionada = (Estadia)cbEstadia.SelectedItem;
+
+            if (estadiaSeleccionada != null)
+            {
+                double totalHabitacion = nCuenta.CalcularSubtotalHabitacion(estadiaSeleccionada.IdEstadia);
+                double totalGastosExtras = nCuenta.CalcularSubtotalGastos(estadiaSeleccionada.IdEstadia);
+
+                var moneda = new System.Globalization.CultureInfo("es-AR");
+
+
+                dgCuenta.DataSource = new List<object>
+        {
+            new {
+                IdEstadia = estadiaSeleccionada.IdEstadia,
+                CostoHabitacion = totalHabitacion.ToString("C2", moneda),
+                GastosExtras = totalGastosExtras.ToString("C2", moneda),
+                TotalGeneral = (totalHabitacion + totalGastosExtras).ToString("C2", moneda)
+            }
+        };
+
+                dgCuenta.AllowUserToAddRows = false;
+            }
+            else
+            {
+                dgCuenta.DataSource = null;
             }
         }
+
+
+
     }
 }
