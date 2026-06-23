@@ -36,40 +36,45 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(66, 53);
+            label1.Location = new Point(82, 66);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(261, 20);
+            label1.Size = new Size(312, 25);
             label1.TabIndex = 0;
             label1.Text = "¿Estas seguro que lo quieres eliminar?";
             // 
             // btEliminar
             // 
-            btEliminar.Location = new Point(66, 143);
+            btEliminar.BackColor = Color.Black;
+            btEliminar.ForeColor = SystemColors.ButtonHighlight;
+            btEliminar.Location = new Point(82, 179);
             btEliminar.Margin = new Padding(2);
             btEliminar.Name = "btEliminar";
-            btEliminar.Size = new Size(118, 27);
+            btEliminar.Size = new Size(148, 34);
             btEliminar.TabIndex = 1;
             btEliminar.Text = "Si, Estoy seguro";
-            btEliminar.UseVisualStyleBackColor = true;
+            btEliminar.UseVisualStyleBackColor = false;
             btEliminar.Click += btEliminar_Click;
             // 
             // btCancelar
             // 
-            btCancelar.Location = new Point(198, 143);
+            btCancelar.BackColor = Color.Black;
+            btCancelar.ForeColor = SystemColors.ButtonHighlight;
+            btCancelar.Location = new Point(248, 179);
             btCancelar.Margin = new Padding(2);
             btCancelar.Name = "btCancelar";
-            btCancelar.Size = new Size(118, 27);
+            btCancelar.Size = new Size(148, 34);
             btCancelar.TabIndex = 2;
             btCancelar.Text = "No, Volver";
-            btCancelar.UseVisualStyleBackColor = true;
+            btCancelar.UseVisualStyleBackColor = false;
             btCancelar.Click += btCancelar_Click;
             // 
             // fReservasEliminar
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(384, 202);
+            BackColor = Color.FromArgb(230, 225, 212);
+            ClientSize = new Size(480, 252);
             Controls.Add(btCancelar);
             Controls.Add(btEliminar);
             Controls.Add(label1);

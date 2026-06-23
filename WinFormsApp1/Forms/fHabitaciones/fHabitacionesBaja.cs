@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,16 +12,28 @@ namespace WinFormsApp1.Forms.fHabitaciones
     public partial class fHabitacionesBaja : Form
     {
 
-        private int _idHabitacionAEliminar;
+        private int idHabitacionAEliminar;
         public fHabitacionesBaja(int idHabitacion)
         {
             InitializeComponent();
-            _idHabitacionAEliminar = idHabitacion;
+            idHabitacionAEliminar = idHabitacion;
         }
 
         private void btSiEstoySeguro_Click(object sender, EventArgs e)
         {
-            bool exito = nHabitacion.EliminarHabitacion(_idHabitacionAEliminar);
+            if (nHabitacion.TieneReservasAsignadas(idHabitacionAEliminar))
+            {
+                MessageBox.Show(
+                    "No se puede eliminar la habitación porque tiene reservas asociadas en el sistema.",
+                    "Operación no permitida",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                this.Close();
+                return;
+            }
+
+            bool exito = nHabitacion.EliminarHabitacion(idHabitacionAEliminar);
 
             if (!exito)
             {

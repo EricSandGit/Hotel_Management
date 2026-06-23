@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             cbEstadias = new ComboBox();
             lbSeleccionar = new Label();
             dgGastosExtra = new DataGridView();
@@ -59,13 +62,39 @@
             // 
             // dgGastosExtra
             // 
+            dgGastosExtra.AllowUserToAddRows = false;
+            dgGastosExtra.AllowUserToDeleteRows = false;
+            dgGastosExtra.AllowUserToResizeColumns = false;
+            dgGastosExtra.AllowUserToResizeRows = false;
             dgGastosExtra.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgGastosExtra.BackgroundColor = Color.FromArgb(165, 150, 135);
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgGastosExtra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgGastosExtra.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgGastosExtra.Enabled = false;
+            dgGastosExtra.EnableHeadersVisualStyles = false;
             dgGastosExtra.GridColor = Color.FromArgb(165, 150, 135);
             dgGastosExtra.Location = new Point(30, 44);
             dgGastosExtra.Name = "dgGastosExtra";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(195, 180, 165);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgGastosExtra.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgGastosExtra.RowHeadersWidth = 62;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(110, 95, 80);
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            dgGastosExtra.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dgGastosExtra.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgGastosExtra.Size = new Size(1144, 645);
             dgGastosExtra.TabIndex = 3;
             dgGastosExtra.CellContentClick += dgGastosExtra_CellContentClick;

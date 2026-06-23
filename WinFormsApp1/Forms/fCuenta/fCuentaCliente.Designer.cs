@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             cbEstadia = new ComboBox();
             lbSeleccionar = new Label();
             dgCuenta = new DataGridView();
@@ -54,13 +57,37 @@
             // 
             // dgCuenta
             // 
+            dgCuenta.AllowUserToAddRows = false;
+            dgCuenta.AllowUserToDeleteRows = false;
+            dgCuenta.AllowUserToResizeColumns = false;
+            dgCuenta.AllowUserToResizeRows = false;
             dgCuenta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgCuenta.BackgroundColor = Color.FromArgb(165, 150, 135);
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgCuenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgCuenta.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgCuenta.EnableHeadersVisualStyles = false;
             dgCuenta.GridColor = Color.FromArgb(165, 150, 135);
             dgCuenta.Location = new Point(36, 36);
             dgCuenta.Name = "dgCuenta";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(195, 180, 165);
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgCuenta.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgCuenta.RowHeadersWidth = 62;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(110, 95, 80);
+            dgCuenta.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dgCuenta.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgCuenta.Size = new Size(1144, 645);
             dgCuenta.TabIndex = 7;
             // 
