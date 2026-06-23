@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,8 +36,8 @@ namespace WinFormsApp1.Forms.fHabitaciones
 
         private void btAgregarHabitacion_Click(object sender, EventArgs e)
         {
-            fHabitacionesAlta Alta = new fHabitacionesAlta();
-            if (Alta.ShowDialog() == DialogResult.OK)
+            fHabitacionesAlta alta = new fHabitacionesAlta();
+            if (alta.ShowDialog() == DialogResult.OK)
             {
                 ActualizarGrilla();
             }
@@ -48,9 +48,9 @@ namespace WinFormsApp1.Forms.fHabitaciones
             if (dataGridViewHabitacion.SelectedRows.Count > 0)
             {
                 Habitacion habSeleccionada = (Habitacion)dataGridViewHabitacion.SelectedRows[0].DataBoundItem;
-                fHabitacionesModificar Modificar = new fHabitacionesModificar(habSeleccionada);
+                fHabitacionesModificar modificar = new fHabitacionesModificar(habSeleccionada);
 
-                if (Modificar.ShowDialog() == DialogResult.OK)
+                if (modificar.ShowDialog() == DialogResult.OK)
                 {
                     ActualizarGrilla();
                 }
@@ -66,9 +66,9 @@ namespace WinFormsApp1.Forms.fHabitaciones
             if (dataGridViewHabitacion.SelectedRows.Count > 0)
             {
                 Habitacion habSeleccionada = (Habitacion)dataGridViewHabitacion.SelectedRows[0].DataBoundItem;
-                fHabitacionesBaja Baja = new fHabitacionesBaja(habSeleccionada.IdHabitacion);
+                fHabitacionesBaja baja = new fHabitacionesBaja(habSeleccionada.IdHabitacion);
 
-                Baja.ShowDialog();
+                baja.ShowDialog();
                 ActualizarGrilla();
             }
             else

@@ -86,6 +86,12 @@ namespace WinFormsApp1.Controladores
             return ActualizarHabitacion(h);
         }
 
+        // Comprobar si la habitación tiene reservas asignadas
+        public static bool TieneReservasAsignadas(int idHabitacion)
+        {
+            return nReserva.ListarReservas().Exists(r => r.IdHabitacion == idHabitacion);
+        }
+
         // Baja de habitación
         public static bool EliminarHabitacion(int id) => persistencia.Eliminar(id);
 
