@@ -16,7 +16,10 @@ namespace WinFormsApp1.Controladores
         public static bool ValidarDisponibilidad(int idHabitacion, DateTime fechaEntrada, DateTime fechaSalida, int idReservaAExcluir = 0)
         {
             
-            if (fechaEntrada >= fechaSalida || fechaEntrada < DateTime.Today)
+            if (fechaEntrada >= fechaSalida)
+                return false;
+
+            if (idReservaAExcluir == 0 && fechaEntrada < DateTime.Today)
                 return false;
 
             var reservas = ListarReservas();

@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp1.Forms
+namespace WinFormsApp1.Forms
 {
     partial class FGastosExtra
     {
@@ -42,7 +42,6 @@
             // cbEstadias
             // 
             cbEstadias.BackColor = Color.White;
-            cbEstadias.ForeColor = SystemColors.InactiveBorder;
             cbEstadias.FormattingEnabled = true;
             cbEstadias.Location = new Point(829, 742);
             cbEstadias.Name = "cbEstadias";

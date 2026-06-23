@@ -54,7 +54,7 @@ namespace WinFormsApp1.Forms
             var listaHabitaciones = nHabitacion.ListarHabitaciones();
             cbResHabitaciones.DataSource = listaHabitaciones;
             cbResHabitaciones.ValueMember = "IdHabitacion";
-            cbResHabitaciones.DisplayMember = "Numero";
+            cbResHabitaciones.DisplayMember = "InfoConCamas";
         }
 
         private void dtResLlegada_ValueChanged(object sender, EventArgs e)

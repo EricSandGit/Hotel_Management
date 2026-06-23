@@ -24,7 +24,6 @@ namespace WinFormsApp1.Forms.fGastosExtra
             
             cbEstadia.DataSource = estadiasActivas;
             cbEstadia.ValueMember = "IdEstadia";
-            cbEstadia.DisplayMember = "ToString";
             
             numericUpDown1.DecimalPlaces = 2;
             numericUpDown1.Maximum = 1000000;

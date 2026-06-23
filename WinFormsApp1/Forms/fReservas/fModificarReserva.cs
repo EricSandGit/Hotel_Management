@@ -39,7 +39,7 @@ namespace WinFormsApp1.Forms.fReservas
             var listaHabitaciones = nHabitacion.ListarHabitaciones();
             cbResHabitaciones.DataSource = listaHabitaciones;
             cbResHabitaciones.ValueMember = "IdHabitacion";
-            cbResHabitaciones.DisplayMember = "Numero";
+            cbResHabitaciones.DisplayMember = "InfoConCamas";
             cbResHabitaciones.SelectedValue = reservaAModificar.IdHabitacion;
 
            

@@ -12,10 +12,16 @@ namespace WinFormsApp1.Forms.fReservas
 {
     public partial class fListarReservas : Form
     {
-        public fListarReservas()
+        private int idUsuarioLogueado = 1;
+
+        public fListarReservas() : this(1)
+        {
+        }
+
+        public fListarReservas(int idUsuarioLogueado)
         {
             InitializeComponent();
-            
+            this.idUsuarioLogueado = idUsuarioLogueado;
         }
 
         private void fListarReservas_Load(object sender, EventArgs e)
@@ -31,7 +37,7 @@ namespace WinFormsApp1.Forms.fReservas
 
         private void btAgregarLReserva_Click(object sender, EventArgs e)
         {
-            fAltaReserva altaReserva = new fAltaReserva();
+            fAltaReserva altaReserva = new fAltaReserva(idUsuarioLogueado);
 
             if (altaReserva.ShowDialog() == DialogResult.OK)
             {

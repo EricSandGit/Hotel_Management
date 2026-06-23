@@ -110,7 +110,6 @@ namespace WinFormsApp1.Forms.fEstadias
             Controls.Add(btEliminarEstadia);
             Controls.Add(btModificarEstadia);
             Controls.Add(dgListarEstadias);
-            ForeColor = Color.Transparent;
             Margin = new Padding(2);
             Name = "fListarEstadias";
             StartPosition = FormStartPosition.CenterParent;
