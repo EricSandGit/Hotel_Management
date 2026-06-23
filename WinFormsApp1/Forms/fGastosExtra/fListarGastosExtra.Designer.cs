@@ -76,10 +76,11 @@ namespace WinFormsApp1.Forms
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgGastosExtra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgGastosExtra.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgGastosExtra.Enabled = false;
+            dgGastosExtra.ReadOnly = true;
             dgGastosExtra.EnableHeadersVisualStyles = false;
             dgGastosExtra.GridColor = Color.FromArgb(165, 150, 135);
             dgGastosExtra.Location = new Point(30, 44);
+            dgGastosExtra.MultiSelect = false;
             dgGastosExtra.Name = "dgGastosExtra";
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
