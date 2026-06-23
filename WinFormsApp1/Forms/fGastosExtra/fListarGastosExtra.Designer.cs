@@ -32,6 +32,7 @@
             lbSeleccionar = new Label();
             dgGastosExtra = new DataGridView();
             btAgregarGE = new Button();
+            btEliminarGE = new Button();
             ((System.ComponentModel.ISupportInitialize)dgGastosExtra).BeginInit();
             SuspendLayout();
             // 
@@ -67,6 +68,7 @@
             dgGastosExtra.RowHeadersWidth = 62;
             dgGastosExtra.Size = new Size(1144, 645);
             dgGastosExtra.TabIndex = 3;
+            dgGastosExtra.CellContentClick += dgGastosExtra_CellContentClick;
             // 
             // btAgregarGE
             // 
@@ -82,17 +84,32 @@
             btAgregarGE.UseVisualStyleBackColor = false;
             btAgregarGE.Click += btAgregarGE_Click;
             // 
-            // fGastosExtra
+            // btEliminarGE
+            // 
+            btEliminarGE.BackColor = Color.FromArgb(30, 30, 30);
+            btEliminarGE.FlatAppearance.BorderSize = 0;
+            btEliminarGE.FlatStyle = FlatStyle.Flat;
+            btEliminarGE.ForeColor = SystemColors.ButtonHighlight;
+            btEliminarGE.Location = new Point(404, 742);
+            btEliminarGE.Name = "btEliminarGE";
+            btEliminarGE.Size = new Size(350, 59);
+            btEliminarGE.TabIndex = 5;
+            btEliminarGE.Text = "Eliminar";
+            btEliminarGE.UseVisualStyleBackColor = false;
+            btEliminarGE.Click += btEliminarGE_Click;
+            // 
+            // FGastosExtra
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 225, 212);
             ClientSize = new Size(1215, 841);
+            Controls.Add(btEliminarGE);
             Controls.Add(btAgregarGE);
             Controls.Add(dgGastosExtra);
             Controls.Add(lbSeleccionar);
             Controls.Add(cbEstadias);
-            Name = "fGastosExtra";
+            Name = "FGastosExtra";
             Text = "fGastosExtra";
             Load += fGastosExtra_Load;
             ((System.ComponentModel.ISupportInitialize)dgGastosExtra).EndInit();
@@ -105,5 +122,6 @@
         private Label lbSeleccionar;
         private DataGridView dgGastosExtra;
         private Button btAgregarGE;
+        private Button btEliminarGE;
     }
 }

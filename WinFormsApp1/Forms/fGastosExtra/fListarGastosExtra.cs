@@ -43,6 +43,10 @@ namespace WinFormsApp1.Forms
                 List<GastoExtra> gastosFiltrados = todosLosGastos.Where(g => g.IdEstadia == seleccionarEstadia.IdEstadia).ToList();
                 dgGastosExtra.DataSource = null;
                 dgGastosExtra.DataSource = gastosFiltrados;
+
+                dgGastosExtra.Columns["Monto"].DefaultCellStyle.Format = "C2";
+                dgGastosExtra.Columns["Monto"].DefaultCellStyle.FormatProvider =
+                    new System.Globalization.CultureInfo("es-AR");
             }
             else
             {
@@ -60,6 +64,36 @@ namespace WinFormsApp1.Forms
             fAgregarGastosExtra alta = new fAgregarGastosExtra();
             if (alta.ShowDialog() == DialogResult.OK)
             {
+                ActualizarGrilla();
+            }
+        }
+
+        private void dgGastosExtra_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btEliminarGE_Click(object sender, EventArgs e)
+        {
+            if (dgGastosExtra.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Seleccione un gasto extra para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Obtenemos el gasto seleccionado
+            GastoExtra gastoSeleccionado = (GastoExtra)dgGastosExtra.SelectedRows[0].DataBoundItem;
+
+            DialogResult confirmacion = MessageBox.Show(
+                $"¿Está seguro que desea eliminar el gasto seleccionado?",
+                "Confirmar eliminación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (confirmacion == DialogResult.Yes)
+            {
+                nGastoExtra.EliminarGasto(gastoSeleccionado.IdGasto);
                 ActualizarGrilla();
             }
         }
