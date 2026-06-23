@@ -17,7 +17,7 @@ namespace WinFormsApp1.Forms
         Color colorFondoForm = Color.FromArgb(45, 45, 45);
         Color colorBotones = Color.FromArgb(30, 30, 30);
         Color colorTextoGrisClaro = Color.FromArgb(220, 220, 220);
-        Color colorSecundarioBotones = Color.FromArgb(45, 45, 48); // El color de fSesion para el hover
+        Color colorSecundarioBotones = Color.FromArgb(45, 45, 48); 
 
         public fLogin()
         {

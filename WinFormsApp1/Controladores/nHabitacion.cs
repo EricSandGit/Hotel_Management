@@ -21,10 +21,10 @@ namespace WinFormsApp1.Controladores
             if (h == null) return 0;
             return h.CamasIndividuales + (h.CamasMatrimoniales * 2);
         }
-
+        // Esta función se va a llamar cuando el usuario no ingrese manualmente el precio de la habitación
         private static double CalcularPrecioBase(int camasInd, int camasMat)
         {
-            return (camasInd * 30000) + (camasMat * 50000);
+            return (camasInd * 30000) + (camasMat * 50000); // El cálculo se hace en base a las camas
         }
 
      

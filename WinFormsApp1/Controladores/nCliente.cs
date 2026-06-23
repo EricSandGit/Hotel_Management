@@ -60,7 +60,7 @@ namespace WinFormsApp1.Controladores
 
 
 
-        // Método guardar unificado para backward compatibility
+        // Calcular precio de habitación según la cantidad de camas
         public static bool GuardarCliente(Cliente c)
         {
             if (c == null) return false;
